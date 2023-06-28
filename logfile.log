@@ -1,0 +1,40 @@
+[2023-05-02 13:37:24.063300  440c][ERROR ] no such column: unused1:
+SELECT unused1 FROM "user";
+[2023-05-02 13:37:24.066307  440c][ERROR ] no such column: softkeyboardSet:
+SELECT softkeyboardSet FROM profile;
+[2023-05-02 13:37:24.404753  440c][ERROR ] no such column: password:
+SELECT password FROM cert;
+[2023-05-02 13:54:29.637672  3450][ERROR ] no such table: config:
+SELECT * FROM config WHERE server_id IS NULL
+[2023-05-02 13:54:29.640668  3450][ERROR ] no such table: config:
+SELECT COUNT(*) AS "count" FROM (SELECT * FROM config WHERE section = 'General' AND item = 'EnableRelay' AND server_id is NULL)
+[2023-05-02 13:54:29.641669  3450][ERROR ] no such table: config:
+INSERT INTO config(section, item, data) VALUES('General','EnableRelay','false')
+[2023-05-02 15:41:20.561478  4090][ERROR ] no such table: config:
+SELECT * FROM config WHERE server_id IS NULL
+[2023-05-02 15:41:36.741267  3c40][ERROR ] no such table: config:
+SELECT * FROM config WHERE server_id IS NULL
+[2023-05-02 15:42:44.391849  9cc][ERROR ] no such table: config:
+SELECT * FROM config WHERE server_id IS NULL
+[2023-05-15 09:08:24.471806  5ac4][ERROR ] no such table: config:
+SELECT * FROM config WHERE server_id IS NULL
+[2023-05-15 09:11:57.282616  3e5c][ERROR ] no such table: config:
+SELECT * FROM config WHERE server_id IS NULL
+[2023-05-15 15:46:26.425196  2a80][ERROR ] no such table: config:
+SELECT * FROM config WHERE server_id IS NULL
+[2023-05-15 15:47:51.719880  2ee8][ERROR ] no such table: config:
+SELECT * FROM config WHERE server_id IS NULL
+[2023-05-15 15:48:19.402919  3734][ERROR ] no such table: config:
+SELECT * FROM config WHERE server_id IS NULL
+[2023-05-15 15:49:31.526647  1034][ERROR ] no such table: config:
+SELECT * FROM config WHERE server_id IS NULL
+[2023-05-15 15:50:56.790047  20d0][ERROR ] no such table: config:
+SELECT * FROM config WHERE server_id IS NULL
+[2023-05-15 15:54:11.842760  6b8][ERROR ] no such table: config:
+SELECT * FROM config WHERE server_id IS NULL
+[2023-05-15 15:55:02.101928  2618][ERROR ] no such table: config:
+SELECT * FROM config WHERE server_id IS NULL
+[2023-05-15 15:58:11.876634  1c0c][ERROR ] no such table: config:
+SELECT * FROM config WHERE server_id IS NULL
+[2023-05-15 16:03:56.153231  3e80][ERROR ] no such table: config:
+SELECT * FROM config WHERE server_id IS NULL

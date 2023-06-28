@@ -1,0 +1,137 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Inbound" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="700,1252" sap2010:WorkflowViewState.IdRef="Inbound_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Inbound" sap:VirtualizedContainerService.HintSize="546,1187" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: ConsID.WMS - сиcтема управления складом нового поколения" sap:VirtualizedContainerService.HintSize="484,1076" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="450,859" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT'" sap:VirtualizedContainerService.HintSize="388,155" sap2010:WorkflowViewState.IdRef="SetValue_1" Text="UDA999VCHE">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3219026e-c856-43e4-aca0-4918ac3d49cc" InformativeScreenshot="634d9bc41c76c8b20f50b83b04670b17" Selector="&lt;webctrl tag='INPUT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT'" sap:VirtualizedContainerService.HintSize="388,155" sap2010:WorkflowViewState.IdRef="SetValue_2" Text="UDA999VCHE">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1eb4dfea-2344-4b91-b857-c7c65b1c9198" InformativeScreenshot="d0c864a5465512a919f9df393bd9c5fc" Selector="&lt;webctrl tag='INPUT' type='password' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Войти'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_mow/(S(xn1dwirb2a1odduoo3i4cum5))/OheWebReports.aspx" DesignTimeRectangle="483, 409, 360, 41" ElementType="Button" FriendlyName="'Войти'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' aaname='Войти' check:text='Войти' /&gt;" Guid="4da37269-82f5-407e-8d6c-e277914060d2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAWwAAAAtCAYAAACK7FHEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARBSURBVHhe7d3BaxxlGMdx/5tY8OBf4CX3Qlusx96WKh6EqpdcQiHQQ8FCQQ+VQMBbLw05mJQVdcBkMS6xK2sPXdLqZknWbVgik3TduHmcZ2af2dnkpbAe9n1Xvz/4HDK+O6fydZhN9Q1hjDE2EyPYjDE2I3MG+9HzL+XTzavy3uO35Nr6HABgCrS52l5tsGtjwT44/j097LoRAGB6tMXa5OLGgv3xD5edHwQATJ82ubg82PoI7voAAMCf4uuRPNgffT/vPAwA8EfbbMuDfX3jkvMwAMAfbbMtD7brIADAPxvBBoDA2Qg2AATORrABIHA2gg0AgbMRbAAInI1gA0DgbAQbAAJnI9j4D5mXxZ9vyb3qldG1zZLcq30oi1HxHDBbbAQbfj3dknj4ZzDf2ZG0D5dlyXX+tealrDcbNCT6NQl37baU/+wlFzpSqbnOA7PBRrDhlwW7tyNRa00qhw3pDtI/khK/vOP+zOtUl6V2cpTdQHfalNpuyX0WmBE2gg2/LNjxw9G16oZ09dpfW/KgeBb4n7IRbPjlCna0Jm29drIhi/m1W7LaaUg8fPrWxa/qEtXtvzJ5R2qnerUhZfvMekmi4/SoxIfJ0/peI/vhwo6k9nROVg6zJ/Pmnn1+TpZazfSanG7JSn5fYLpsBBt+nQ/25oJ83dVw9mT3hcW4JOVY30WL9Ht1qbbWpHrUkb5eGCSBruqZi8HOY5ssDfYvX6SvXaLWTvYE/3cjvVfU+kpWth3Brib/4jhLLxFseGUj2PDL9aVjEuv2H5+NfrPj2U4W5+SJu/hF5OedTno6jfH5YA9j2+910vtnZ+yzDyVN+bkIjwd7+HQ+6EhX70uw4ZGNYMOvC1861qXZy56m9R32ShLtBy+zkLZb5/4nG2NP58VgD2N71pRoNzszabDt6bzdWs7uS7DhkY1gwy/XO+z14a/nJdNITxrsyl4jfSJvt0r5mYmCfZD8c31XfryWPNEP70uw4ZGNYMMvZ7Bv5F8WtvdvyLUX9eyHNKCjzy4dZK9Eup2F5GcLdk/6eWxH958k2P1B8oSvT+fFd+MEGx7ZCDb8smAPX4lEnZ3RKxH9QnFbzy1I5VV26eKXjnVZTd91W7CT5bEd3X+SYOvSp/P0OsGGfzaCDb8s2MWd9SSOv5PVJ4VXINFtiZJIx/ZbG3bGwlwIdnu/8Bdl/k2wx77cJNjwz0awASBwNoINAIGzEWwACJyNYANA4GwEGwACZyPYABA4G8EGgMDZCDYABM5GsAEgcLY82O+uv+k8CADwR9tsy4P9fvlt52EAgD/aZlse7PuVK87DAAB/tM22PNi/7T+SmzxlA0AwtMnaZlsebN3jJx8QbQAIgLZYm1zcWLBPevvyY/0TuRu9kx7mi0gAmB5trrZXG6wt1iYXNxZsmz6C6+Fvf7ou32xfBQBMgTZX21t8DVKcM9iMMcZCm8g/+C7S2oYMVtIAAAAASUVORK5CYII=" InformativeScreenshot="4cc5d7823645757062367fee326ae991.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS - сиcтема управления складом нового поколения' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="640, 418, 44, 21" ElementType="Text" FriendlyName="'Войти'" FullSelectorArgument="&lt;webctrl tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' type='' aaname='Войти' check:text='Войти' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJnSURBVFhH7ZXNattAEMf7Nn4QP0HxA+TmU245+mIChtyaU3sIBAy95WR8qAM+lD3EhiLcqqg5VJiAIhJVMcZFSVS59j+zu1pp/UEtuRTV4IE57Hhmdn6amfWrSqeEXdY9QNG6Byha9wBF6z8EKKP++QinxuvUdlXFqXmIOtP9/k4XAa57CLAk8wm80Tkaul8mLaPLk81ssG8EYh6j+zMkg4++uc5/O10PEA7A3Db6IxvjGTcAwcPJQmAmNc5hPk1kAi5TB+awut53S10PEFykNuMSY2771cOZ7vuf6GYA1obHbU+XqCe2I7R8G0HcHS7BswVmleO4E5hTbrXRVTGdKtijcEUwom7e2vKwIhOY1yU0R7Jzzq2KL6HhOsKGaQ/N2PZngKsaPox5ohDDG1VclWabzzIQhRYMGjVj4iPiBpr3rsF9VgGSy0kEwNd3YkyZO5Ad/m2LXMx9j+anNQAGfci5MGUAWJAQ3o836cvxfSCLpY7oi/3W94W3KG4ZIL48Cn2RX/qo2AsINK0orosAcfdmPsY870aAZIktOKH82nwHmgRx9iATe67qyFKs6J4OEF8+d8CG0icvgOqe59KjkAlA34FO/ByS8KLzAvRp1nnHPJden9gnF8A9/c537bFNHY/z5gM4SJbPuztA5caSB5EwjW3cyxEa+zU6K4AQUXJ5mj8PQDSjCeDd03drI0A8QswfpCPEF5SWq9Kpof8sTatLbKEldkUBkCSXp/nzAHAR3RP2rAC6zEMEwUe0vmgjw47BqOhAvQrKRxWqAXh32h/XNgALj8UmgB3UPUDRugcoWnccoIQXF5vibH2tAjAAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NHover DisplayName="Hover 'Управление Складом'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NHover_1" ScopeIdentifier="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Version="V1">
+              <uix:NHover.Target>
+                <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_mow/(S(rqbj5jyvwso103j520x03uzn))/OheWebReports.aspx#" DesignTimeRectangle="406, 149, 129, 15" ElementType="Text" FriendlyName="'Управление Складом'" FullSelectorArgument="&lt;webctrl aaname='Управление Складом' parentid='top-menu' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Управление Складом' parentid='top-menu' tag='SPAN' type='' check:text='Управление Складом' /&gt;" Guid="7bd2fcca-b4f9-4a9c-99a2-55f9eead2319" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIUAAAATCAYAAAC+5c5iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMNSURBVGhD7VatcpsxEOyDhRbmBUKDzI3CwgyMTAwaYGQQ4JmAzOTt1PvX3UmfPrdppuOMwI4tnXS63VvJ/nH3875MTHhMU0w0mKaYaDBNMdHATPGwv5S3l+dmAWL78lHO+003NvFcju8f5c1wKtvuutuBeyk2Zfd6KbvHuODu8VDO34Dol4C0iReGLteN6xV/Pp5OzWuBJOcr0Qe+oO3ripfrtl/W9J8ivxb4NIrr5VbUZxIhaykG3/dgKolFUViouk9vUp4HvB7Kg+zjW5firgkh7vaRuf2YeEitOYZjjdnaet7xSeczeN1yHMH8eI1wlbPXuJHhLObrAzS9iPGwt8mZchH/2K/2j6Z7LcIr0fyMOKG1SBVbxioYCWDFsTic14uWY3lfGhOZWk+4tbnxi6aQRplQ8XwzuxdRMYoZHD+nK2KVm6u/eZFCLscNxpTH9rJxlQ/mOcOlN34yt24KIoKHxMOuMYW/NQ0Rgy/UiUaxOB4JRwQdkVDflabAfOf9IfHwHDvnKP7QFJjH6zPiFsE5QmzRFLzW10t5hS9zAb7BNKdyTBw7pgBIk0MhjWDZFFGgQBJJYD4CNMIKF8IWA7hmLgvX2UeQGsJ5nRidwYJss2GafQCvgwH3xUa3qHVmYy1zg7HqT2C98tqaz9XfqYnyBlNs4NPxhbzZ+H1ThIMEq6aIxeBBTCS714/5+9INGgmXiQRY43XO1SqxHeznczOP+FKMUDkuzVd+sZHr3HysN66a+V5lrSVvMgVqgJ+ax+ZlT9cUuWDCFaawPcEkXKjF5DZyEWNTZDFCXZSn1kMxHa+ZAmu1+EhUjEXBAoRniFP+mK/qoPNjbhTT+rraLvQBxpQncKv11ebDPP63kDxDU7CwUEA4VDAqhmIX+G3S/T2heB7JVUHEMBojYM46v2QYG4d97ryhKdzaJKoKaXndeX2k9UEjbwoA6XQuv9a4qREQwGOrjfbzDeq5pK/Ou/pr80VfiQ1N8dcQU1RhJ74EpPM1F/ZzmKa4JUxTTPwv/BtTTHwrTFNMJNyX3+ri8jSP9PFWAAAAAElFTkSuQmCC" InformativeScreenshot="5ca3d0b61b89d5272988161f3220fa72.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Список ячеек по классу товара-5' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NHover.Target>
+            </uix:NHover>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Edge" IconBase64="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" InformativeScreenshot="e155de6ce804536f328d74e3e00fa464.png" Selector="&lt;html app='msedge.exe' title='ConsID.WMS - сиcтема управления складом нового поколения'/&gt;" Url="http://10.29.19.230/cwms_mow" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

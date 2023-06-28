@@ -1,0 +1,189 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="WaveCreation" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1198,1965" sap2010:WorkflowViewState.IdRef="WaveCreation_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Terminal</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="WaveCreation" sap:VirtualizedContainerService.HintSize="1208,1900" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: ConsID.WMS-Не размещенные Расходные заказы-205" sap:VirtualizedContainerService.HintSize="1146,1789" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="d5505817-c2ad-4516-bc96-5b3c95e3eac4" Version="V1" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="1112,1572" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'editable text Логин'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1050,217" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="d5505817-c2ad-4516-bc96-5b3c95e3eac4" Text="UDA999VCHE" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="556, 252, 270, 35" ElementType="InputBox" FriendlyName="'editable text Логин'" FullSelectorArgument="&lt;ctrl name='ConsID.WMS - сиcтема управления складом нового поколения' role='document' /&gt;&lt;ctrl name='Авторизация пользователей' role='grouping' /&gt;&lt;ctrl name='Логин' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='ConsID.WMS - сиcтема управления складом нового поколения' role='document' /&gt;&lt;ctrl name='Авторизация пользователей' role='grouping' /&gt;&lt;ctrl name='Логин' role='editable text' automationid='' /&gt;" Guid="ba1af811-2c8b-4fcb-bf26-803462060ba0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARIAAAAnCAYAAADD98eJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIESURBVHhe7d1BS+NAGIDh/f/gXfYaPAlC8STeBP0BKj2UEig99VfM9tNmnKRx0Z1hLfp88IAJSW95mYmH/ErGGFM5QmKMqZ6jkOx2u7RardJyuQQYiTZEI6YzCknf92m9XqfNZpO22y3ASLQhGhGtKCeHJCoTF8zdDFCKVpQrkxySWLJYiQAfEa2IZgyTQxL7n7kbAOZEM4YREuCfCAlQTUiAakICVBMSoJqQANWEBKgmJEC19iF5vk3nvy/SWXad7uauA76N9iF5uE5nV/eH4/vUCQl8e81D8nhzmc5vng7HQgI/QfOQ3F1dpO5hOJ6EJFYrectzmRbPh/Oj7VCc39/X3abH0X3D70zjJFbw1RqH5CktuiIQ5UM+isHeSzwOx/F3GY64Lx/Hb+xXOd1wr5DAqWkckvcf8tjyvK1UXuXVy19C8npNBKoMybB6GQgJfKW2IZkLQk1I8ovbaUjKcEyPgf+taUgiFm//sQnFQ/7prc1+O5OvFxI4Zc1CsuiGF6Xl+fFD/hKavB2ZvGw9WsmUL22FBE5Z0xUJ8DMJCVBNSIBqQgJUExKgmpAA1YQEqCYkQDUhAarNhsS3f4GPevfbv/Fl8fjC+NxNAKVoRTRjmBySmL7vXy6wMgHmRBuiEdGKckYhiYnKxJIl9j8ApWhDuRIZ5igkxhjz2RESY0zlpPQH/UmgfbfhTNYAAAAASUVORK5CYII=" InformativeScreenshot="cb827f6584b027d98f22e9f85ffc7a3e.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='ConsID.WMS - сиcтема управления складом нового поколения - [InPr*' /&gt;" SearchSteps="Selector" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'editable text Пароль'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1050,217" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="HardwareEvents" IsPassword="True" ScopeIdentifier="d5505817-c2ad-4516-bc96-5b3c95e3eac4" Text="[&quot;&quot;&quot;UDA999VCHE&quot;&quot;&quot;]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="556, 289, 270, 35" ElementType="InputBoxPassword" FriendlyName="'editable text Пароль'" FullSelectorArgument="&lt;ctrl name='ConsID.WMS - сиcтема управления складом нового поколения' role='document' /&gt;&lt;ctrl name='Авторизация пользователей' role='grouping' /&gt;&lt;ctrl name='Пароль' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='ConsID.WMS - сиcтема управления складом нового поколения' role='document' /&gt;&lt;ctrl name='Авторизация пользователей' role='grouping' /&gt;&lt;ctrl name='Пароль' role='editable text' automationid='' /&gt;" Guid="1d8b5d7f-aa11-41a4-a929-bb95c05352c4" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARIAAAAnCAYAAADD98eJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIVSURBVHhe7d3NSiNBFIDReX+YvbgNroSAuBJ3gj6AShYhNISs8hQ1uZ3udFWnBxwriaOcCwfSv+4+qtz0r2SMMZUjJMaY6jkKyXa7TcvlMi0WC4BCtCEaMZ4iJE3TpNVqldbrddpsNgCFaEM0IlqRzyEkUZm4YephgFy0Il+ZHEISSxYrEeAjohXRjH4OIYn9z9QDAFOiGf0ICfApQgJUExKgmpAA1YQEqCYkQDUhAaoJCVBNSIBqJwzJW7qb3aTf18euHt4m7gd+ihOH5DbdvZfnXx9uhQR+OCEBql00JPF72PLcp6funqf5TZq9PKdZf232mF67a5v3x3R1eCbuG9493k7tr8V7hncD5/dlK5L8fIRkHJb2WhuR/J0RifHx/rl9jMpz+3uAc7twSLJVR5g/t+eHCHQiILEqebk/ilDxvv6+3e8yJNnfEBU4uwuGZLSa2EWiOiST7yhXJGXIgHO4XEjabUq5fckj0P/uj4dnxluZ4TgPkJDA17ngiqQLRrflmM1Hq4k47rcjWVTaVUd/Pp5rYxF/a3ec/VO2DMlwv60NnN8JQ/J5+coC+H6EBKgmJEC1/yIkwPcmJEA1IQGqCQlQTUiAapMh8e1f4KP++u3f+LJ4fGF86iGAXLQimtHPISQxTdO0N1iZAFOiDdGIaEU+RUhiojKxZIn9D0Au2pCvRPo5CokxxvzrCIkxpnJS+gMgXofMNOHxTgAAAABJRU5ErkJggg==" InformativeScreenshot="c06cca82d7b5be129b3cf744db559cda.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='ConsID.WMS - сиcтема управления складом нового поколения - [InPr*' /&gt;" SearchSteps="Selector" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Войти'" sap:VirtualizedContainerService.HintSize="1050,157" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d5505817-c2ad-4516-bc96-5b3c95e3eac4" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="556, 326, 270, 32" ElementType="Button" FriendlyName="'Войти'" FullSelectorArgument="&lt;ctrl name='ConsID.WMS - сиcтема управления складом нового поколения' role='document' /&gt;&lt;ctrl name='Авторизация пользователей' role='grouping' /&gt;&lt;ctrl name='Войти' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='ConsID.WMS - сиcтема управления складом нового поколения' role='document' /&gt;&lt;ctrl name='Авторизация пользователей' role='grouping' /&gt;&lt;ctrl name='Войти' role='push button' automationid='' check:text='Войти' /&gt;" Guid="f3ab2652-8446-48b1-aa10-a48273317abd" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARIAAAAkCAYAAABFY7UnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALZSURBVHhe7dq/axNhHMdx/xsXF8HNwaGjY/6ACoIS0KlOioOCUBCpLi4FpVBc6iIOFmmhZmiKEkujiVaKICmWtpRQm9okbfz6fHP5Xi7pk/64gEju/YEX9JrniiB9k4ueEcYY63OEhDHW9wgJY6zvHQrJ5LdHcn3ukqSmzwJAB22DNqJ7HSG5nU15bwaAKG1FdGFInhfveW8AAB9thi0MydXZC97DAOCjzbCFIfEdBICj2AgJgNhshARAbDZCAiA2GyEBEJuNkACIzUZIEmBia7v1txysXivIm5z/bKcbkqlUpfTzmvt6SMY3SlIvT3adQZLZCEkCBCEpyUJ+RB4XX0up4S5/PfOe7ZZenpP1g6rUG05tRWY++c8hmWyEJAGCkLgItK5nKu6yMnXoHHBaNkKSANGQpJeCdyTra/q44l7P3JfMTuTRx73ryBSGmq91BCczKvmaHnA/Z3VFv+hYZWu093m9xkCyEZIE6P6MRPay8nJJYzEsMztVkYaLx+dhufV+VBZ23fXBorxw97XDMBT8jD96czsMze/tZ2WidX3ceQweGyFJgCAkrc9I8mORWEy574qUN0ba51cWpS7bkv/SDkN6OSsV2ZTcpr4TOT4kvc5j8NgISQIEIYn8QjcfTTQWQUjW14bb5y0kxVYYdrOS39fY3Gndd0xIjjiPwWMjJAngfUfSKMgrfbTRX/7uR5taEIfma7rqnDzVn3WSkOh6nMfgsRGSBAhCElnkA9XU/Jjkfrdfr+8thv/HJAiDe0Sxf/I9UUh6n8fgsRESALHZCAmA2GyEBEBsNkICIDYbIQEQm42QAIjNRkgAxGYLQ3Ll7TnvQQDw0WbYwpA8nL/sPQwAPtoMWxiS1Y1puTl73nsDAERpK7QZtjAkuuUf4/Lg3UUecwB4aRu0EdqK6DpCotssf5DC9yfy8etdAP9Y7j+mfz5tgzaie4dCwhhjpx0hYYz1OZG/dQP/IZNPEP4AAAAASUVORK5CYII=" InformativeScreenshot="52921558a43cf6c29d46c83126ec5693.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='ConsID.WMS - сиcтема управления складом нового поколения - [InPr*' /&gt;" SearchSteps="Selector" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Не размещенные'" sap:VirtualizedContainerService.HintSize="1050,746" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="d5505817-c2ad-4516-bc96-5b3c95e3eac4" Timeout="10" Version="V1">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Целевой объект появляется" sap:VirtualizedContainerService.HintSize="450,529" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Раунд'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,217" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="d5505817-c2ad-4516-bc96-5b3c95e3eac4" Text="5948728" Version="V1">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_mow/(S(xcujsm3ubnqytfbposhu5vy3))/OheWebReports.aspx#ref=205&amp;popup=0" DesignTimeRectangle="669, 272, 198, 23" ElementType="InputBox" FriendlyName="'INPUT eb_205_host_stop3…'" FullSelectorArgument="&lt;webctrl id='eb_205_host_stop33261' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='eb_205_host_stop33261' tag='INPUT' type='text' aaname='Раунд:' /&gt;" Guid="b6272c51-81c5-4b20-af50-13e8e5819bb0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMoAAAAbCAYAAAA9BxAiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC0SURBVHhe7dxBCoMwAETR3v+A4gXESwgpE7Ag0nb2vgezyf6TVfIawF+fUPZ9H+u6jmVZzB6/tJAmTjOUHGzbNo7jmIfwdGkhTZyxzFBSj0jgKk2kjZih5KoB7s42hAI/CAUKQoGCUKAgFCgIBQpCgYJQoCAUKAgFCkKBglCgIBQoCAUKQoGCUKAgFCgIBQqXULyZh7vbm3m/sMBVWrj9whI5SD25asyevrRwRhKfUIBvxngDBXATn28l5hcAAAAASUVORK5CYII=" InformativeScreenshot="719f9ed386a3690f269ad3dc6c49a365.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Не размещенные Расходные заказы-205' /&gt;" SearchSteps="Selector">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="668, 251, 34, 20" ElementType="Text" FriendlyName="'Раунд'" FullSelectorArgument="&lt;webctrl aaname='Раунд:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Раунд:' tag='LABEL' type='' check:text='Раунд:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACYAAAAYCAYAAACWTY9zAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEOSURBVEhL7ZSxDYMwEEWzWppMko6CCRgCCtaAgjWgRCxAYAiki33Yhw+HBEMSKPwkKzIcvudvKxc4KV7MFS/mihdzxYu5cnaxB2ThHa43c0SQ9ePbI+BiSTlOrfn/WSE2SzMsxBOAKjHqy1S8S6FStUEuK8SXeUT11jpi6Dq2luLNUcpGM1BAHTHJmAt/FouxP697xUJiHGxAwvrulRCLeVzqX6y0N0hidt0+MSMZlpgAk0IBnS5vyBIz1/mKmNrpuPsIAtq1oC9wPjVYEFN1LEkc86swocQ2gg1X/K3IOjpSBX6rE7TZLEb3buFe7mVfYj/Ei7nCxLqug6ZpoK7rwweJSam2bWEYBvXkSACe91ptgotrqPQAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Поиск'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d5505817-c2ad-4516-bc96-5b3c95e3eac4" Version="V1">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_mow/(S(xcujsm3ubnqytfbposhu5vy3))/OheWebReports.aspx#ref=205&amp;popup=0" DesignTimeRectangle="1098, 271, 63, 26" ElementType="Button" FriendlyName="'Поиск'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' aaname='Поиск' check:text='Поиск' /&gt;" Guid="64311944-e13e-4784-8ad0-3c5760cba9c6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEMAAAAeCAYAAAB32qNaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ2SURBVGhD7Zi/a9tAFMf7r3nx3KWL59IpSzdNHkKXYC8eggOmJlBKSBYvVcAQQmIPNRQbYXAMxRA1EC3GQSBc4iTw7XuSTn5qVFtWhqTKfeHh0713P74fdIfRG2hF0jCEYjBub+9wf/8QPuVb7JP9SkUwOHF2/gNv331Eofg+98E+2a8EEsFgUq8FhAr2K09C7JgkDch7SGkYQhqGkIYh9EQY26gcdHFy3kfnpAfzYB8fEutebkhlhlFqDOF4c9hWH61mA5+ap+hYDjxvil7DWNa2nXD2uDzrKDbfc4VUNhh7Y8xuJjgsJ+TKbYxuXAwUEB/GHIM9VdOFTT05gVFD59pFr5qcq+3WUKgOMZsOUeG+dTBib86yrm7NqWiMuqix20HOvPIffam+ZX0wP666wfxrQmpzGDtklBYqFaswyuI4EIjWhDbEhpoGbZiA7VD/ShhB+7GhBHOqzp/PgclzibaqN/k3JQgOqc1hNMZwyIi/+IM6DgpEYLJEdXVrSjmqXwWDjpsnc/8wZ1tcF8CQwOS+/H5fIaiUIbU5DDLgXHyju4FMLWjQwoV9HQfBdV8uCAabTPFmBO240cgcP/vQEt4MATMaK/MpQirDndHGT3eCz9xWQEgSRKHYwsj9hUNur4Sh8kpLEwGMcJyEQTl5ZzwGeYQBFUfzrwmpDDBo4b6LmTJPQAbfJQiDNkb5frrNPHdIZYLBd4R5Oae74xSVLdG/tY8W3RXeZRdGrP7lhlRGGBzbqB1P4Lh3WPwOw51idPz1v/oXKvUEGPkIKQ1DSMMQ0jCEIhj6G6iAob+O/3VMOCFJ5VnsU4JgxWC8dmkYQhpGJOAPObUuUiBc57AAAAAASUVORK5CYII=" InformativeScreenshot="350a359e4884e146873d70c53d8a8ed8.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Не размещенные Расходные заказы-205' /&gt;" SearchSteps="Selector">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="1120, 277, 31, 11" ElementType="Text" FriendlyName="'Поиск'" FullSelectorArgument="&lt;webctrl aaname='Поиск' parentid='bt205_Button133261' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Поиск' parentid='bt205_Button133261' tag='SPAN' type='' check:text='Поиск' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACMAAAAPCAYAAABut3YUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEFSURBVEhL7ZW/DoIwEMb7ai4+CQ/BKxgfABJGJ9k7MLO4SBoTZUUGFkJCQpjP/uHoGYq6KAw2+UKvd/f110IC22w9WIv+MHNaKUxSgWt0Ip40fUssi3wTaJgeshCTKRS/hmnqC+xV8A7m6eZsXSB6WZRDQGqKxOR4qUM9cM3WG38oU+MvxXjZwmmHRnMwZj41dJhjnfargCsvMsd6rp4ERMMEooYswoYZmDCHjuZmzAuh6gwMBaYb6nU9BlAidrhJGLXJBzeDr4xuNJqrWEM7boYcZuyl+UHs2t7hqIKXMJjHYU0MzNBHYWSOfjPTg8SQyeLRX4o1ZxssLeY7FpfS/3fglgcPKg/JRB55Pm0AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Целевой объект не появляется" sap:VirtualizedContainerService.HintSize="546,343" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:TimeoutScope TimeoutMessage="{x:Null}" DisplayName="Timeout Scope" sap:VirtualizedContainerService.HintSize="484,228" sap2010:WorkflowViewState.IdRef="TimeoutScope_1" ThrowExceptionAfter="20.00:00:00">
+                    <ui:TimeoutScope.Body>
+                      <ActivityAction x:TypeArguments="Activity">
+                        <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="450,103" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:TimeoutScope.Body>
+                  </ui:TimeoutScope>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_mow/(S(agr35nmiyxemqchzeeloiykr))/OheWebReports.aspx#ref=205&amp;popup=0" DesignTimeRectangle="33, 359, 1254, 15" FriendlyName="'Не размещенные'" FullSelectorArgument="&lt;webctrl tag='H4' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H4' type='' aaname='Не размещенные расходные заказы' check:text='Не размещенные расходные заказы' /&gt;" Guid="02e86648-edab-48a2-8e87-4905fc5f471c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAABOoAAAATCAYAAAAu0OIdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAetSURBVHhe7d3vaxRHHMfx/kN90D+goIiJVSSIsRhKQZurafwZDDGt0hA1OS+x5IgNmofSUqE+agspzeNAH1r7yIIthDywf0Dw8fS+szO739mdvWSTu0vOvr/wopfZ2dnZzaYwH3bP944O1AwAAAAAAACAg0VQBwAAAAAAABwCBHUAAAAAAAAVjX4xa379bcO8/mfL9Hv98edf5odnP7mfqtXW1r9m6qtm9BqhOoI6AAAAAACAiiSk+/bxs+i2fiP1/gcD0W07ebz6ow3r8u1Hjo8W2qryY3RyrPznverW3AjqAAAAAAAAKpIn6WLt/Wg/QZ2QirWjOoI6AAAAAACAit6lcEqqv4O6aTO9tGSmPr9mjkW3948sqFt/07qsb82LVffz6iuz3WrZXHc/AwAAAAAAwDr4cKpzpPoyqBuaMLWbdXN77pFZbK4k6nVzYfhSvH8fIKgDAAAAAACoqCPh1PqbJHdZfWU2Xz6P9+kBqa4HdedmzV0fphUsmSvnIvu0cXqsYeaXkv0bC7mg7uOx6D69cmxk1szcmzFnBlX74A0zfu8bc2WkfYi4+6DObne1tZEOkLLbWzdY+o+dvDFrdttz80IG8rX9yjwptLu+7hjb6c25YTZtg9snOoekj52nOoc1mUd6LDeOrXBe/lhPXr5N++vPyXVw10WNn553vn/0WJqb71Z2Lv4a2zmnpfaNnLc9pp2Lu46xaxT5fWalz8kfK34tk3knwnPVv8NiX0vNx1/r6Hmm89Dno8dvVfS44dyze8fRvz/dDgAAAADAPkjF2qvx61uVARwAqX4K6gYu1s18a7/5mTvmzClpi7z6qkOyHjtZa81PQsQ5F9ZJSDfX+nlp2UzVLkf38XJBXbGSEEkFOO4mKgQibn/dpxDoqfAnC3zUeOkcdHjTKtuvbA7xcEkHdfazDrjyxw3ac2FUxaAufizdP5lvGLjl/iCDkFSfd/EaJBWGVcn22Hm4foVziuy/i3MNxg/G8fLjtTlPv13+W7hmfnsyn+y4xfugcF/qc9XtAAAAAADsg1SsvR9J9SKom56cNCeHLhecn2xUCOomzPXGilmsz6on1i6ZYx9ln4evPjTzD+6a4WC/3jox6sO6upnyId3oeLSvtrsn6tznoKIhXBbEFAKrtHRo4sImP5YbQ57K21yXbW9bn10oUzqHeLiUBXU60PIl84y0u4AonK+Um7MdPyw5bj44CqtNeKXO2fbJjZ9d+5KgyfVPw6l838LY7rPulzumVHYtwwrP1V3joNrNMz+vrMLjhWPs+t5x1zUo2dbu+gEAAAAAsEdShfYgu8jWonptm67hW+vg4OGhND/Q61tpK653k8zE/SDl1umlY+bW4dlaOiHVk6Bu4lp029BEhaDu7Ix9Mu/2WPnrrQNjC/YpvfGz8e0FHX4t1ztRa5iGHeORma7tHNKJXb76mguXYtwvPemjQhTbrm+M5BhZkBfp68aSG20tDYbK5qDa8+PrQCl3E/rjBjew668/F0Ot7Br5Y2RzLDuW5v7AXJ/0D0cfp/Ta6zkn7dvbsr+fk2uLnFMwr8I5ud9PybWUfWLnGlynmNi1+73kPP08yuam5pOdi7p3cuee9l9X4+m5AQAAAACwD1KF9tZa1K9L17bU2letnWVN69fB6fq+tbb3b8HJdr2uD9a5ad4g62G/lpfP2To6PqZaFwfjJKTKgrqn3/9it+uSNt1HSv8c1amgbuSuud9cMdOjkW3eaMMsNpvm+khkW8ypG+aTz780F6Km3Ou1FaWvuzr+NdhYX2Vv31GXBjuK3R77jrokQLFlbxI3phs/qeyGSvZLAhjpF4RB0Tmo8SOVzD/sk7Tp0Cs8TnDMQnAUVmGO0WNpyfbid9S50MlW6zqpuQXHdcfxwVn62V+PyDWy84uV/GGm11zNTeazq3PVc1bzVZK5udLhmi11nmoedh8Vvtna6d7JXXdbMob+/eXmBgAAAADAXknl22TN7HOANByLrK/9Olj+K2vgzXVZ0/o1cckaVsZJA7ZwPZ62l4xZ2t+RavdEnQ7r8iGdkMq3FRzmJ+o6TX8n3ei4eg1257AuC+r2SwUt0e09l9yE/g/k8FBhWHR758n/KPIhmg3ccn+YAAAAAABgd4rhlOQQWS5S9kRdSkK1bb8210Gdygx0OFcI6rJjpQFhyZjBHIJxElI7vfr69LufoyGdkIq1B7r6HXXK4A1zpd7a3jio76i7ZM7faha+k86HdfdvTWb/4EXEOxzUHVa9D+oAAAAAAEBn5cOp4I0yXy4csw/LqPKhWviWmM9UktwgKZWzFII618WW6xcdM/cg0x6DunakYu2BDr5emv6rr7Nfm2G936kJMza7bBaby2bqYvkTd103eNUMjxS/k+70yIQ52bMn6gAAAAAAAP4n8uFU8ZXVDbMZe5LuEJLqelDXYafHGsnrpM0V01hYNvMLj+xneZJteuxqdJ9+QFAHAAAAAABQ0UGEU90i1W9BnTU0YWo36+b23LKZf/DQTN+8Y4aHIv36CEEdAAAAAABARQcWTnWBVKeDuiPHPyu0VeXH6ORY+c971a25EdQBAAAAAABU9PrvrWh7P5LqdFD34dFP9xViyb4yhnzu5Fji8M6tZv4D71Onc6B36CQAAAAASUVORK5CYII=" InformativeScreenshot="2fdc60bd5609aa9880e7ec03a076afd8.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Не размещенные Расходные заказы-205' /&gt;" SearchSteps="FuzzySelector" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Edge" IconBase64="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" InformativeScreenshot="3c100576641e2b6b5c4cdad29fc05db0.png" Selector="&lt;html app='msedge.exe' title='ConsID.WMS-Не размещенные Расходные заказы-205'/&gt;" Url="http://10.29.19.230/cwms_mow/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

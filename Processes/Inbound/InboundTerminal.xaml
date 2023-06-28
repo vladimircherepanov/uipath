@@ -1,0 +1,110 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="InboundTerminal" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="700,1447" sap2010:WorkflowViewState.IdRef="InboundTerminal_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:uit="http://schemas.uipath.com/workflow/activities/terminal" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Terminal</x:String>
+      <x:String>UiPath.Terminal.Service</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.Terminal.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Terminal.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Terminal.Advanced.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Terminal.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Terminal</AssemblyReference>
+      <AssemblyReference>UiPath.Terminal.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="InboundTerminal" sap:VirtualizedContainerService.HintSize="546,1382" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uit:TerminalSession ContinueOnError="{x:Null}" ExistingConnection="{x:Null}" OutputConnection="{x:Null}" SSHPassword="{x:Null}" SSHUserName="{x:Null}" CloseConnection="False" ConnectionString="{}{'AttachExisting':false,'ConnectionProtocol':0,'ConnectionType':1,'EhllBasicMode':false,'EhllDll':null,'EhllEnhanced':true,'EhllFunction':'hllapi','EhllSession':'A','EnableSSL':false,'Host':'10.29.19.230','InProcessMode':false,'InternalEncoding':'IBM037','Mode':1,'Port':5400,'Profile':null,'ProviderType':9,'ShowTerminal':true,'TerminalModel':3,'TerminalType':2}" DelayMS="1000" DisplayName="Terminal Session" sap:VirtualizedContainerService.HintSize="484,1271" sap2010:WorkflowViewState.IdRef="TerminalSession_1" TimeoutMS="5000">
+      <uit:TerminalSession.Body>
+        <ActivityAction x:TypeArguments="uit:TerminalConnection">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="uit:TerminalConnection" Name="terminalSession" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="450,1171" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uit:TerminalSendKeys DelayMS="300" DisplayName="&quot;Отправить ключи (UDA999VCHEUDA999VCHE)&quot;" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="TerminalSendKeys_1" Keys="UDA999VCHEUDA999VCHE" TimeoutMS="5000" WaitType="READY" />
+            <uit:TerminalSendControlKey DelayMS="1000" DisplayName="Send Control Key" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="TerminalSendControlKey_1" Key="Transmit" TimeoutMS="5000" WaitType="READY" />
+            <uit:TerminalSendKeys DelayMS="300" DisplayName="&quot;Отправить ключи (POGR01)&quot;" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="TerminalSendKeys_2" Keys="POGR01" TimeoutMS="5000" WaitType="READY" />
+            <uit:TerminalSendControlKey DelayMS="1000" DisplayName="Send Control Key" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="TerminalSendControlKey_2" Key="Transmit" TimeoutMS="5000" WaitType="READY" />
+            <uit:TerminalSendKeys DelayMS="300" DisplayName="&quot;Отправить ключи (1)&quot;" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="TerminalSendKeys_3" Keys="1" TimeoutMS="5000" WaitType="READY" />
+            <uit:TerminalSendControlKey DelayMS="1000" DisplayName="Send Control Key" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="TerminalSendControlKey_3" Key="Transmit" TimeoutMS="5000" WaitType="READY" />
+            <uit:TerminalSendKeys DelayMS="300" DisplayName="&quot;Отправить ключи (1)&quot;" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="TerminalSendKeys_4" Keys="1" TimeoutMS="5000" WaitType="READY" />
+            <uit:TerminalSendControlKey DelayMS="1000" DisplayName="Send Control Key" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="TerminalSendControlKey_4" Key="Transmit" TimeoutMS="5000" WaitType="READY" />
+            <uit:TerminalSendKeys DelayMS="300" DisplayName="&quot;Отправить ключи (F3)&quot;" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="TerminalSendKeys_5" Keys="F3" TimeoutMS="5000" WaitType="READY" />
+            <uit:TerminalSendControlKey DelayMS="1000" DisplayName="Send Control Key" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="TerminalSendControlKey_5" Key="Transmit" TimeoutMS="5000" WaitType="READY" />
+            <uit:TerminalSendKeys DelayMS="300" DisplayName="&quot;Отправить ключи (F3)&quot;" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="TerminalSendKeys_6" Keys="99999999999" TimeoutMS="5000" WaitType="READY" />
+          </Sequence>
+        </ActivityAction>
+      </uit:TerminalSession.Body>
+    </uit:TerminalSession>
+  </Sequence>
+</Activity>
