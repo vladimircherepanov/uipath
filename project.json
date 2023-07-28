@@ -1,5 +1,6 @@
 {
   "name": "CONSID",
+  "projectId": "3f22f1f0-2166-497f-8b1a-89591947ed92",
   "description": "Тестовый проект автоматизации",
   "main": "Main.xaml",
   "dependencies": {
