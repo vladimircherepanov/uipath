@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="M40" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="676,2530" sap2010:WorkflowViewState.IdRef="M40_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="M40" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="867,2530" sap2010:WorkflowViewState.IdRef="M40_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -41,41 +41,43 @@
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <sco:Collection x:TypeArguments="AssemblyReference">
-      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>BouncyCastle.Crypto</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
-      <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Drawing</AssemblyReference>
-      <AssemblyReference>System.Core</AssemblyReference>
-      <AssemblyReference>System.Xml</AssemblyReference>
-      <AssemblyReference>System.Xml.Linq</AssemblyReference>
-      <AssemblyReference>PresentationFramework</AssemblyReference>
-      <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>PresentationCore</AssemblyReference>
-      <AssemblyReference>System.Xaml</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
-      <AssemblyReference>UiPath.Excel</AssemblyReference>
-      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
       <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.ValueTuple</AssemblyReference>
-      <AssemblyReference>NPOI</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
-      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
-      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Terminal</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
-      <AssemblyReference>BouncyCastle.Crypto</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="M40" sap:VirtualizedContainerService.HintSize="592,2465" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -156,7 +158,7 @@
                 <InArgument x:TypeArguments="x:Int32">[New Random ().Next (5,Materials.RowCount -1 )]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&#xD;&#xA;deliveryNum +5900000001,&#xD;&#xA;&quot;5312&quot;, &#xD;&#xA;Today.ToString(&quot;dd.MM.yyyy&quot;),&#xD;&#xA;&quot;ZNL&quot;,&#xD;&#xA;deliveryNum + 4900000001,&#xD;&#xA;refItem,&#xD;&#xA;item,&#xD;&#xA;Materials.Rows(randomMaterialRowNum).Item(&quot;MaterialCode&quot;).ToString,&#xD;&#xA;CInt(Materials.Rows(randomMaterialRowNum).Item(&quot;PCPAL&quot;)) * New Random ().Next (1,10),&#xD;&#xA;&quot;PC&quot;,&#xD;&#xA;Materials.Rows(randomMaterialRowNum).Item(&quot;Plant&quot;).ToString + Today.AddDays(CInt(Materials.Rows(randomMaterialRowNum).Item(&quot;Shelflife&quot;))).ToString(&quot;yyyyMMdd&quot;)&#xD;&#xA;}]" DataTable="[M40Data]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="434,186" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&#xA;deliveryNum +5900000001,&#xA;&quot;5312&quot;, &#xA;Today.ToString(&quot;dd.MM.yyyy&quot;),&#xA;&quot;ZNL&quot;,&#xA;deliveryNum + 4900000001,&#xA;refItem,&#xA;item,&#xA;Materials.Rows(randomMaterialRowNum).Item(&quot;MaterialCode&quot;).ToString,&#xA;CInt(Materials.Rows(randomMaterialRowNum).Item(&quot;PCPAL&quot;)) * New Random ().Next (1,10),&#xA;&quot;PC&quot;,&#xA;Materials.Rows(randomMaterialRowNum).Item(&quot;Plant&quot;).ToString + Today.AddDays(CInt(Materials.Rows(randomMaterialRowNum).Item(&quot;Shelflife&quot;))).ToString(&quot;yyyyMMdd&quot;)&#xA;}]" DataTable="[M40Data]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="434,186" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
           </Sequence>
         </ActivityAction>
       </ui:RepeatNumberOfTimesX.Body>
@@ -164,6 +166,6 @@
     <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{Cint(deliveryNum) + 1}]" DataTable="[DeliveriesMD]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="530,186" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
     <ui:WriteCsvFile AddHeaders="True" DataTable="[DeliveriesMD]" Delimitator="Comma" DisplayName="Write CSV" FilePath="DATA\MASTERDATA\Deliveries.csv" sap:VirtualizedContainerService.HintSize="530,153" sap2010:WorkflowViewState.IdRef="WriteCsvFile_2" ShouldQuote="True" />
     <ui:WriteCsvFile AddHeaders="True" DataTable="[M40Data]" Delimitator="Semicolon" DisplayName="Write CSV" FilePath="DATA\OUTPUT FILES\5441BCPM40.csv" sap:VirtualizedContainerService.HintSize="530,153" sap2010:WorkflowViewState.IdRef="WriteCsvFile_1" ShouldQuote="False" />
-    <ui:CopyFile ContinueOnError="{x:Null}" Destination="\\wrumosrub318\FilesExchange\CSV\TEST\" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="530,153" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="DATA\OUTPUT FILES\5441BCPM40.csv" />
+    <ui:CopyFile ContinueOnError="{x:Null}" Destination="\\wrumosrub318\FilesExchange\CSV\TEST\RU3SMRWMSS" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="530,153" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="DATA\OUTPUT FILES\5441BCPM40.csv" />
   </Sequence>
 </Activity>
