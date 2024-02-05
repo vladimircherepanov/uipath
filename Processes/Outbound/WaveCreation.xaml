@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="WaveCreation" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1198,1925" sap2010:WorkflowViewState.IdRef="WaveCreation_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="WaveCreation" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1196,1972.8" sap2010:WorkflowViewState.IdRef="WaveCreation_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -82,6 +82,7 @@
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -89,48 +90,48 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="WaveCreation" sap:VirtualizedContainerService.HintSize="1208,1900" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="WaveCreation" sap:VirtualizedContainerService.HintSize="1206.4,1908" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: ConsID.WMS-Не размещенные Расходные заказы-205" sap:VirtualizedContainerService.HintSize="1146,1789" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="d5505817-c2ad-4516-bc96-5b3c95e3eac4" Version="V1" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: ConsID.WMS-Не размещенные Расходные заказы-205" sap:VirtualizedContainerService.HintSize="1144,1796" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="d5505817-c2ad-4516-bc96-5b3c95e3eac4" Version="V1" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="1112,1573" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="1110.4,1579.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'editable text Логин'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1050,219" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="d5505817-c2ad-4516-bc96-5b3c95e3eac4" Text="UDA999VCHEDA999VCHE" Version="V1">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'editable text Логин'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1048,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="d5505817-c2ad-4516-bc96-5b3c95e3eac4" Text="UDA999VCHE" Version="V1">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="556, 252, 270, 35" ElementType="InputBox" FriendlyName="'editable text Логин'" FullSelectorArgument="&lt;ctrl name='ConsID.WMS - сиcтема управления складом нового поколения' role='document' /&gt;&lt;ctrl name='Авторизация пользователей' role='grouping' /&gt;&lt;ctrl name='Логин' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='ConsID.WMS - сиcтема управления складом нового поколения' role='document' /&gt;&lt;ctrl name='Авторизация пользователей' role='grouping' /&gt;&lt;ctrl name='Логин' role='editable text' automationid='' /&gt;" Guid="ba1af811-2c8b-4fcb-bf26-803462060ba0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARIAAAAnCAYAAADD98eJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIESURBVHhe7d1BS+NAGIDh/f/gXfYaPAlC8STeBP0BKj2UEig99VfM9tNmnKRx0Z1hLfp88IAJSW95mYmH/ErGGFM5QmKMqZ6jkOx2u7RardJyuQQYiTZEI6YzCknf92m9XqfNZpO22y3ASLQhGhGtKCeHJCoTF8zdDFCKVpQrkxySWLJYiQAfEa2IZgyTQxL7n7kbAOZEM4YREuCfCAlQTUiAakICVBMSoJqQANWEBKgmJEC19iF5vk3nvy/SWXad7uauA76N9iF5uE5nV/eH4/vUCQl8e81D8nhzmc5vng7HQgI/QfOQ3F1dpO5hOJ6EJFYrectzmRbPh/Oj7VCc39/X3abH0X3D70zjJFbw1RqH5CktuiIQ5UM+isHeSzwOx/F3GY64Lx/Hb+xXOd1wr5DAqWkckvcf8tjyvK1UXuXVy19C8npNBKoMybB6GQgJfKW2IZkLQk1I8ovbaUjKcEyPgf+taUgiFm//sQnFQ/7prc1+O5OvFxI4Zc1CsuiGF6Xl+fFD/hKavB2ZvGw9WsmUL22FBE5Z0xUJ8DMJCVBNSIBqQgJUExKgmpAA1YQEqCYkQDUhAarNhsS3f4GPevfbv/Fl8fjC+NxNAKVoRTRjmBySmL7vXy6wMgHmRBuiEdGKckYhiYnKxJIl9j8ApWhDuRIZ5igkxhjz2RESY0zlpPQH/UmgfbfhTNYAAAAASUVORK5CYII=" InformativeScreenshot="cb827f6584b027d98f22e9f85ffc7a3e.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='ConsID.WMS - сиcтема управления складом нового поколения - [InPr*' /&gt;" SearchSteps="Selector" />
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'editable text Пароль'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1050,219" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="HardwareEvents" IsPassword="True" ScopeIdentifier="d5505817-c2ad-4516-bc96-5b3c95e3eac4" Text="[&quot;&quot;&quot;UDA999VCHE&quot;&quot;&quot;]" Version="V1">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'editable text Пароль'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1048,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="HardwareEvents" ScopeIdentifier="d5505817-c2ad-4516-bc96-5b3c95e3eac4" Text="UDA999VCHE" Version="V1">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="556, 289, 270, 35" ElementType="InputBoxPassword" FriendlyName="'editable text Пароль'" FullSelectorArgument="&lt;ctrl name='ConsID.WMS - сиcтема управления складом нового поколения' role='document' /&gt;&lt;ctrl name='Авторизация пользователей' role='grouping' /&gt;&lt;ctrl name='Пароль' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='ConsID.WMS - сиcтема управления складом нового поколения' role='document' /&gt;&lt;ctrl name='Авторизация пользователей' role='grouping' /&gt;&lt;ctrl name='Пароль' role='editable text' automationid='' /&gt;" Guid="1d8b5d7f-aa11-41a4-a929-bb95c05352c4" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARIAAAAnCAYAAADD98eJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIVSURBVHhe7d3NSiNBFIDReX+YvbgNroSAuBJ3gj6AShYhNISs8hQ1uZ3udFWnBxwriaOcCwfSv+4+qtz0r2SMMZUjJMaY6jkKyXa7TcvlMi0WC4BCtCEaMZ4iJE3TpNVqldbrddpsNgCFaEM0IlqRzyEkUZm4YephgFy0Il+ZHEISSxYrEeAjohXRjH4OIYn9z9QDAFOiGf0ICfApQgJUExKgmpAA1YQEqCYkQDUhAaoJCVBNSIBqJwzJW7qb3aTf18euHt4m7gd+ihOH5DbdvZfnXx9uhQR+OCEBql00JPF72PLcp6funqf5TZq9PKdZf232mF67a5v3x3R1eCbuG9493k7tr8V7hncD5/dlK5L8fIRkHJb2WhuR/J0RifHx/rl9jMpz+3uAc7twSLJVR5g/t+eHCHQiILEqebk/ilDxvv6+3e8yJNnfEBU4uwuGZLSa2EWiOiST7yhXJGXIgHO4XEjabUq5fckj0P/uj4dnxluZ4TgPkJDA17ngiqQLRrflmM1Hq4k47rcjWVTaVUd/Pp5rYxF/a3ec/VO2DMlwv60NnN8JQ/J5+coC+H6EBKgmJEC1/yIkwPcmJEA1IQGqCQlQTUiAapMh8e1f4KP++u3f+LJ4fGF86iGAXLQimtHPISQxTdO0N1iZAFOiDdGIaEU+RUhiojKxZIn9D0Au2pCvRPo5CokxxvzrCIkxpnJS+gMgXofMNOHxTgAAAABJRU5ErkJggg==" InformativeScreenshot="c06cca82d7b5be129b3cf744db559cda.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='ConsID.WMS - сиcтема управления складом нового поколения - [InPr*' /&gt;" SearchSteps="Selector" />
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NClick ClickType="Single" DisplayName="Click 'Войти'" sap:VirtualizedContainerService.HintSize="1050,158" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d5505817-c2ad-4516-bc96-5b3c95e3eac4" Version="V1">
+            <uix:NClick ClickType="Single" DisplayName="Click 'Войти'" sap:VirtualizedContainerService.HintSize="1048,157.6" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d5505817-c2ad-4516-bc96-5b3c95e3eac4" Version="V1">
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="556, 326, 270, 32" ElementType="Button" FriendlyName="'Войти'" FullSelectorArgument="&lt;ctrl name='ConsID.WMS - сиcтема управления складом нового поколения' role='document' /&gt;&lt;ctrl name='Авторизация пользователей' role='grouping' /&gt;&lt;ctrl name='Войти' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='ConsID.WMS - сиcтема управления складом нового поколения' role='document' /&gt;&lt;ctrl name='Авторизация пользователей' role='grouping' /&gt;&lt;ctrl name='Войти' role='push button' automationid='' check:text='Войти' /&gt;" Guid="f3ab2652-8446-48b1-aa10-a48273317abd" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARIAAAAkCAYAAABFY7UnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALZSURBVHhe7dq/axNhHMdx/xsXF8HNwaGjY/6ACoIS0KlOioOCUBCpLi4FpVBc6iIOFmmhZmiKEkujiVaKICmWtpRQm9okbfz6fHP5Xi7pk/64gEju/YEX9JrniiB9k4ueEcYY63OEhDHW9wgJY6zvHQrJ5LdHcn3ukqSmzwJAB22DNqJ7HSG5nU15bwaAKG1FdGFInhfveW8AAB9thi0MydXZC97DAOCjzbCFIfEdBICj2AgJgNhshARAbDZCAiA2GyEBEJuNkACIzUZIEmBia7v1txysXivIm5z/bKcbkqlUpfTzmvt6SMY3SlIvT3adQZLZCEkCBCEpyUJ+RB4XX0up4S5/PfOe7ZZenpP1g6rUG05tRWY++c8hmWyEJAGCkLgItK5nKu6yMnXoHHBaNkKSANGQpJeCdyTra/q44l7P3JfMTuTRx73ryBSGmq91BCczKvmaHnA/Z3VFv+hYZWu093m9xkCyEZIE6P6MRPay8nJJYzEsMztVkYaLx+dhufV+VBZ23fXBorxw97XDMBT8jD96czsMze/tZ2WidX3ceQweGyFJgCAkrc9I8mORWEy574qUN0ba51cWpS7bkv/SDkN6OSsV2ZTcpr4TOT4kvc5j8NgISQIEIYn8QjcfTTQWQUjW14bb5y0kxVYYdrOS39fY3Gndd0xIjjiPwWMjJAngfUfSKMgrfbTRX/7uR5taEIfma7rqnDzVn3WSkOh6nMfgsRGSBAhCElnkA9XU/Jjkfrdfr+8thv/HJAiDe0Sxf/I9UUh6n8fgsRESALHZCAmA2GyEBEBsNkICIDYbIQEQm42QAIjNRkgAxGYLQ3Ll7TnvQQDw0WbYwpA8nL/sPQwAPtoMWxiS1Y1puTl73nsDAERpK7QZtjAkuuUf4/Lg3UUecwB4aRu0EdqK6DpCotssf5DC9yfy8etdAP9Y7j+mfz5tgzaie4dCwhhjpx0hYYz1OZG/dQP/IZNPEP4AAAAASUVORK5CYII=" InformativeScreenshot="52921558a43cf6c29d46c83126ec5693.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='ConsID.WMS - сиcтема управления складом нового поколения - [InPr*' /&gt;" SearchSteps="Selector" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Не размещенные'" sap:VirtualizedContainerService.HintSize="1050,746" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="d5505817-c2ad-4516-bc96-5b3c95e3eac4" Timeout="10" Version="V1">
+            <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Не размещенные'" sap:VirtualizedContainerService.HintSize="1048,749.6" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="d5505817-c2ad-4516-bc96-5b3c95e3eac4" Timeout="10" Version="V1">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Целевой объект появляется" sap:VirtualizedContainerService.HintSize="450,529" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <Sequence DisplayName="Целевой объект появляется" sap:VirtualizedContainerService.HintSize="449.6,531.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Раунд'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,217" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="d5505817-c2ad-4516-bc96-5b3c95e3eac4" Text="5948728" Version="V1">
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Раунд'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="d5505817-c2ad-4516-bc96-5b3c95e3eac4" Text="5948728" Version="V1">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_mow/(S(xcujsm3ubnqytfbposhu5vy3))/OheWebReports.aspx#ref=205&amp;popup=0" DesignTimeRectangle="669, 272, 198, 23" ElementType="InputBox" FriendlyName="'INPUT eb_205_host_stop3…'" FullSelectorArgument="&lt;webctrl id='eb_205_host_stop33261' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='eb_205_host_stop33261' tag='INPUT' type='text' aaname='Раунд:' /&gt;" Guid="b6272c51-81c5-4b20-af50-13e8e5819bb0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMoAAAAbCAYAAAA9BxAiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC0SURBVHhe7dxBCoMwAETR3v+A4gXESwgpE7Ag0nb2vgezyf6TVfIawF+fUPZ9H+u6jmVZzB6/tJAmTjOUHGzbNo7jmIfwdGkhTZyxzFBSj0jgKk2kjZih5KoB7s42hAI/CAUKQoGCUKAgFCgIBQpCgYJQoCAUKAgFCkKBglCgIBQoCAUKQoGCUKAgFCgIBQqXULyZh7vbm3m/sMBVWrj9whI5SD25asyevrRwRhKfUIBvxngDBXATn28l5hcAAAAASUVORK5CYII=" InformativeScreenshot="719f9ed386a3690f269ad3dc6c49a365.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Не размещенные Расходные заказы-205' /&gt;" SearchSteps="Selector">
                         <uix:TargetAnchorable.Anchors>
@@ -141,7 +142,7 @@
                       </uix:TargetAnchorable>
                     </uix:NTypeInto.Target>
                   </uix:NTypeInto>
-                  <uix:NClick ClickType="Single" DisplayName="Click 'Поиск'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d5505817-c2ad-4516-bc96-5b3c95e3eac4" Version="V1">
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Поиск'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d5505817-c2ad-4516-bc96-5b3c95e3eac4" Version="V1">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_mow/(S(xcujsm3ubnqytfbposhu5vy3))/OheWebReports.aspx#ref=205&amp;popup=0" DesignTimeRectangle="1098, 271, 63, 26" ElementType="Button" FriendlyName="'Поиск'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' aaname='Поиск' check:text='Поиск' /&gt;" Guid="64311944-e13e-4784-8ad0-3c5760cba9c6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEMAAAAeCAYAAAB32qNaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ2SURBVGhD7Zi/a9tAFMf7r3nx3KWL59IpSzdNHkKXYC8eggOmJlBKSBYvVcAQQmIPNRQbYXAMxRA1EC3GQSBc4iTw7XuSTn5qVFtWhqTKfeHh0713P74fdIfRG2hF0jCEYjBub+9wf/8QPuVb7JP9SkUwOHF2/gNv331Eofg+98E+2a8EEsFgUq8FhAr2K09C7JgkDch7SGkYQhqGkIYh9EQY26gcdHFy3kfnpAfzYB8fEutebkhlhlFqDOF4c9hWH61mA5+ap+hYDjxvil7DWNa2nXD2uDzrKDbfc4VUNhh7Y8xuJjgsJ+TKbYxuXAwUEB/GHIM9VdOFTT05gVFD59pFr5qcq+3WUKgOMZsOUeG+dTBib86yrm7NqWiMuqix20HOvPIffam+ZX0wP666wfxrQmpzGDtklBYqFaswyuI4EIjWhDbEhpoGbZiA7VD/ShhB+7GhBHOqzp/PgclzibaqN/k3JQgOqc1hNMZwyIi/+IM6DgpEYLJEdXVrSjmqXwWDjpsnc/8wZ1tcF8CQwOS+/H5fIaiUIbU5DDLgXHyju4FMLWjQwoV9HQfBdV8uCAabTPFmBO240cgcP/vQEt4MATMaK/MpQirDndHGT3eCz9xWQEgSRKHYwsj9hUNur4Sh8kpLEwGMcJyEQTl5ZzwGeYQBFUfzrwmpDDBo4b6LmTJPQAbfJQiDNkb5frrNPHdIZYLBd4R5Oae74xSVLdG/tY8W3RXeZRdGrP7lhlRGGBzbqB1P4Lh3WPwOw51idPz1v/oXKvUEGPkIKQ1DSMMQ0jCEIhj6G6iAob+O/3VMOCFJ5VnsU4JgxWC8dmkYQhpGJOAPObUuUiBc57AAAAAASUVORK5CYII=" InformativeScreenshot="350a359e4884e146873d70c53d8a8ed8.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Не размещенные Расходные заказы-205' /&gt;" SearchSteps="Selector">
                         <uix:TargetAnchorable.Anchors>
@@ -155,16 +156,16 @@
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Целевой объект не появляется" sap:VirtualizedContainerService.HintSize="546,343" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <Sequence DisplayName="Целевой объект не появляется" sap:VirtualizedContainerService.HintSize="545.6,345.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:TimeoutScope TimeoutMessage="{x:Null}" DisplayName="Timeout Scope" sap:VirtualizedContainerService.HintSize="484,228" sap2010:WorkflowViewState.IdRef="TimeoutScope_1" ThrowExceptionAfter="20.00:00:00">
+                  <ui:TimeoutScope TimeoutMessage="{x:Null}" DisplayName="Timeout Scope" sap:VirtualizedContainerService.HintSize="483.2,230.4" sap2010:WorkflowViewState.IdRef="TimeoutScope_1" ThrowExceptionAfter="20.00:00:00">
                     <ui:TimeoutScope.Body>
                       <ActivityAction x:TypeArguments="Activity">
-                        <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="450,103" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                        <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="449.6,104.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
