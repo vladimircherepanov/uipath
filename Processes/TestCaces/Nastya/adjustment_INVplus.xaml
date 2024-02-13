@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Нужно_переименовать" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="824,569.6" sap2010:WorkflowViewState.IdRef="Нужно_переименовать_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Нужно_переименовать" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="797.6,2170.4" sap2010:WorkflowViewState.IdRef="Нужно_переименовать_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>Microsoft.VisualBasic</x:String>
@@ -30,6 +30,19 @@
       <x:String>UiPath.CSV.Activities</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -60,17 +73,316 @@
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Terminal</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="adjustment_INVplus" sap:VirtualizedContainerService.HintSize="496,267.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="adjustment_INVplus" sap:VirtualizedContainerService.HintSize="592,3114.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="sd:DataTable" Name="log_x" />
+      <Variable x:TypeArguments="sd1:DataTable" Name="log_x" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadCsvFile DataTable="[log_x]" Delimitator="Comma" DisplayName="Read CSV" FilePath="Log_INVplus.csv" sap:VirtualizedContainerService.HintSize="433.6,155.2" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: ConsID.WMS - сиcтема управления складом нового поколения" sap:VirtualizedContainerService.HintSize="529.6,2086.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="8b2f5d97-80df-4792-93ac-1f347c65690b" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="496,1869.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="ae16adb3-73f5-4469-b23d-595e5e7f80d3" DisplayName="CV Screen Scope 'BODY'" sap:VirtualizedContainerService.HintSize="433.6,1161.6" sap2010:WorkflowViewState.IdRef="CVScope_1" Version="V3">
+              <p:CVScope.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Сделать" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <p:CvTypeIntoWithDescriptor DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (600,207,327,43)&quot; +&#xD;&#xA;&quot;Anchor: Text 'YMHble peweHNA A/A ycnewhorO 603Heca' (602,174,322,17)&quot;]" DesignTimeCacheId="ae16adb3-73f5-4469-b23d-595e5e7f80d3" DesignTimeScaleFactor="1.25" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="400,186.4" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_1" InformativeScreenshot="2fb09c43769e310257b1bb4a35607cb4" Text="[&quot;UDA999ALYU&quot;]" Version="V3">
+                      <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
+                        <uc:CvDescriptor>
+                          <uc:CvDescriptor.Anchors>
+                            <x:Array Type="uc:CvElementDescriptor">
+                              <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="602, 174, 322, 17" ElementType="Text" Text="YMHble peweHNA A/A ycnewhorO 603Heca" />
+                            </x:Array>
+                          </uc:CvDescriptor.Anchors>
+                          <uc:CvDescriptor.Target>
+                            <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="600, 207, 327, 43" ElementType="InputBox" />
+                          </uc:CvDescriptor.Target>
+                        </uc:CvDescriptor>
+                      </p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
+                      <p:CvTypeIntoWithDescriptor.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="154f7f54-df14-494e-9dbd-bebc8ab3aeb9">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </p:CvTypeIntoWithDescriptor.Target>
+                    </p:CvTypeIntoWithDescriptor>
+                    <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="400,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(esc)][u(hk)]" Version="V1" />
+                    <p:CvTypeIntoWithDescriptor DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (600,252,327,42)&quot; +&#xD;&#xA;&quot;Anchor: Text 'YMHble peweHNA A/A ycnewhorO 603Heca' (602,174,322,17)&quot;]" DesignTimeCacheId="ae16adb3-73f5-4469-b23d-595e5e7f80d3" DesignTimeScaleFactor="1.25" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="400,186.4" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_2" InformativeScreenshot="7e90a3a0ce073acaa50318acf0ee7f29" Text="[&quot;UDA999ALYU&quot;]" Version="V3">
+                      <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
+                        <uc:CvDescriptor>
+                          <uc:CvDescriptor.Anchors>
+                            <x:Array Type="uc:CvElementDescriptor">
+                              <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="602, 174, 322, 17" ElementType="Text" Text="YMHble peweHNA A/A ycnewhorO 603Heca" />
+                            </x:Array>
+                          </uc:CvDescriptor.Anchors>
+                          <uc:CvDescriptor.Target>
+                            <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="600, 252, 327, 42" ElementType="InputBox" />
+                          </uc:CvDescriptor.Target>
+                        </uc:CvDescriptor>
+                      </p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
+                      <p:CvTypeIntoWithDescriptor.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="d83409b8-d209-4ad3-a64a-64b84eb2f9ee">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </p:CvTypeIntoWithDescriptor.Target>
+                    </p:CvTypeIntoWithDescriptor>
+                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (600,296,326,40)&quot; +&#xD;&#xA;&quot;Anchor: Text 'BouTn' (743,309,40,14)&quot;]" DesignTimeCacheId="ae16adb3-73f5-4469-b23d-595e5e7f80d3" DesignTimeScaleFactor="1.25" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="400,137.6" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_1" InformativeScreenshot="fa56c52ad6a59f198418b4c04f4e4e9b" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V3">
+                      <p:CvClickWithDescriptor.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </p:CvClickWithDescriptor.CursorPosition>
+                      <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                        <uc:CvDescriptor>
+                          <uc:CvDescriptor.Anchors>
+                            <x:Array Type="uc:CvElementDescriptor">
+                              <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="743, 309, 40, 14" ElementType="Text" Text="BouTn" />
+                            </x:Array>
+                          </uc:CvDescriptor.Anchors>
+                          <uc:CvDescriptor.Target>
+                            <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="600, 296, 326, 40" ElementType="Button" />
+                          </uc:CvDescriptor.Target>
+                        </uc:CvDescriptor>
+                      </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                      <p:CvClickWithDescriptor.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="accda9d4-2d06-427e-b6dc-a026bde30e83">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </p:CvClickWithDescriptor.Target>
+                    </p:CvClickWithDescriptor>
+                  </Sequence>
+                </ActivityAction>
+              </p:CVScope.Body>
+              <p:CVScope.DesignTimeCacheContainer>
+                <uc:CvCacheContainer>
+                  <uc:CvCacheContainer.Caches>
+                    <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
+                      <uc:CVCache DisplayName="Экран CV Type Into - 'YMHble p (Главный)" Id="ae16adb3-73f5-4469-b23d-595e5e7f80d3" InformativeScreenshot="cfbf6bd81067c210ea3964cd964f1414" LogicalPosition="5, 87" OcrText="AsTopn3ayna consid TeXHOnornn YMHble peweHNA A/A ycnewhorO 603Heca JlornH Napo/1b BouTn 2007-2024 KoHCWA TexHonornn" Position="5, 87" ScaleFactor="1.25" ScreenshotGuid="7b3ee4e5-3613-4623-bea4-3a224cd4c87c" ServerVersion="1">
+                        <uc:CVCache.CvUiElements>
+                          <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="16">
+                            <uc:CvElementInfo Category="Button" Region="600, 296, 326, 40" />
+                            <uc:CvElementInfo Category="Icon" Region="808, 100, 36, 39" />
+                            <uc:CvElementInfo Category="InputBox" Region="600, 207, 327, 43" />
+                            <uc:CvElementInfo Category="InputBox" Region="600, 252, 327, 42" />
+                            <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="600, 252, 326, 42" />
+                            <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="600, 207, 326, 43" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="904, 104, 24, 25" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="755, 88, 193, 60" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="593, 294, 336, 42" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="579, 91, 256, 58" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="925, 88, 28, 63" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="603, 292, 155, 41" />
+                          </scg:List>
+                        </uc:CVCache.CvUiElements>
+                        <uc:CVCache.OcrTexts>
+                          <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="16">
+                            <uc:OcrTextInfo Region="599, 113, 108, 18" Text="AsTopn3ayna" />
+                            <uc:OcrTextInfo Region="845, 104, 82, 23" Text="consid" />
+                            <uc:OcrTextInfo Region="847, 128, 80, 8" Text="TeXHOnornn" />
+                            <uc:OcrTextInfo Region="602, 175, 56, 13" Text="YMHble" />
+                            <uc:OcrTextInfo Region="660, 177, 72, 15" Text="peweHNA" />
+                            <uc:OcrTextInfo Region="736, 178, 31, 13" Text="A/A" />
+                            <uc:OcrTextInfo Region="768, 177, 88, 15" Text="ycnewhorO" />
+                            <uc:OcrTextInfo Region="860, 174, 64, 14" Text="603Heca" />
+                            <uc:OcrTextInfo Region="616, 224, 40, 12" Text="JlornH" />
+                            <uc:OcrTextInfo Region="616, 268, 48, 15" Text="Napo/1b" />
+                            <uc:OcrTextInfo Region="743, 309, 40, 14" Text="BouTn" />
+                            <uc:OcrTextInfo Region="676, 360, 60, 11" Text="2007-2024" />
+                            <uc:OcrTextInfo Region="738, 360, 42, 12" Text="KoHCWA" />
+                            <uc:OcrTextInfo Region="782, 360, 67, 11" Text="TexHonornn" />
+                          </scg:List>
+                        </uc:CVCache.OcrTexts>
+                      </uc:CVCache>
+                    </scg:List>
+                  </uc:CvCacheContainer.Caches>
+                </uc:CvCacheContainer>
+              </p:CVScope.DesignTimeCacheContainer>
+              <p:CVScope.OCREngine>
+                <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                  <ActivityFunc.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                  </ActivityFunc.Argument>
+                  <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_1" Image="[Image]" Language="en" Profile="Screen" Scale="1" Timeout="100000" />
+                </ActivityFunc>
+              </p:CVScope.OCREngine>
+              <p:CVScope.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="54160f76-acba-4e8d-ba7a-450a7dda190b" InformativeScreenshot="0e4c36c8b9b7c4c5e7f96dff8fcf7e51" Selector="&lt;webctrl tag='BODY' /&gt;" WaitForReady="INTERACTIVE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </p:CVScope.Target>
+              <p:CVScope.UseLocalServer>
+                <InArgument x:TypeArguments="x:Boolean" />
+              </p:CVScope.UseLocalServer>
+            </p:CVScope>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Управление Складом'" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8b2f5d97-80df-4792-93ac-1f347c65690b" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_mow_test/(S(5ki45jupr51i3u5s3uqmcl0t))/OheWebReports.aspx#ref=5" DesignTimeRectangle="495, 174, 166, 19" ElementType="Text" FriendlyName="'Управление Складом'" FullSelectorArgument="&lt;webctrl aaname='Управление Складом' parentid='top-menu' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Управление Складом' parentid='top-menu' tag='SPAN' type='' check:text='Управление Складом' /&gt;" Guid="a4f87d34-f526-4370-81a1-513b0728c780" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKoAAAAXCAYAAACbItQpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAPzSURBVGhD7ZexbhsxDIb7YF075gWyZvKeyVu2DAEKpIAnD5k8ZAjQoUDeTj1JpMifpM5ykQY9V8M3RCdSP8lfd86Xr99u0mTyrzONOtkE06iTTTCNOtkE06iTTTCNOtkEYtT9S/r56z0d9rhBc398X/a8pPvg2eQvQDPRnJ528d4rB96oxYivz+lWrQkP6fAfN+pz2aXH12zMt/R4p9bvntMpG7Y7o+sFP/3UiMiMt09vS+Pm2/QzWP1yrczomnG/UWND6rcp3/YIjuP9D7g3ehPwW0IBQwg+f25PkKNhzqz1qefHB8nDtcHaQtEgb7ewR6whyqfOW/tpVThrxF263+/S7R09N9pav1jHBb2pF0TjL4vfU0G95+qu/vDr/WfBP1P+E4+DiYeJe+QwyUNxujnURBBLjW5rdhDRnihPcF5tss5FOlstcW1WgzeqGkyLpdy6Xqs7YmSPBrRVHRB7SW/AuH5P2wf9sX7p1+32ZMJe12dac2BUHgQXb4XEwwyNakWYpvnmZEx+GARjNI0Mg/ZIHQQYI67NarBG5X6dVCz2UKiXRZsc6cV10dpKjSb3Bb3BPQtB77N+7CHOwvaGwbop5vji9Jb8ZR31hEbVA/MHx8PEfdbcTMfAGTJMg/cEzeK9rZCBYfQNoLX+iVFr/GH5HEssnr2Wy9LX2UHlK2aw2keMCtCzJaaitdRna0YtGs7WzTH1p6Foy+vLnr3X3DHqApkhg8L0QGR/PDx5XjGx1EQ8x+xROgB9/rBRTQ4FnB081wPTtcpgtO61PBk9fAPV63vXQffHzKQwaNT6xmNojmCuTDRXbVSftwG5JKb0Us86xwaa+0ZdqOLZfIweiKxHRkWDyzoM0xVl8rtmZXSe5e9ho9paLHFtVkPLVc7ldR3byTNEr3cCzEVpC99mI0YtOeweXle9h3oZ1BtqyEAuFVNy5lqqJlkbNmpN5sR3hhAZ1Q0KBKzvaeu2WQQ0JCjMDSPcY9c7BjMaaq34m9TG9i7GyIWJXxDEWn/oGZh8oDdcT9hjW7czIRp1PRf6o8ZULYenrBPr0Jq7Ro1FZeJh4gDIhHAYrbWclAcGwmsqf2hUY/KBYeQ123i/J64tNmrOFWhvsbbehchIIdwHUzfFw7mdS9TiRnpTchhdtCa5aozXrk0nf0PdLj/GtH5yzHmj0iEF06RGPMzIqKfllkg+HyMDEbI4uH2tYYZSlIrXjdG5zbqYjABNcW2xGezQoti4Pnm+jtO64IxitEndx/SDzx7pje1zftYu1necYwepzdZtvWTMbS/weaN+FEbIZOPUefYvWTXmJZfwUqZRJwNMo042wdUadTL5WKZRJxvgJv0G+bDibKpG6jEAAAAASUVORK5CYII=" InformativeScreenshot="3fdb2e5c97940848be62649b5471fe10.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Список ячеек по классу товара-5' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Товарный запас'" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8b2f5d97-80df-4792-93ac-1f347c65690b" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_mow_test/(S(5ki45jupr51i3u5s3uqmcl0t))/OheWebReports.aspx#ref=5" DesignTimeRectangle="468, 227, 109, 16" ElementType="Text" FriendlyName="'Товарный запас'" FullSelectorArgument="&lt;webctrl aaname='Товарный запас' parentid='top-menu' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Товарный запас' parentid='top-menu' tag='SPAN' type='' check:text='Товарный запас' /&gt;" Guid="b2566a09-81b0-4a39-9cca-e6f0d04d33f0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHEAAAAUCAYAAAC6R9I5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJMSURBVGhD7Vc9d8IwDOxP6taNgY2FhY2FhYmJx8KWiQUWFv6vG8tfJ0VOHPry2qQe7j2wrLN0Z5n24/NrZSrmjWriAlBNXACqiQtANXEBSCbuG/N4vnpwN8cNT541NmfT3M5mTd8P5vJszE7umQkyk7g1x9vLNKetElsO1qd7vKRz7vVfm7gUjDZxd80/sTzmcT2kfOXJTmfYJ+1lLqf2mYP4ZR/4fTx+l2taPIGmzj+f+DnEqXaxhsCpfYint9s36GKfbRbzgLN68wmutxTn548w0a3h4a6xdCAVg6ahsNQML47nh0JhD5nO45OYGC5XzkSKJ+F6uaROub5L84MuoKu8cOUmKsXIfR0T/S3MCcs5XbFy+hPnVCbaHu7mcpVi5tEVvic+YCLmqXFxgTSUm5ghowO9cd1nIRiAOf5mRfRNGjYk8xLQRD3GhZGfbZ+4hucjaA/xKqKGaQ4IXKUmZvJL6vqxiTh9nUn0whKPn0pbYORVJnHIRB7HNSUO/ChG/Exx11OJWAEdrvZc/BlgXAMmDuUzrgymfU5hTS2GLkbgBMNhT+J8w0SoTxPm2HKH/SViRUTzFZ1aUM2Bq9fEgvzM8CAm/sNGiIjFUHPtfmEi8mkmjzIRBESTXC28VozH/Ewsiew1kTyWO+wvMLE33/fFvBDGjjDRgRqwhxB4cTzmIZuPMZuLBXoT2L8YyK+YpJiY+B1CD2iEE4rfbown/gAvduTt1hVjlgMvX6+JBfnaHlF7xsTfABpSMQbVxAWgmrgA/CETK97DynwDF0z4UCBoIREAAAAASUVORK5CYII=" InformativeScreenshot="39ba9c7c76bc859870c0c0bb7518d079.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Список ячеек по классу товара-5' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="663, 233, 8, 4" FriendlyName="'B'" FullSelectorArgument="&lt;webctrl idx='4' tag='B' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='B' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAwAAAAICAYAAADN5B7xAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAA5SURBVChTYzAwt/tPCqajhtikzP9d/VOwYpAchgZcmpAVgzCGk5A1oSsGYax+ACnEphiESfS03X8AoCmt+WymIxIAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'по ГМ'" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8b2f5d97-80df-4792-93ac-1f347c65690b" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_mow_test/(S(5ki45jupr51i3u5s3uqmcl0t))/OheWebReports.aspx#" DesignTimeRectangle="446, 360, 248, 32" ElementType="Text" FriendlyName="'по ГМ'" FullSelectorArgument="&lt;webctrl aaname='по ГМ' parentid='top-menu' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='по ГМ' parentid='top-menu' tag='A' type='' check:text='по ГМ' /&gt;" Guid="f5d2a7b5-6cb0-434f-b838-e4b6a0e8d62d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPwAAAAkCAYAAACtxlclAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGeSURBVHhe7dkvb8JAGMfxvZqpqUkUSxocaghkBVU1CFyDQjSZmdn7vd099C+7Jk2WQunvKz7J6B2t+vaebS8fm4MLXt/eASxQ3XhA8MDCETwghOABIQQPCCF4QAjBA0IIHhBC8IAQggeEEDwghOABIU8f/Pb0476+487Zp0sv/ufTPvpdsyts73EXWQMWZhnBDwadWPDnS+njTyLre3cMawQPERrBZ7kPO3er23V/utsawUPE3YMfGsF7wVVjdi1+Ol+NCz6xff2ow1rp0rU/5W+fDyzUY4LvBdoPbpWVPvIQYrW+zm3kHop+bPD2EunuC/e1U5/goWNmwXcC7XzHXgKxkdwbHbw9p3Dbai3cs71O8NAws+AH4rNTvo21a3zw173ti6WeIggeOp4jePud/v/BN2N9M86HPQQPHTMLfsqRPnwOzypc2ozz9TWCh4aZBT/hH+06n3v3J3gImV3wZoJ/y9XX/k4LBA8ddw8ewOMQPCCE4AEhBA8IIXhACMEDQggeEELwgBCCB4QQPCCE4AEhBA8IIXhASBv8wf0CgMJvhlNZMzsAAAAASUVORK5CYII=" InformativeScreenshot="85bfd6d5ec8ae57c13159547d9f7f935.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Список ячеек по классу товара-5' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Edge" IconBase64="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" InformativeScreenshot="19ac21f892e06ab95c5662e8886d220d.png" Selector="&lt;html app='msedge.exe' title='ConsID.WMS - сиcтема управления складом нового поколения'/&gt;" Url="http://10.29.19.230/cwms_mow_test/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="529.6,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Игнорируемые действия" sap:VirtualizedContainerService.HintSize="496,267.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ReadCsvFile DataTable="[log_x]" Delimitator="Comma" DisplayName="Read CSV" FilePath="Log_INVplus.csv" sap:VirtualizedContainerService.HintSize="433.6,155.2" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:ReadRange AddHeaders="False" DataTable="[log_x]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="529.6,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Log_INVplus" WorkbookPath="Log_INVplus.xlsx">
+      <ui:ReadRange.Range>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </ui:ReadRange.Range>
+    </ui:ReadRange>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="529.6,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Игнорируемые действия" sap:VirtualizedContainerService.HintSize="496,195.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign sap:VirtualizedContainerService.HintSize="433.6,83.2" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign.To>
+              <OutArgument x:TypeArguments="sd1:DataTable">[log_x]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="sd1:DataTable" xml:space="preserve">[log_x.Columns("Наименование процесса").MaxLength=-1
+log_x.Columns("Наименование подпроцесса").MaxLength=-1
+log_x.Columns("#").MaxLength=-1
+log_x.Columns("Профиль").MaxLength=-1
+log_x.Columns("UI").MaxLength=-1
+log_x.Columns("Операция").MaxLength=-1
+log_x.Columns("Статус").MaxLength=-1
+log_x.Columns("Комментарий").MaxLength=-1]</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;Изменение стока&quot;, &quot;Корректировка запаса&quot;, &quot;1&quot;, &quot;админ&quot;, &quot;WEB&quot;, &quot;Корректировка любой паллеты в большую сторону мотивом INV&quot;, &quot;OK&quot;, Date.Now}]" DataTable="[log_x]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="529.6,188" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DataTable="[log_x]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="529.6,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Log_INVplus" WorkbookPath="C:\UIPath\uipath\uipath_2\Log_INVplus.xlsx" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="529.6,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Игнорируемые действия" sap:VirtualizedContainerService.HintSize="496,164.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:WriteCsvFile AddHeaders="True" DataTable="[log_x]" Delimitator="Comma" DisplayName="Write CSV" FilePath="Log_INVplus.csv" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="WriteCsvFile_1" ShouldQuote="True">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:WriteCsvFile>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="529.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;The end!&quot;]" />
   </Sequence>
 </Activity>
