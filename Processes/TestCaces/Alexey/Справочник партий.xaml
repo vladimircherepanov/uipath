@@ -1,0 +1,774 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Нужно_переименовать" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1232,6791" sap2010:WorkflowViewState.IdRef="Нужно_переименовать_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Core.Activities.Storage</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>System.Security</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Terminal</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="Справочник партий" sap:VirtualizedContainerService.HintSize="1112,6726" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd1:DataTable" Name="LogListLot" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ReadCsvFile DataTable="[LogListLot]" Delimitator="Comma" DisplayName="Read CSV" FilePath="Processes\TestCaces\Alexey\LOG\ListLotLog.csv" sap:VirtualizedContainerService.HintSize="1050,153" sap2010:WorkflowViewState.IdRef="ReadCsvFile_3" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: ConsID.WMS - сиcтема управления складом нового поколения" sap:VirtualizedContainerService.HintSize="1050,6422" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="1016,6205" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" DisplayName="Click 'INPUT'" sap:VirtualizedContainerService.HintSize="954,157" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_mow_test/(S(zoalvlbqsjumcaaqwvll20id))/OheWebReports.aspx" DesignTimeRectangle="764, 386, 360, 46" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='' /&gt;" Guid="0536ae7b-5dcf-4b12-9054-b4f3f7fd1504" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAWwAAAAyCAYAAAB4bOGKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKjSURBVHhe7do/SyNBGMDh+/5gL9fqNYJFsBI7i3wAlaRJIGCbL5Bqzje668xmuFNwN5nwvPAUmf0Tqx/DxF/JGGNMEyPYxhjTyFSDvd1u02q1SsvlMi0WCwAmEM2N9kaDa1MEe7fb7W9er9dps9mk19dXACYU7Y0GR4ujyfkUwe5iXXsJANPpop1PH+zYgos1wOmIJufHI32wo+SOQQBORzQ532X3wY7D7toDABxPtLmbPtjxC2XtZgCOJ9rcjWADnDDBBmiEYAM0QrABGiHYAI0QbIBGCDZAIwQboBGCDdAIwQZohGADNGKaYM/v0sXvPwM3afZSuReAqkmC/XR/ky6uHtJTvzZP14IN8C2TBPvx9m1HfTvP1gQb4LsmC/bl/XO2Vgv2c5pdlccm1/Ps+stDusyu9df363fpsX/P5739d+4/17+v/LsATtcEwX4PYxHfg2DH57cI57vwL0W3W8+D/Rl+wQbOyQTBru2my7XDM+7K+heD3T0zy3f1gg2cgfGDfbADDmWwD49MPuTPfiXY2T3FO/fr5XFKR7CBVowe7PrueYxglzvmw2APn7XDBtoyerAjnOV/iISfPxKZDd4h2MC5GTfY+1AOf3AMw3Pt+DwI+/DZfwY7jjfKa4INnJvRgh0x3J8TH+yuwzDY3drHM5UA/y/Yw/AKNnBuxt1hA/BjBBugEYIN0AjBBmiEYAM0QrABGiHYAI0QbIBGCDZAIwQboBGCDdCIarCXy2X1ZgCOJ9rcTR/s1WqVNptN9QEAphdNjjZ30wd7u92m9XpdfQiA6UWTo83d9MGOiZKLNsDxRYvz3XVMEezdbtdH2/EIwPSivV2so8n5FMHuJrbgcXMcdscvlACML5ob7c2PQfKpBtsYY8zpjWAbY0wTk9Jfp083Znq3QsUAAAAASUVORK5CYII=" InformativeScreenshot="bd4b7113d31f109a1837c95a3c9fa09c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS - сиcтема управления складом нового поколения' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT'" sap:VirtualizedContainerService.HintSize="954,155" sap2010:WorkflowViewState.IdRef="SetValue_1" Text="UDA999AZAM">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3219026e-c856-43e4-aca0-4918ac3d49cc" InformativeScreenshot="634d9bc41c76c8b20f50b83b04670b17" Selector="&lt;html app='msedge.exe' title='ConsID.WMS - сиcтема управления складом нового поколения' /&gt;&lt;webctrl tag='INPUT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="954,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_4" Shortcuts="[d(hk)][k(tab)][u(hk)]" Version="V1" />
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT'" sap:VirtualizedContainerService.HintSize="954,155" sap2010:WorkflowViewState.IdRef="SetValue_2" Text="UDA999AZAM">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1eb4dfea-2344-4b91-b857-c7c65b1c9198" InformativeScreenshot="92f991c40dd1028555a3a4d95775c310" Selector="&lt;webctrl tag='INPUT' type='password' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Войти'" sap:VirtualizedContainerService.HintSize="954,157" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_mow_test/(S(c0gbhnvamoranepv3n1litw0))/OheWebReports.aspx" DesignTimeRectangle="764, 494, 360, 41" ElementType="Button" FriendlyName="'Войти'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' aaname='Войти' check:text='Войти' /&gt;" Guid="84446b75-b8e4-42f1-a98a-c8ae0a100fbb" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAWwAAAAtCAYAAACK7FHEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAQ1SURBVHhe7dzBaxRnGMfx/je2UGj/gh665x6q1B69SVOEHqKnXkJB8OBBKLQHSyDgzR6UPZiElKYDdaE2qEu3snRdajchljQsi6tujNmn7zMzz2Rm87awl33fbb8/+EAc310v4eswG31DGGOMzcUINmOMzcm8wb7V/UYu3T0tH6+/LWdWTwEAZkCbq+3VBvtWCfbu8yfpYd8bAQBmR1usTS6vEuzFHz/wvhAAMHva5PKKYOstuO8FAIBwyo9HimB/9sP73sMAgHC0zbYi2GfX3vIeBgCEo222FcH2HQQAhGcj2AAQORvBBoDI2Qg2AETORrABIHI2gg0AkbMRbACInI1gA0DkbAQb/y13z8u15gVZSuxaTZYeLMq1rQ+r54A5YiPYCG5jmH8TlvbqoCNJq+Y9/68eNUTfbrj/tQu3C/XjhvTH7v0Gy/7zwBywEWwElwV7JL29uiQ7m9J+MUi/J+WoIxv3/K/5ZzW5vtOR4VH2FjIeyfBZXa4Xd9zA/LERbASXBXsgzUd2rSa3B6P0+7LXq54F/o9sBBvBnQz2KVnZ17vskbQ7x9cu/lqX7sv87lt3NHB35ctyOf/9M9ud9PJw/0rxmoV29ohExN2tr16R5mH6i5Mb3nTnb0pPvz5syIq9Z3L8mt52fg2YMRvBRnDVYNdkqb0uf+ojjdGmfJWfKcI7dpHeX5dktyG9PKQa6AU9NxnsUmyzYJ+TlT/0sUtdtobZHXy/n/06efy5e81ksGv5XxzZCDZCsRFsBOf70FEOWrLxi/1kxzlJnutFveMufRCZ3JDuWK+7GOsz6kqwLbZ70k/brMHOX+dYiKsRrgbb/pLoj/b0KsFGMDaCjeBOfOj4rCfDNMTu2vZ5d8bzqKLy2vzuvBRsi61+naRnpgy23Z3r1zvZ+xJshGIj2AjO9wzbfjwvi/S0wa5L88B9kYbXzkwX7CT9ffe+bXdHn78vwUYoNoKN4LzB/u2+vNLLr+/Lt6uLspU+1sgDameSZem+dpfHLblTeiQiR3r4+OzUwR6P0j978tk4wUYoNoKN4LKg2iORdWkO7JGIi+Zf2QeIC7+3soB7PnTsP9UPDN17WbDditgW7z9FsHX53Xl6nWAjMBvBRnBZUCd2uCfdnS/kYunc5e6m9A6yn+5Il5+xMBfB1rvy0j+UmT7YEx9uEmwEZiPYABA5G8EGgMjZCDYARM5GsAEgcjaCDQCRsxFsAIicjWADQORsBBsAImcj2AAQOVsR7I/W3vQeBACEo222FcH+ZONd72EAQDjaZlsR7C8b9p/FAwBioW22FcF+snvLlfwd7wsAALOnTdY224pg69Yefkq0ASAC2mJtcnmVYL8Y7cpPrUtyNXkvPcwHkQAwO9pcba82WFusTS6vEmyb3oLr4e9/Pivf3TsNAJgBba62t/wYpDxvsBljjMU2kb8B08nMNrEJVnMAAAAASUVORK5CYII=" InformativeScreenshot="2b29a2bc87afa05ac1d079a18d904296.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS - сиcтема управления складом нового поколения' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="922, 503, 44, 21" ElementType="Text" FriendlyName="'Войти'" FullSelectorArgument="&lt;webctrl tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' type='' aaname='Войти' check:text='Войти' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAZCAYAAAB3oa15AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJUSURBVFhH7ZXNattAEMf7Nn4QPUHJA+QWMPSW3HoJhUCOObWHgMHQW3opOtQYH8we6kMxKaJuEFVEqWza4hohorRyHPvfnf3Ql01l9QPVoIE/SOPZ2flpZtcP9joN7LJqgKpVA1StGqBq/TuA1wc4sx7hmGmfgeO3hzgbPszG/aEyAL0Qa3Y3d8BGRmbRVroagNKFs2cchBd+PYC/4vmC1ub439QGgAje1ASb9GF/D8gBLB303mQXFsvA+cRBuJQpsIoQ3pg4jzvyd7QBIIB1pX0GXgaR2N/zkrj/SQUADbRn1IUItpP4jt6bcH+o7pAtA961Fk7U73tjR7jD2Wm8pmnLkQJ4NzunsBbiZd3CCx5/AY+eFwO0dU6WrPHGysf1CwB+6OwuvtIIRH08VTFxISte9KwL9nkATyWmgpsUlwdIbS4B9tH+RGNqYhjKDvu+fGfXj/maPIChPqS0AoCczUfovdM3xz7YLTmpI6mDzZ7D5QdUFEczngHQm0/hi1oJQK3j0oWli8oD6I/mR1PyFgGkDvGNh1AUxn3jg7XE62tV91IAenN6ZiKmJIDuHj3zS4FsyxFSUtehLLosgAlrzh9EITqmHAATv/O8Nu+4ylsO4MMl7sh9f4kXnUMMxRiohDqGteDec/dqhFepEcKSgpPY0gD86qW982erAECPUBdWoEeIJ/kmD2Tz40gCbTjE/hc6gMlGZPHmcf4SAGSqe8K/HUDOFlO4kyc4SsWduH14c3l7CFMxutAYgLqW+uMqD5C7LIoAdlE1QNWqAarWjgM08BOkJNvk+6CrhAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Справочники системы'" sap:VirtualizedContainerService.HintSize="954,518" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Version="V1">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Целевой объект появляется" sap:VirtualizedContainerService.HintSize="450,301" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;Справочник партий&quot;,&quot;Вход в систему&quot;,Date.now.ToString(&quot;DD.MM.YYYY hh:mm:ss&quot;),&quot;успешен&quot;}]" DataTable="[LogListLot]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="388,186" sap2010:WorkflowViewState.IdRef="AddDataRow_4" />
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Целевой объект не появляется" sap:VirtualizedContainerService.HintSize="450,301" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;Справочник партий&quot;,&quot;Вход в систему&quot;,Date.now.ToString(&quot;DD.MM.YYYY hh:mm:ss&quot;),&quot;ОШИБКА&quot;}]" DataTable="[LogListLot]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="388,186" sap2010:WorkflowViewState.IdRef="AddDataRow_5" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_mow_test/(S(eemyaekfvswsdgsn4ytcshx3))/OheWebReports.aspx#ref=5" DesignTimeRectangle="211, 225, 133, 15" ElementType="Text" FriendlyName="'Справочники системы'" FullSelectorArgument="&lt;webctrl aaname='Справочники системы' parentid='top-menu' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Справочники системы' parentid='top-menu' tag='SPAN' type='' check:text='Справочники системы' /&gt;" Guid="10487ec8-bf1b-4aad-93a1-9ea6dee9aad9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIkAAAATCAYAAACk2S7sAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAL2SURBVGhD7VYxbiMxDLy/pkuXKl2qFK7cBHDhZhsXdhMgAQ7I73QiRUpDSivhgisOMYuBV6JIDslZrX89PD6lQGCGEElgiRBJYIkQSWCJoUgOl6/08bthO/ZnAvcDJ5LXdHrPwnjf0rPuvWzpFkK5a1iRHK/55rimA+5lPJ8/rXACdwUjEv7MXN7MAQ//KWKIT/Hfym3ENic4FqHavtLt/Fr25bYa2jr7Zzq9lH3Kh+dYzMDFxKDcInRvY976EsA55Uu36NRnALYrZ+0pxtY11PPw+Ja2Wqfc3sLBQ2/2YZ66j7FbLK3D11TB/W6zA5GUT83QCeAD+8F0BdSmUAOANBMWIo5UWevZ0jiNyfnk7IqLqQUGZGwqQBQGP1M/dgTpfRzszQt9BQ71017rdP03PSC4/mXs5slr5pv513iy93+IBBvXFdqAw/akzBrFxGiiWXExtQxFQjVnfmcYnp4jDlDL1Mdg0kfgQFxv560NftKrAi+SkkdfHkZXY45fOZL/NW3Ql65HCjePb31uMHAnEuOPhZWi9GoklVuRNBuqneObYTSReFvHxcW0Dczxqal0HprLz3wehbnwMWj87H5G9SkDO2B/OK/NaYG91LWrj1FiKN/DBeJn3rUOOWN95exMJLtEYR+TELrBYOPw7fCxce1Imbek44RDsMJjABfkyXGMSOgtlrhga886yOI/9TFY3ySnHKvwh8Fjr7wfw4tkcJMAav05J/3Sms5iX/CZoTVNRaJNN8WXoewF7t/eVgivNRYRqDYdrhCZicSIQvKZsw2ey7ABYiNBVTvYumdT246PA/MAG/tSHPIhIVcbDt6Ly9bdi2Qnj6xb/dmP/ptIz9q+fWZoTXORFHAyKkaAavWBO5Fc8nev+vaDL/u52CO8OUxKbQIo3tptoxB/JRKMjwN3w9c4U58B+LyvhXwMfz/4Igz1M/wHIiGYPNBv5V37PuiL9SXgPBYi+S44qZAJ/ByESAJLhEgCS/xTkQR+JkIkgQWe0h+4fzUiJKY7yQAAAABJRU5ErkJggg==" InformativeScreenshot="173166f3b0587fc6c91a34b2469b13a6.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Список ячеек по классу товара-5' /&gt;" SearchSteps="FuzzySelector" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Справочники системы'" sap:VirtualizedContainerService.HintSize="954,157" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_mow_test/(S(5m2ekt1ye24y2ooaanq0cuw5))/OheWebReports.aspx#ref=5" DesignTimeRectangle="170, 181, 107, 11" ElementType="Text" FriendlyName="'Справочники системы'" FullSelectorArgument="&lt;webctrl aaname='Справочники системы' parentid='top-menu' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Справочники системы' parentid='top-menu' tag='SPAN' type='' check:text='Справочники системы' /&gt;" Guid="cac1f9c4-5520-41c0-bfb6-23bed60e51a4" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAG8AAAAPCAYAAADqMZE6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIkSURBVFhH7VUtj8JAEL0fhj3JH8Ci8FV1dQgUAlWBQiBIECT8u72d75l22dzlkjuarHhJOzvz5s28bfqx+lynhmWimbdgNPMWjGbeghHN2x7T5fFMd8blsAvJDe8FMw+NO6dOD3dpf32mUy/vDe8GNW9zuFWMGtLJfZH3xy3tt1wznjWu9ZMvmOJ0GSR2vx7TZsZNvKv+7L76fM65QSP0GAfmlUtHXFQrddQXYr6+G70Gh9xbNVb5C7n+HUF10Fdi01rRQzml+RmFmJrXjVzoDg22QBrGzKMBcxyWKUvuB1sKiJwtwThgiSpKOILQ75sH55fMS7Vcp/1dPfaBXJlJAObIHkRjhX+WSzwwU9Dp+ugZzJgvvs1A3MhRMKpqXliMYDukDgW9Ns9qbEh6djdQBU5j00sDC8kcbuG+N/TT+sCba3hJHSxYl5tz3OJIL+vv41KnvSxW4Z/lEoJ5MIvXnIH1aMaR5mXuvexiUmP5L8zDG1L4582F8vBsni7Z3bBgiBrBS0AOM7745SGHG5hj4bJArvLarYWcoFn78xnkwrnrhXwIMNw0kgkV/lnu/LncJ4PNwPlZk+4tGMV7q5oHgEZTx/HstXn2zzPDIK6Lz+dUC3XGLf8DWoLEjMNgvbFf0bxc6w1C3bEOzkkX960s1bTX+Eu5xBHM4xrNy8AzMQM5aG5vns+XPPODEM37IUCUF9nwt2jmLRi/Mq/hf9HMWyzW6QuswwypMF98OAAAAABJRU5ErkJggg==" InformativeScreenshot="f02515aed879cbaf003bdc218e0c5896.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Список ячеек по классу товара-5' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Справочник партий'" sap:VirtualizedContainerService.HintSize="954,157" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_mow_test/(S(c0gbhnvamoranepv3n1litw0))/OheWebReports.aspx#ref=2088&amp;popup=0" DesignTimeRectangle="135, 259, 176, 23" ElementType="Text" FriendlyName="'Справочник партий'" FullSelectorArgument="&lt;webctrl aaname='Справочник партий' parentid='top-menu' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Справочник партий' parentid='top-menu' tag='A' type='' check:text='Справочник партий' /&gt;" Guid="2b027d84-3479-400b-9775-ba7d851d9470" ImageBase64="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" InformativeScreenshot="0842e129d711c0faabb8757773a807ba.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Справочник партий-2088' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="170, 181, 107, 11" ElementType="Text" FriendlyName="'Справочники системы'" FullSelectorArgument="&lt;webctrl aaname='Справочники системы' parentid='top-menu' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Справочники системы' parentid='top-menu' tag='SPAN' type='' check:text='Справочники системы' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAG8AAAAPCAYAAADqMZE6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIgSURBVFhH7VU9a8NADO1/zdYtU7ZMGTx5MWTI4sVDsgQSCOTfXU/fkn05WgptDDc8sHXS05PeGX9sPrepYZ1o5q0YzbwVo5m3YkTz9mO6PJ7pxricDiG54b1g5qFx59Tp4SEdr8809vLe8G5Q83ane8WoIY3ui7w97um455rprHGtn33BFKfLILHbdUy7BTfxbvqz++rzOecGjdBjGphXLh1xUa3UUV+I+fpu8hoccm/VWOUv5Pp3BNVBX4nNa0UP5ZTmZxRial43caE7NNgCaRgzjwbMcVimLLkfbCkgcrEE44AlqijhCEK/bx6cXzIv1XKd9nf12AdyZSYBmCN7EI0V/kUu8cBMQafro2cwY774NgNxI0fBqKp5YTGC/ZA6FPTaPKuxIenZ3UAVOI/NLw0sJHO4hfve0E/rA2+u4SV1sGBdbs5xiyO9rL+PS533sliFf5FLCObBLF5zBtajGSPNy9xH2cWsxvJfmIc3pPDPWwrl4dk8XbK7YcEQNYKXgBxmfPHLQw43MMfCZYFc5bVbCzlBs/bnM8iFc9cL+RBguGkkEyr8i9zlc7lPBpuB87Mm3VswivdWNQ8AjeaO49lr8+yfZ4ZBXBefz6kW6oxb/ge0BIkZh8F6Y7+iebnWG4S6Yx2cky7uW1mqaa/xl3KJI5jHNZqXgWdiBnLQ3N48ny955gchmvdDgCgvsuFv0cxbMX5lXsP/opm3WmzTF6oEc6wwvxNWAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Справочник партий'" sap:VirtualizedContainerService.HintSize="954,518" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Version="V1">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Целевой объект появляется" sap:VirtualizedContainerService.HintSize="450,301" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;Справочник партий&quot;,&quot;Справочник партий открыт&quot;,Date.now.ToString(&quot;dd.MM.yyyy hh:mm:ss&quot;),&quot;успешен&quot;}]" DataTable="[LogListLot]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="388,186" sap2010:WorkflowViewState.IdRef="AddDataRow_6" />
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Целевой объект не появляется" sap:VirtualizedContainerService.HintSize="450,301" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;Справочник партий&quot;,&quot;Справочник партий открыт&quot;,Date.now.ToString(&quot;dd.MM.yyyyhh:mm:ss&quot;),&quot;ОШИБКА&quot;}]" DataTable="[LogListLot]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="388,186" sap2010:WorkflowViewState.IdRef="AddDataRow_7" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_mow_test/(S(rss5eltdtywnxqo0lwlboiev))/OheWebReports.aspx#ref=2088&amp;popup=0" DesignTimeRectangle="32, 270, 123, 20" ElementType="Text" FriendlyName="'Справочник партий'" FullSelectorArgument="&lt;webctrl aaname='Справочник партий' parentid='tabs-2088-tab-1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Справочник партий' parentid='tabs-2088-tab-1' tag='SPAN' type='' check:text='Справочник партий' /&gt;" Guid="53c47343-bbf5-4448-a992-6b8886673e56" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAH8AAAAYCAYAAADTTCLxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALMSURBVGhD7VbLbVsxEExruaSS3HxwBS5COqgN++BbanguQ3AXDPfDx1nukk9B7AQyOQABPpHcnZ1ZEvqWFqbFMn9iLPMnxjJ/YizzJ8Yy/wvj+vKUHl6u+/y08XRHYP41PT/+TN9/1FECLNwbwMvH1/xlYc1/f00PzuwtnejwuWmbhbsHmC9dEt5yboqn9PxOH9oMzSjn3s403+D1KOcU2mD1bF2np6n+LsM+VTY3Pmm2s2WfnMW5wOw3tRH0tmizUz1lXvi1z+eRJgSOg+v7ZaKzOf8GuhRu28WewfU/4M3gWNaLar4L1oMXUwyXQkuR+zomVePrWSWsxbK4jvAlvckH562C1u8PNb8I7kSkOD19fA6nCfLTHMiv1hnszzPSCePfzpugOjf8q/lG6BFuKBQN1MTVNAs0YmS+NzhD1399mPm0N/9Jim4Q5TJ1IcaaeIz5+Yt4ZP6Ad4bUm9dNzE8yvy0aiQgkBncqDTQff8+j5PExMliAzJm5Y2Fe3DZuZD7lJ+6Yi+e4P8RYk4K2vsrPmuLjjc3v8uY5xcoauYb6pGe/b76cpcLLHulKMB8NBk5Y2A5eh5dBY3txLV/MWXOoSPknzFXm5ozDWJPKrVwu3E/zVvc23sj8Y97MI/D3tj98jmy/UCQggLh0QxsBUVSeB2cpVyh+97Ua8zWxVJTTWUXKiESM4lSMNAmMO+DnjeqbP+Z9ybFVn7H5GbyhbQAhV4UfFapJMQka1JrF3zW2M98QlryVW/uNQI6erzcf64tElHnYgIyRJu2lku/2ZerlF/TM75/jOXI6NJ+hZGBYgUeFFgLUceW8TVhI8SDi3ACyh8Xdz8mIcsdrCOTo+Ubmt/VE5pdYPu9Yk90oHadNG4Dj6tmsWVn3DdY3f8gb49xm/t/BirVwDN84/wrL/P+OZf7E+ELmL9wPlvkTY5k/MZb5E2OZPy1S+g2uVFqBdITEdQAAAABJRU5ErkJggg==" InformativeScreenshot="b6afba0224efa8d9ebfe6ca8de00a603.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Справочник партий-2088' /&gt;" SearchSteps="FuzzySelector" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+            <ui:WriteCsvFile AddHeaders="True" DataTable="[LogListLot]" Delimitator="Comma" DisplayName="Write CSV" FilePath="Processes\TestCaces\Alexey\LOG\ListLotLog.csv" sap:VirtualizedContainerService.HintSize="954,153" sap2010:WorkflowViewState.IdRef="WriteCsvFile_4" ShouldQuote="True" />
+            <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="45a66d81-4b49-40e9-a161-163c50a7f0b8" DisplayName="CV Screen Scope 'menu button'" sap:VirtualizedContainerService.HintSize="954,627" sap2010:WorkflowViewState.IdRef="CVScope_1" Version="V3">
+              <p:CVScope.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Сделать" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: ArrowButton (1743,125,17,21)&quot; +&#xD;&#xA;&quot;Anchor: Image (1686,115,56,42)&quot;]" DesignTimeCacheId="45a66d81-4b49-40e9-a161-163c50a7f0b8" DesignTimeScaleFactor="1" DisplayName="CV Click - ArrowButton" sap:VirtualizedContainerService.HintSize="400,137" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_2" InformativeScreenshot="a39a09f53f5488dcb1b4bd7d85065bec" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V3">
+                      <p:CvClickWithDescriptor.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </p:CvClickWithDescriptor.CursorPosition>
+                      <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                        <uc:CvDescriptor>
+                          <uc:CvDescriptor.Anchors>
+                            <x:Array Type="uc:CvElementDescriptor">
+                              <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1686, 115, 56, 42" ElementType="Image" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADgAAAAqCAYAAADmmJiOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKZSURBVGhD7ZjLbhoxFIZ5svSW9jVokzxG8wKVuqhUKdl110WWaVhEgMQwAsRtGJgAVSNVEQvWXBRF5XZqH9tjH5impVWjeJhf+qXBPj7nfLYhkBTEXAmg7Uo9e3UEcXYCaLsTQNudANru3QJMHx7D+YUDneBa/pm0XwTwS8aBDx8/h6/jYAIYXH0jk3EwAeQyX8fBCeD2PgNv0IcT9pwZ3IJ3GhXzcP4vJ3ji32IuGLiR8w/p5IqGp4EyrtxpH6ZyFGAIGYx34caIyQzYlDpFM37KrzC7yjqBFMtzOZTPUhgr+yC5ZB3SB5fqRfgPAIeyYd6Qap6C6OLGuGoUxwXM1D/DeA6unsUaoym+TkKZNXUNtTFi/N5czL8F1B8UBuDGrnHxxApQxrLN2QBfyx8JaEqeWgjI59mHmAn+D4C8UbVgHZAmEpYgCgyb+QvA8ATFCd1cKkAFZvTCYnAu1DaAHETuIAHEpvTVwALYlBgPi4SAfK2OJ+/NbQCZRI71XtT6tVzMvwaMvIZMqjiZNwtoEA2o54TMJiIATcl6AlDFKUCxcXwDInMx3w9o7KQwS7Ax9ri9w4AxMQHsXF2TyTiYAJ5fFKz+wfv05eGGCWD64C3+y4L/8H3sWq1W6OVyiV4sFuj5fI6ezWZoAmib9UkdoJ/sc78hthbQhNNgr2HvBXca9p4LWwkYBffu/Se4u/shL7CWxYAajp9Y/+t3iUSV6vV6YIu73S46CALodDrg+z40m02oVqvsS0nkF0tItdttsMUcqNVqoRuNBtRqNSiXy1AsFmEymUgkKisBPc+Der2OJ1cqlaBQKNgPyOHWASuVCriuC/l8HsbjsUSishKQv+/M65nL5WA0GkkkKusBHceBbDa7q4AAPwE2gMXObCJcEwAAAABJRU5ErkJggg==" />
+                            </x:Array>
+                          </uc:CvDescriptor.Anchors>
+                          <uc:CvDescriptor.Target>
+                            <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1743, 125, 17, 21" ElementType="ArrowButton" />
+                          </uc:CvDescriptor.Target>
+                        </uc:CvDescriptor>
+                      </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                      <p:CvClickWithDescriptor.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="6e5c0b6b-67cf-46e2-a96b-84aa6478c454">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </p:CvClickWithDescriptor.Target>
+                    </p:CvClickWithDescriptor>
+                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text '006a8wTb' (1751,195,46,10)&quot; +&#xD;&#xA;&quot;Anchor: Text 'AenCTBMA' (1691,129,49,12)&quot;]" DesignTimeCacheId="45a66d81-4b49-40e9-a161-163c50a7f0b8" DesignTimeScaleFactor="1" DisplayName="CV Click - Text" sap:VirtualizedContainerService.HintSize="400,137" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_1" InformativeScreenshot="b886a34f2b035f081887ee9c943ff5e3" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V3">
+                      <p:CvClickWithDescriptor.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </p:CvClickWithDescriptor.CursorPosition>
+                      <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                        <uc:CvDescriptor>
+                          <uc:CvDescriptor.Anchors>
+                            <x:Array Type="uc:CvElementDescriptor">
+                              <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1691, 129, 49, 12" ElementType="Text" Text="AenCTBMA" />
+                            </x:Array>
+                          </uc:CvDescriptor.Anchors>
+                          <uc:CvDescriptor.Target>
+                            <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1751, 195, 46, 10" ElementType="Text" Text="006a8wTb" />
+                          </uc:CvDescriptor.Target>
+                        </uc:CvDescriptor>
+                      </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                      <p:CvClickWithDescriptor.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="3e9fd4e3-e3db-4965-bacc-59013d1518f6">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </p:CvClickWithDescriptor.Target>
+                    </p:CvClickWithDescriptor>
+                  </Sequence>
+                </ActivityAction>
+              </p:CVScope.Body>
+              <p:CVScope.DesignTimeCacheContainer>
+                <uc:CvCacheContainer>
+                  <uc:CvCacheContainer.Caches>
+                    <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
+                      <uc:CVCache DisplayName="Экран CV Click - '006a8wTb' (Главный)" Id="45a66d81-4b49-40e9-a161-163c50a7f0b8" InformativeScreenshot="e35f7b160fc570adb786dc5687b052f1" LogicalPosition="4, 179" OcrText="~EPOR CnpaBO4HWK napTwn CnvcoK A4eeK no Knaccy TOBapa X Kon Toeapa: NapTWA: Cpok rOAHOCTM: Onowck CnpaBO4HWK napTnn AenCTBMA - X Kon Tosapa HavMeHOBaHWe TOBapa napTMA cpok rOAHOCTWI Aara CosAaHMA 3kcnopT Excel 3kcnopT PDF 100692 AKTVBVA C TBOP 130 MANWHA K8 XY20231022 22.10.2023 22.09.2023 006a8wTb 100703 AAHWCCVMO TBOP 130 4EPHVKA K8 CH20240206 06.02.2024 26.12.2023 YpanvTb 100711 AAHOH TBOPOr MArKMn 5% 170 HAT XY20231012 12.10.2023 08.09.2023 100712 PACTVW noryPT 110 KNY6HVIKA K12 CH20240115 15.01.2024 28.12.2023 100722 PACTVW noryPT 110 A6NOKO-rPYWIA K12 CH20240127 27.01.2024 28.12.2023 100722 PACTVW noryPT 110 A6NOKO-rPYWA K12 CH20240114 14.01.2024 28.12.2023 100722 PACTVW noryPT 110 A6NOKO-rPYWIA K12 XY20240304 04.03.2024 29.01.2024 101184 PACTVW TBOP 6*45 KNY6H-6AH-NNOM6 CH20240130 30.01.2024 26.12.2023 106991 PACT TB 6*45 KNY6-ASPVKOC CH20240120 20.01.2024 28.12.2023 106991 PACT TB 6*45 KNY6-ASPVKOC CH20240125 25.01.2024 28.12.2023 106992 PACTVWKA TBOPOr 100 KNY6HVKA* CH20240131 31.01.2024 26.12.2023 108704 NPO TBOPOr 180 2% TPAANLVOHHbln XY20231006 06.10.2023 22.09.2023 109247 AKTVBVA 150 4EPHVKA- 5 3n-CEM XY20231010 10.10.2023 05.09.2023 K 1 2 3 4 1... aneMeHTOB Ha CTpahMye OT06paxeHbl 3anwCM 1 - 100 M3 374" Position="4, 179" ScreenshotGuid="bc1e3de4-24ef-4b2b-b345-a19a918c6025" ServerVersion="1">
+                        <uc:CVCache.CvTables>
+                          <x:Array Type="uc:CvTableInfo">
+                            <uc:CvTableInfo>
+                              <uc:CvTableInfo.Columns>
+                                <x:Array Type="x:Int32">
+                                  <x:Int32>1</x:Int32>
+                                  <x:Int32>13</x:Int32>
+                                  <x:Int32>117</x:Int32>
+                                  <x:Int32>465</x:Int32>
+                                  <x:Int32>808</x:Int32>
+                                  <x:Int32>1153</x:Int32>
+                                  <x:Int32>1500</x:Int32>
+                                  <x:Int32>1734</x:Int32>
+                                  <x:Int32>1860</x:Int32>
+                                </x:Array>
+                              </uc:CvTableInfo.Columns>
+                              <uc:CvTableInfo.Rows>
+                                <x:Array Type="x:Int32">
+                                  <x:Int32>148</x:Int32>
+                                  <x:Int32>176</x:Int32>
+                                  <x:Int32>210</x:Int32>
+                                  <x:Int32>239</x:Int32>
+                                  <x:Int32>272</x:Int32>
+                                  <x:Int32>304</x:Int32>
+                                  <x:Int32>337</x:Int32>
+                                  <x:Int32>368</x:Int32>
+                                  <x:Int32>400</x:Int32>
+                                  <x:Int32>433</x:Int32>
+                                  <x:Int32>466</x:Int32>
+                                  <x:Int32>497</x:Int32>
+                                  <x:Int32>530</x:Int32>
+                                  <x:Int32>560</x:Int32>
+                                  <x:Int32>593</x:Int32>
+                                </x:Array>
+                              </uc:CvTableInfo.Rows>
+                            </uc:CvTableInfo>
+                          </x:Array>
+                        </uc:CVCache.CvTables>
+                        <uc:CVCache.CvUiElements>
+                          <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="256">
+                            <uc:CvElementInfo Category="InputBox" Region="322, 84, 296, 28" />
+                            <uc:CvElementInfo Category="Button" Region="944, 84, 68, 28" />
+                            <uc:CvElementInfo Category="InputBox" Region="632, 84, 296, 28" />
+                            <uc:CvElementInfo Category="Button" Region="2, 20, 116, 35" />
+                            <uc:CvElementInfo Category="InputBox" Region="13, 84, 295, 28" />
+                            <uc:CvElementInfo Category="CheckBox" Region="21, 542, 16, 15" />
+                            <uc:CvElementInfo Category="CheckBox" Region="21, 189, 15, 15" />
+                            <uc:CvElementInfo Category="CheckBox" Region="21, 221, 16, 15" />
+                            <uc:CvElementInfo Category="CheckBox" Region="21, 253, 16, 16" />
+                            <uc:CvElementInfo Category="CheckBox" Region="21, 348, 16, 15" />
+                            <uc:CvElementInfo Category="CheckBox" Region="21, 510, 16, 15" />
+                            <uc:CvElementInfo Category="CheckBox" Region="21, 317, 16, 16" />
+                            <uc:CvElementInfo Category="CheckBox" Region="21, 478, 16, 16" />
+                            <uc:CvElementInfo Category="CheckBox" Region="21, 285, 16, 15" />
+                            <uc:CvElementInfo Category="CheckBox" Region="21, 446, 16, 16" />
+                            <uc:CvElementInfo Category="CheckBox" Region="21, 414, 16, 14" />
+                            <uc:CvElementInfo Category="CheckBox" Region="21, 382, 15, 14" />
+                            <uc:CvElementInfo Category="CheckBox" Region="22, 574, 15, 15" />
+                            <uc:CvElementInfo Category="CloseButton" Region="279, 25, 16, 16" />
+                            <uc:CvElementInfo Category="Icon" Region="1786, 126, 17, 17" />
+                            <uc:CvElementInfo Category="Button" Region="111, 600, 25, 25" />
+                            <uc:CvElementInfo Category="Button" Region="18, 600, 25, 24" />
+                            <uc:CvElementInfo Category="ArrowButton" Region="1743, 125, 17, 21" />
+                            <uc:CvElementInfo Category="CloseButton" Region="1828, 127, 16, 16" />
+                            <uc:CvElementInfo Category="CheckBox" Region="21, 159, 15, 15" />
+                            <uc:CvElementInfo Category="Button" Region="118, 21, 188, 35" />
+                            <uc:CvElementInfo Category="Icon" Region="1750, 172, 13, 14" />
+                            <uc:CvElementInfo Category="Button" Region="88, 601, 24, 24" />
+                            <uc:CvElementInfo Category="Icon" Region="1750, 152, 13, 15" />
+                            <uc:CvElementInfo Category="MinimizeButton" Region="1807, 127, 16, 13" />
+                            <uc:CvElementInfo Category="InputBox" Region="1688, 125, 65, 22" />
+                            <uc:CvElementInfo Category="Button" Region="180, 600, 27, 25" />
+                            <uc:CvElementInfo Category="Button" Region="66, 601, 24, 23" />
+                            <uc:CvElementInfo Category="Button" Region="41, 600, 27, 24" />
+                            <uc:CvElementInfo Category="ArrowButton" Region="157, 600, 26, 24" />
+                            <uc:CvElementInfo Category="Button" Region="134, 600, 25, 24" />
+                            <uc:CvElementInfo Category="Icon" Region="1766, 128, 15, 15" />
+                            <uc:CvElementInfo Category="ArrowButton" Region="134, 600, 25, 25" />
+                            <uc:CvElementInfo Category="ArrowButton" Region="41, 600, 26, 24" />
+                            <uc:CvElementInfo Category="Button" Region="157, 600, 26, 25" />
+                            <uc:CvElementInfo Category="Icon" Region="187, 604, 12, 13" />
+                            <uc:CvElementInfo Category="Icon" Region="24, 605, 12, 12" />
+                            <uc:CvElementInfo Category="Cell" Region="13, 210, 104, 29" />
+                            <uc:CvElementInfo Category="Cell" Region="13, 239, 104, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="13, 497, 104, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="13, 530, 104, 30" />
+                            <uc:CvElementInfo Category="Cell" Region="13, 433, 104, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="13, 466, 104, 31" />
+                            <uc:CvElementInfo Category="Cell" Region="13, 272, 104, 32" />
+                            <uc:CvElementInfo Category="Cell" Region="1153, 210, 347, 29" />
+                            <uc:CvElementInfo Category="Cell" Region="13, 304, 104, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="808, 176, 345, 34" />
+                            <uc:CvElementInfo Category="Cell" Region="117, 148, 348, 28" />
+                            <uc:CvElementInfo Category="Cell" Region="808, 148, 345, 28" />
+                            <uc:CvElementInfo Category="Cell" Region="1153, 239, 347, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="117, 210, 348, 29" />
+                            <uc:CvElementInfo Category="Cell" Region="465, 239, 343, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="465, 148, 343, 28" />
+                            <uc:CvElementInfo Category="Cell" Region="808, 210, 345, 29" />
+                            <uc:CvElementInfo Category="Cell" Region="465, 210, 343, 29" />
+                            <uc:CvElementInfo Category="Cell" Region="13, 368, 104, 32" />
+                            <uc:CvElementInfo Category="Cell" Region="13, 400, 104, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="13, 176, 104, 34" />
+                            <uc:CvElementInfo Category="Cell" Region="1153, 272, 347, 32" />
+                            <uc:CvElementInfo Category="Cell" Region="808, 239, 345, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="13, 337, 104, 31" />
+                            <uc:CvElementInfo Category="Cell" Region="1153, 148, 347, 28" />
+                            <uc:CvElementInfo Category="Cell" Region="117, 272, 348, 32" />
+                            <uc:CvElementInfo Category="Cell" Region="808, 272, 345, 32" />
+                            <uc:CvElementInfo Category="Cell" Region="1500, 148, 234, 28" />
+                            <uc:CvElementInfo Category="Cell" Region="465, 368, 343, 32" />
+                            <uc:CvElementInfo Category="Cell" Region="465, 466, 343, 31" />
+                            <uc:CvElementInfo Category="Cell" Region="465, 272, 343, 32" />
+                            <uc:CvElementInfo Category="Cell" Region="117, 304, 348, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="465, 433, 343, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="1153, 466, 347, 31" />
+                            <uc:CvElementInfo Category="Cell" Region="1153, 304, 347, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="808, 304, 345, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="1153, 368, 347, 32" />
+                            <uc:CvElementInfo Category="Cell" Region="465, 176, 343, 34" />
+                            <uc:CvElementInfo Category="Cell" Region="117, 497, 348, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="465, 497, 343, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="117, 337, 348, 31" />
+                            <uc:CvElementInfo Category="Cell" Region="1153, 337, 347, 31" />
+                            <uc:CvElementInfo Category="Cell" Region="465, 530, 343, 30" />
+                            <uc:CvElementInfo Category="Cell" Region="117, 368, 348, 32" />
+                            <uc:CvElementInfo Category="Cell" Region="1153, 530, 347, 30" />
+                            <uc:CvElementInfo Category="Cell" Region="117, 239, 348, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="1153, 497, 347, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="117, 466, 348, 31" />
+                            <uc:CvElementInfo Category="Cell" Region="465, 337, 343, 31" />
+                            <uc:CvElementInfo Category="Cell" Region="117, 530, 348, 30" />
+                            <uc:CvElementInfo Category="Cell" Region="808, 337, 345, 31" />
+                            <uc:CvElementInfo Category="Cell" Region="1153, 400, 347, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="1500, 560, 360, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="1153, 433, 347, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="117, 433, 348, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="13, 560, 104, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="1153, 176, 347, 34" />
+                            <uc:CvElementInfo Category="Cell" Region="465, 304, 343, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="1153, 560, 347, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="465, 400, 343, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="465, 560, 343, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="808, 530, 345, 30" />
+                            <uc:CvElementInfo Category="Cell" Region="117, 560, 348, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="117, 400, 348, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="808, 466, 345, 31" />
+                            <uc:CvElementInfo Category="Cell" Region="808, 368, 345, 32" />
+                            <uc:CvElementInfo Category="Cell" Region="808, 560, 345, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="808, 497, 345, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="1500, 368, 360, 32" />
+                            <uc:CvElementInfo Category="Cell" Region="117, 176, 348, 34" />
+                            <uc:CvElementInfo Category="Cell" Region="1500, 530, 360, 30" />
+                            <uc:CvElementInfo Category="Cell" Region="1500, 176, 234, 34" />
+                            <uc:CvElementInfo Category="Cell" Region="808, 400, 345, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="1500, 337, 360, 31" />
+                            <uc:CvElementInfo Category="Cell" Region="808, 433, 345, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="1500, 210, 234, 29" />
+                            <uc:CvElementInfo Category="Cell" Region="1500, 304, 360, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="1500, 497, 360, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="1500, 239, 360, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="13, 148, 104, 28" />
+                            <uc:CvElementInfo Category="Cell" Region="1500, 466, 360, 31" />
+                            <uc:CvElementInfo Category="Cell" Region="1500, 400, 360, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="1500, 433, 360, 33" />
+                            <uc:CvElementInfo Category="Cell" Region="1500, 272, 360, 32" />
+                            <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="1688, 125, 63, 22" />
+                            <uc:CvElementInfo Category="MaximizeButton" Confidence="Runtime" Region="1766, 127, 16, 16" />
+                            <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="180, 600, 27, 25" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1807, 127, 16, 13" />
+                            <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="307, 24, 1548, 32" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="953, 88, 16, 16" />
+                            <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="18, 600, 25, 25" />
+                            <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="187, 604, 13, 13" />
+                            <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="110, 600, 26, 25" />
+                            <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="24, 605, 13, 13" />
+                            <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="1743, 126, 18, 21" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="279, 25, 16, 16" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="42, 601, 24, 22" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="15, 115, 106, 35" />
+                            <uc:CvElementInfo Category="InputBox" Region="215, 598, 65, 29" />
+                            <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="88, 600, 25, 24" />
+                            <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="66, 600, 24, 23" />
+                            <uc:CvElementInfo Category="ArrowButton" Region="258, 602, 16, 19" />
+                            <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="66, 600, 23, 23" />
+                            <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="88, 600, 25, 24" />
+                          </scg:List>
+                        </uc:CVCache.CvUiElements>
+                        <uc:CVCache.OcrTexts>
+                          <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="256">
+                            <uc:OcrTextInfo Region="819, 0, 39, 6" Text="~EPOR" />
+                            <uc:OcrTextInfo Region="13, 32, 60, 11" Text="CnpaBO4HWK" />
+                            <uc:OcrTextInfo Region="74, 31, 34, 13" Text="napTwn" />
+                            <uc:OcrTextInfo Region="126, 32, 38, 10" Text="CnvcoK" />
+                            <uc:OcrTextInfo Region="164, 34, 29, 8" Text="A4eeK" />
+                            <uc:OcrTextInfo Region="194, 34, 13, 8" Text="no" />
+                            <uc:OcrTextInfo Region="208, 33, 35, 11" Text="Knaccy" />
+                            <uc:OcrTextInfo Region="243, 33, 35, 11" Text="TOBapa" />
+                            <uc:OcrTextInfo Region="282, 28, 10, 10" Text="X" />
+                            <uc:OcrTextInfo Region="13, 72, 21, 10" Text="Kon" />
+                            <uc:OcrTextInfo Region="35, 72, 41, 12" Text="Toeapa:" />
+                            <uc:OcrTextInfo Region="323, 72, 42, 12" Text="NapTWA:" />
+                            <uc:OcrTextInfo Region="633, 72, 27, 12" Text="Cpok" />
+                            <uc:OcrTextInfo Region="661, 74, 51, 9" Text="rOAHOCTM:" />
+                            <uc:OcrTextInfo Region="953, 90, 50, 12" Text="Onowck" />
+                            <uc:OcrTextInfo Region="24, 128, 69, 13" Text="CnpaBO4HWK" />
+                            <uc:OcrTextInfo Region="94, 127, 40, 14" Text="napTnn" />
+                            <uc:OcrTextInfo Region="1691, 129, 49, 12" Text="AenCTBMA" />
+                            <uc:OcrTextInfo Region="1809, 128, 11, 10" Text="-" />
+                            <uc:OcrTextInfo Region="1830, 129, 11, 11" Text="X" />
+                            <uc:OcrTextInfo Region="126, 159, 18, 10" Text="Kon" />
+                            <uc:OcrTextInfo Region="145, 159, 36, 12" Text="Tosapa" />
+                            <uc:OcrTextInfo Region="471, 161, 72, 8" Text="HavMeHOBaHWe" />
+                            <uc:OcrTextInfo Region="544, 161, 35, 10" Text="TOBapa" />
+                            <uc:OcrTextInfo Region="817, 160, 34, 11" Text="napTMA" />
+                            <uc:OcrTextInfo Region="1162, 161, 24, 9" Text="cpok" />
+                            <uc:OcrTextInfo Region="1186, 161, 45, 8" Text="rOAHOCTWI" />
+                            <uc:OcrTextInfo Region="1507, 161, 24, 8" Text="Aara" />
+                            <uc:OcrTextInfo Region="1532, 161, 47, 8" Text="CosAaHMA" />
+                            <uc:OcrTextInfo Region="1763, 155, 41, 12" Text="3kcnopT" />
+                            <uc:OcrTextInfo Region="1805, 155, 26, 10" Text="Excel" />
+                            <uc:OcrTextInfo Region="1763, 175, 41, 11" Text="3kcnopT" />
+                            <uc:OcrTextInfo Region="1805, 175, 22, 10" Text="PDF" />
+                            <uc:OcrTextInfo Region="127, 189, 36, 10" Text="100692" />
+                            <uc:OcrTextInfo Region="472, 189, 50, 10" Text="AKTVBVA" />
+                            <uc:OcrTextInfo Region="523, 189, 10, 10" Text="C" />
+                            <uc:OcrTextInfo Region="533, 189, 30, 10" Text="TBOP" />
+                            <uc:OcrTextInfo Region="565, 189, 18, 10" Text="130" />
+                            <uc:OcrTextInfo Region="585, 189, 46, 9" Text="MANWHA" />
+                            <uc:OcrTextInfo Region="632, 189, 13, 10" Text="K8" />
+                            <uc:OcrTextInfo Region="818, 189, 62, 10" Text="XY20231022" />
+                            <uc:OcrTextInfo Region="1164, 189, 53, 10" Text="22.10.2023" />
+                            <uc:OcrTextInfo Region="1510, 189, 53, 10" Text="22.09.2023" />
+                            <uc:OcrTextInfo Region="1751, 195, 46, 10" Text="006a8wTb" />
+                            <uc:OcrTextInfo Region="127, 221, 36, 10" Text="100703" />
+                            <uc:OcrTextInfo Region="472, 221, 70, 11" Text="AAHWCCVMO" />
+                            <uc:OcrTextInfo Region="543, 221, 30, 10" Text="TBOP" />
+                            <uc:OcrTextInfo Region="575, 221, 18, 10" Text="130" />
+                            <uc:OcrTextInfo Region="594, 221, 51, 10" Text="4EPHVKA" />
+                            <uc:OcrTextInfo Region="646, 221, 13, 10" Text="K8" />
+                            <uc:OcrTextInfo Region="819, 221, 62, 10" Text="CH20240206" />
+                            <uc:OcrTextInfo Region="1164, 221, 53, 10" Text="06.02.2024" />
+                            <uc:OcrTextInfo Region="1510, 221, 53, 10" Text="26.12.2023" />
+                            <uc:OcrTextInfo Region="1751, 214, 41, 10" Text="YpanvTb" />
+                            <uc:OcrTextInfo Region="127, 253, 34, 10" Text="100711" />
+                            <uc:OcrTextInfo Region="472, 253, 39, 11" Text="AAHOH" />
+                            <uc:OcrTextInfo Region="512, 253, 44, 10" Text="TBOPOr" />
+                            <uc:OcrTextInfo Region="556, 250, 45, 13" Text="MArKMn" />
+                            <uc:OcrTextInfo Region="602, 253, 16, 10" Text="5%" />
+                            <uc:OcrTextInfo Region="621, 253, 18, 10" Text="170" />
+                            <uc:OcrTextInfo Region="640, 253, 22, 10" Text="HAT" />
+                            <uc:OcrTextInfo Region="818, 253, 62, 10" Text="XY20231012" />
+                            <uc:OcrTextInfo Region="1165, 253, 52, 10" Text="12.10.2023" />
+                            <uc:OcrTextInfo Region="1510, 253, 53, 10" Text="08.09.2023" />
+                            <uc:OcrTextInfo Region="127, 285, 36, 10" Text="100712" />
+                            <uc:OcrTextInfo Region="473, 285, 44, 10" Text="PACTVW" />
+                            <uc:OcrTextInfo Region="519, 282, 42, 13" Text="noryPT" />
+                            <uc:OcrTextInfo Region="563, 285, 17, 10" Text="110" />
+                            <uc:OcrTextInfo Region="581, 285, 56, 9" Text="KNY6HVIKA" />
+                            <uc:OcrTextInfo Region="639, 285, 19, 10" Text="K12" />
+                            <uc:OcrTextInfo Region="819, 285, 61, 10" Text="CH20240115" />
+                            <uc:OcrTextInfo Region="1165, 285, 52, 10" Text="15.01.2024" />
+                            <uc:OcrTextInfo Region="1510, 285, 53, 10" Text="28.12.2023" />
+                            <uc:OcrTextInfo Region="127, 317, 36, 10" Text="100722" />
+                            <uc:OcrTextInfo Region="473, 317, 44, 10" Text="PACTVW" />
+                            <uc:OcrTextInfo Region="519, 314, 42, 13" Text="noryPT" />
+                            <uc:OcrTextInfo Region="563, 317, 17, 10" Text="110" />
+                            <uc:OcrTextInfo Region="582, 317, 83, 10" Text="A6NOKO-rPYWIA" />
+                            <uc:OcrTextInfo Region="666, 317, 20, 10" Text="K12" />
+                            <uc:OcrTextInfo Region="819, 317, 62, 10" Text="CH20240127" />
+                            <uc:OcrTextInfo Region="1164, 317, 53, 10" Text="27.01.2024" />
+                            <uc:OcrTextInfo Region="1510, 317, 53, 10" Text="28.12.2023" />
+                            <uc:OcrTextInfo Region="127, 349, 36, 10" Text="100722" />
+                            <uc:OcrTextInfo Region="473, 349, 44, 10" Text="PACTVW" />
+                            <uc:OcrTextInfo Region="519, 346, 42, 13" Text="noryPT" />
+                            <uc:OcrTextInfo Region="563, 349, 17, 10" Text="110" />
+                            <uc:OcrTextInfo Region="582, 349, 83, 10" Text="A6NOKO-rPYWA" />
+                            <uc:OcrTextInfo Region="666, 349, 20, 10" Text="K12" />
+                            <uc:OcrTextInfo Region="819, 349, 61, 10" Text="CH20240114" />
+                            <uc:OcrTextInfo Region="1165, 349, 53, 10" Text="14.01.2024" />
+                            <uc:OcrTextInfo Region="1510, 349, 53, 10" Text="28.12.2023" />
+                            <uc:OcrTextInfo Region="127, 381, 36, 10" Text="100722" />
+                            <uc:OcrTextInfo Region="473, 381, 44, 10" Text="PACTVW" />
+                            <uc:OcrTextInfo Region="519, 378, 42, 13" Text="noryPT" />
+                            <uc:OcrTextInfo Region="563, 381, 17, 10" Text="110" />
+                            <uc:OcrTextInfo Region="582, 381, 83, 10" Text="A6NOKO-rPYWIA" />
+                            <uc:OcrTextInfo Region="666, 381, 20, 10" Text="K12" />
+                            <uc:OcrTextInfo Region="818, 381, 62, 10" Text="XY20240304" />
+                            <uc:OcrTextInfo Region="1164, 381, 53, 10" Text="04.03.2024" />
+                            <uc:OcrTextInfo Region="1510, 381, 53, 10" Text="29.01.2024" />
+                            <uc:OcrTextInfo Region="127, 413, 35, 10" Text="101184" />
+                            <uc:OcrTextInfo Region="473, 413, 45, 10" Text="PACTVW" />
+                            <uc:OcrTextInfo Region="518, 413, 30, 10" Text="TBOP" />
+                            <uc:OcrTextInfo Region="549, 413, 24, 10" Text="6*45" />
+                            <uc:OcrTextInfo Region="574, 413, 100, 10" Text="KNY6H-6AH-NNOM6" />
+                            <uc:OcrTextInfo Region="819, 413, 62, 10" Text="CH20240130" />
+                            <uc:OcrTextInfo Region="1164, 413, 54, 10" Text="30.01.2024" />
+                            <uc:OcrTextInfo Region="1510, 413, 53, 10" Text="26.12.2023" />
+                            <uc:OcrTextInfo Region="127, 445, 35, 10" Text="106991" />
+                            <uc:OcrTextInfo Region="473, 445, 28, 10" Text="PACT" />
+                            <uc:OcrTextInfo Region="502, 445, 14, 10" Text="TB" />
+                            <uc:OcrTextInfo Region="518, 445, 23, 10" Text="6*45" />
+                            <uc:OcrTextInfo Region="542, 445, 81, 10" Text="KNY6-ASPVKOC" />
+                            <uc:OcrTextInfo Region="819, 445, 62, 10" Text="CH20240120" />
+                            <uc:OcrTextInfo Region="1164, 445, 53, 10" Text="20.01.2024" />
+                            <uc:OcrTextInfo Region="1510, 445, 53, 10" Text="28.12.2023" />
+                            <uc:OcrTextInfo Region="127, 477, 35, 10" Text="106991" />
+                            <uc:OcrTextInfo Region="473, 477, 28, 10" Text="PACT" />
+                            <uc:OcrTextInfo Region="502, 477, 14, 10" Text="TB" />
+                            <uc:OcrTextInfo Region="518, 477, 23, 10" Text="6*45" />
+                            <uc:OcrTextInfo Region="542, 477, 81, 10" Text="KNY6-ASPVKOC" />
+                            <uc:OcrTextInfo Region="819, 477, 62, 10" Text="CH20240125" />
+                            <uc:OcrTextInfo Region="1164, 477, 54, 10" Text="25.01.2024" />
+                            <uc:OcrTextInfo Region="1510, 477, 53, 10" Text="28.12.2023" />
+                            <uc:OcrTextInfo Region="128, 509, 35, 10" Text="106992" />
+                            <uc:OcrTextInfo Region="473, 509, 58, 10" Text="PACTVWKA" />
+                            <uc:OcrTextInfo Region="531, 509, 44, 10" Text="TBOPOr" />
+                            <uc:OcrTextInfo Region="577, 509, 18, 10" Text="100" />
+                            <uc:OcrTextInfo Region="596, 509, 60, 10" Text="KNY6HVKA*" />
+                            <uc:OcrTextInfo Region="819, 509, 61, 10" Text="CH20240131" />
+                            <uc:OcrTextInfo Region="1164, 509, 54, 10" Text="31.01.2024" />
+                            <uc:OcrTextInfo Region="1510, 509, 53, 10" Text="26.12.2023" />
+                            <uc:OcrTextInfo Region="127, 542, 36, 10" Text="108704" />
+                            <uc:OcrTextInfo Region="473, 542, 23, 10" Text="NPO" />
+                            <uc:OcrTextInfo Region="497, 542, 44, 10" Text="TBOPOr" />
+                            <uc:OcrTextInfo Region="543, 542, 18, 10" Text="180" />
+                            <uc:OcrTextInfo Region="562, 542, 16, 10" Text="2%" />
+                            <uc:OcrTextInfo Region="579, 539, 92, 15" Text="TPAANLVOHHbln" />
+                            <uc:OcrTextInfo Region="818, 542, 62, 10" Text="XY20231006" />
+                            <uc:OcrTextInfo Region="1164, 542, 53, 10" Text="06.10.2023" />
+                            <uc:OcrTextInfo Region="1509, 542, 55, 10" Text="22.09.2023" />
+                            <uc:OcrTextInfo Region="127, 574, 36, 10" Text="109247" />
+                            <uc:OcrTextInfo Region="472, 574, 51, 10" Text="AKTVBVA" />
+                            <uc:OcrTextInfo Region="524, 574, 18, 10" Text="150" />
+                            <uc:OcrTextInfo Region="543, 574, 54, 10" Text="4EPHVKA-" />
+                            <uc:OcrTextInfo Region="599, 574, 7, 10" Text="5" />
+                            <uc:OcrTextInfo Region="607, 574, 42, 10" Text="3n-CEM" />
+                            <uc:OcrTextInfo Region="818, 574, 62, 10" Text="XY20231010" />
+                            <uc:OcrTextInfo Region="1165, 574, 53, 10" Text="10.10.2023" />
+                            <uc:OcrTextInfo Region="1510, 574, 53, 10" Text="05.09.2023" />
+                            <uc:OcrTextInfo Region="26, 606, 9, 9" Text="K" />
+                            <uc:OcrTextInfo Region="74, 608, 6, 9" Text="1" />
+                            <uc:OcrTextInfo Region="96, 608, 8, 9" Text="2" />
+                            <uc:OcrTextInfo Region="120, 607, 7, 9" Text="3" />
+                            <uc:OcrTextInfo Region="143, 608, 7, 8" Text="4" />
+                            <uc:OcrTextInfo Region="226, 606, 16, 10" Text="1..." />
+                            <uc:OcrTextInfo Region="282, 609, 53, 8" Text="aneMeHTOB" />
+                            <uc:OcrTextInfo Region="337, 609, 12, 8" Text="Ha" />
+                            <uc:OcrTextInfo Region="351, 609, 46, 10" Text="CTpahMye" />
+                            <uc:OcrTextInfo Region="1676, 607, 62, 12" Text="OT06paxeHbl" />
+                            <uc:OcrTextInfo Region="1740, 609, 35, 8" Text="3anwCM" />
+                            <uc:OcrTextInfo Region="1777, 607, 5, 10" Text="1" />
+                            <uc:OcrTextInfo Region="1785, 608, 5, 9" Text="-" />
+                            <uc:OcrTextInfo Region="1791, 607, 18, 10" Text="100" />
+                            <uc:OcrTextInfo Region="1811, 609, 12, 8" Text="M3" />
+                            <uc:OcrTextInfo Region="1824, 607, 19, 10" Text="374" />
+                          </scg:List>
+                        </uc:CVCache.OcrTexts>
+                      </uc:CVCache>
+                    </scg:List>
+                  </uc:CvCacheContainer.Caches>
+                </uc:CvCacheContainer>
+              </p:CVScope.DesignTimeCacheContainer>
+              <p:CVScope.OCREngine>
+                <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                  <ActivityFunc.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                  </ActivityFunc.Argument>
+                  <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_1" Image="[Image]" Language="en" Profile="Screen" Scale="1" Timeout="100000" />
+                </ActivityFunc>
+              </p:CVScope.OCREngine>
+              <p:CVScope.Target>
+                <ui:Target Element="{x:Null}" Id="cbd737a4-91ea-4b85-9e8e-2bc44e339d3b" InformativeScreenshot="b786c41bcf54e3ccc8994a217de90724" Selector="&lt;webctrl tag='BODY' /&gt;" WaitForReady="INTERACTIVE">
+                  <ui:Target.ClippingRegion>
+                    <ui:Region Rectangle="0, 77, 2332, 851" />
+                  </ui:Target.ClippingRegion>
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </p:CVScope.Target>
+              <p:CVScope.UseLocalServer>
+                <InArgument x:TypeArguments="x:Boolean" />
+              </p:CVScope.UseLocalServer>
+            </p:CVScope>
+            <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Добавление партии'" sap:VirtualizedContainerService.HintSize="954,518" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Version="V1">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Целевой объект появляется" sap:VirtualizedContainerService.HintSize="450,301" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;Справочник партий&quot;,&quot;Диалог добавления партии запущен&quot;,Date.now.ToString(&quot;dd.MM.yyyy hh:mm:ss&quot;),&quot;успешен&quot;}]" DataTable="[LogListLot]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="388,186" sap2010:WorkflowViewState.IdRef="AddDataRow_8" />
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Целевой объект не появляется" sap:VirtualizedContainerService.HintSize="450,301" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;Справочник партий&quot;,&quot;Диалог добавления партии запущен&quot;,Date.now.ToString(&quot;dd.MM.yyyy hh:mm:ss&quot;),&quot;ОШИБКА&quot;}]" DataTable="[LogListLot]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="388,186" sap2010:WorkflowViewState.IdRef="AddDataRow_9" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_mow_test/(S(rss5eltdtywnxqo0lwlboiev))/OheWebReports.aspx#" DesignTimeRectangle="750, 268, 318, 21" ElementType="Text" FriendlyName="'Добавление партии'" FullSelectorArgument="&lt;webctrl id='panel-2089-popup_wnd_title' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='panel-2089-popup_wnd_title' tag='SPAN' type='' aaname='Добавление партии' check:text='Добавление партии' /&gt;" Guid="9b180e0e-8b2e-4d48-8a2b-2abca03d6ef3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAUIAAAAZCAYAAABEkyccAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAQoSURBVHhe7ZqxapRBFIV9NRufJC+gYB5BENIqWtiIjbYiiiAqYqNoFS3UwhSmMIUBUYstfjnLnnj27J3NrBHzk/8MfOz+M2fu3DvZe7KBnDt/YWsIIYQpEyMMIUyeGGEIYfLECEMIkydGGEKYPDHCEMLkWTHCz3tfhtZ48PDFkraHS9s7w8HBt0WEPwPnVPoQQvjflEYI44KBce72nfvDbDbb2AivXL01HB5+n++v1kMI4TS5eHlnePb8dW2E/m3tb43wzdv3c6q1EEI4bf6JEXKew79JIg724JUDev+G6HEw9CyYqQ+PA31raCx8S/3x89diZTVnruse/nnPe6k0rMHvznPXPRWtOnAezqWu586Q8+67T4vV5RitczCw7/rNe/NX/UXGunlnvJd1Gs6HMEZObIRsJDYBm8KbBEPjYZ+aWBUbMVWDZzcCxNRm87jAY7NJNR+819jUaD6shfsqDda8Vq+D+ahxOIjptfqc1wWqO8PQO/Jada/Ps2bN1WP2aDgfwhiBET56/HLZCKsPNvDGo06b3nXUVI2HfWwUnOVN4+dB43F8Dlo1AtATB+8xx5r5zD3A63UNz8acaxiXVDkoiOXrPocYPXfm97FJTqyZWsSBBvDsHg3jhTBGTmSErYbifpiBvlcNqBqP8zq0qVXP2Nps0Hrja97r8sGcGxjPBr5XNVzDn6CqqfIBNAufJ9jnd1PNkXV3pvdDtFZS/TxYF9bwzH2AcXs0jBfCGCmNsDIBoIayTsfGQCN4kyja2IzNgTU/DzF8uMlA63Mah/m0BnLGHtZWDdcgLsD7azfuHtXOfFrD81QYD2e05lgXB9a1VmhwZ5UZIT/mSKD1M/Xnh9hYxyv2Mm6PRs8JYWyURqgfZp/XJqMRoAFUp42B56rpgDZe1TR+nuqpwZoaij8DjcPcqnwU1sazge+l5snTV/P5Kn6VTw/YV9Wqc7135prWHVT3Sy3WoMcr5vXsHg3jhTBGSiNEE1UfYG8yNoA31KbNyPdsIIJnftPhszcqzYgavLrxeD5Vg3oOHlc1rJcajecaP5vg2Ws5bl3nPF9S3ZnfR1UbtX4mz9nf/zr/X1CuVTWv0zBeCGNkxQhbDQaqpsZ7DOq5XxuAczQH4A2KNW1CnqWxq0bF+RrHn4Hnjf2I4/lobGq0Vq+DGgzqemrlPtZVgXiaTzXXe2cY+vPAPn0mfgeA9WBovhqjR8O5EMYIjHDp32fQCD1DDUIbEENNgGizYLhZVetsfMZjU/uATvf7+W6EgGbE4QbAdd3DMxifGm121xDPXQ2jgrVrTj7Xe2d4/vBxb6Fq/0sLtXomz/B5xGecHg3nQhgzS0aoze/gg36cJoyHytxCCDUxwjNKjDCEfmKEZ5QYYQj9HBlhCCFMlRhhCGHyxAhDCJMnRhhCmDhbw28LMt/9mfrugAAAAABJRU5ErkJggg==" InformativeScreenshot="33979678b7863a0bfabc717539d74df7.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Справочник партий-2088' /&gt;" SearchSteps="FuzzySelector" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+            <ui:WriteCsvFile AddHeaders="True" DataTable="[LogListLot]" Delimitator="Comma" DisplayName="Write CSV" FilePath="Processes\TestCaces\Alexey\LOG\ListLotLog.csv" sap:VirtualizedContainerService.HintSize="954,153" sap2010:WorkflowViewState.IdRef="WriteCsvFile_3" ShouldQuote="True" />
+            <uix:NClick ClickType="Single" DisplayName="Click 'Введите Код товара'" sap:VirtualizedContainerService.HintSize="954,157" sap2010:WorkflowViewState.IdRef="NClick_9" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_mow_test/(S(m2wqpqpa3fkdzysfjndpw43j))/OheWebReports.aspx#" DesignTimeRectangle="798, 276, 137, 24" ElementType="InputBox" FriendlyName="'INPUT ajc_2089_product_…'" FullSelectorArgument="&lt;webctrl aria-role='combobox' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='combobox' tag='INPUT' type='text' aaname='Введите Код товара:' /&gt;" Guid="480dd600-9605-4a4d-882d-df63070c3afa" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAI0AAAAcCAYAAABcZDxDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACwSURBVGhD7dsxCsMwAATB/P+BLty68w9cKZzAIcbg5PoZuEb1okp6DSh9otn3fazrOpZlMbssXaSP04wmB9u2jeM45iF8Sxfp4wxnRpOSBMOT9JFOYkaTKwh+OTsRDX8TDTXRUBMNNdFQEw010VATDTXRUBMNNdFQEw010VATDTXRUBMNNdFQEw010VC7RONhOb/cHpb7wsKTdHH7whI5SEm5gsy+ly7OYOITDfxnjDd1Rtt/2NJ6zAAAAABJRU5ErkJggg==" InformativeScreenshot="078615561e2c6448d453df4f523d387b.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Справочник партий-2088' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="797, 254, 107, 21" ElementType="Text" FriendlyName="'Введите Код товара'" FullSelectorArgument="&lt;webctrl id='ajc_2089_product_popup1831_label' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ajc_2089_product_popup1831_label' tag='LABEL' type='' aaname='Введите Код товара:' check:text='Введите Код товара:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAG8AAAAZCAYAAAA/vnC8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJqSURBVGhD7ZQxa1RBFIX9azbWNrYKammR0mJ7OyGlYGerWIpga6OgjaywGAOuJLBCQqq41ci35FvODvueCgnuyBwY3sy8M/eee8+8d610NItuXsPo5jWMbl7D6OY1jG5ew+jmNYxuXsPo5jWMbl7D6OY1jLV5L16+Kddv3N8YDyf75fz85wVjN/Hu/ady89Ze+XLwrZycnJU79yarwfx/x4Z5WbSNoDm7jDSPGlq4cJeFQfNoBk2hORqZX+Xj/WcrHu/rPZD7DGOz79wc5ObsNn7+EZjX0Dzj8hSpQYOBebe9A0P1cim4HLk3xgdZlzXJz3fq3sZ335hi9Lcp2WQ2jydFHB//WO2T2MLksOdXwFwhzo+OFutGeMY8FkJDb9+drJ71O8G61gtqvprRQ7wHe49WnMxRQ63wQMbI+M6tI3mC+F4y+eqFn3lA8ocw+OWlGSazSd5UE7ifDcwCsgnOX71+W548fb6awwXmUTDPjM2QK+BYJGfNj7Y0xfepgXnNSyQPENv4f9IfQIzUz3pbnamt5g/ht+Yh1mQ2zmSHh983RIgsDGwTx/rg63wjbl3UWGMFXJtFnLpBxubpZUoTxnKkbkAM16m1zuW5Dx8/r2MzvGTy1WDcIf4QRn+bBEyh+S6/qpqPqOQ6yCE/i7Bo1yk4dZkzAVfzPD+mbVudDBuZ4LzngJfSM7XujAfv9PRszUcjxnBGfvaJXBk/+QBurXFt3mWCJGkAYE8h/xJoqHWwrhtzldC8ukd/iysxr2Mc3byObl7L6OY1jA3zFotFmc1mZTqd9tHAWJuHcfP5vCyXy4udjt1GKb8AZoLcqU8l5IQAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Введите Код товара'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,217" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Text="100703" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_mow_test/(S(m2wqpqpa3fkdzysfjndpw43j))/OheWebReports.aspx#" DesignTimeRectangle="798, 276, 137, 24" ElementType="InputBox" FriendlyName="'INPUT ajc_2089_product_…'" FullSelectorArgument="&lt;webctrl aria-role='combobox' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='combobox' tag='INPUT' type='text' aaname='Введите Код товара:' /&gt;" Guid="2c522b85-222c-4f21-99a7-235ea097b6a5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAI0AAAAcCAYAAABcZDxDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACwSURBVGhD7dsxCsMwAATB/P+BLty68w9cKZzAIcbg5PoZuEb1okp6DSh9otn3fazrOpZlMbssXaSP04wmB9u2jeM45iF8Sxfp4wxnRpOSBMOT9JFOYkaTKwh+OTsRDX8TDTXRUBMNNdFQEw010VATDTXRUBMNNdFQEw010VATDTXRUBMNNdFQEw010VC7RONhOb/cHpb7wsKTdHH7whI5SEm5gsy+ly7OYOITDfxnjDd1Rtt/2NJ6zAAAAABJRU5ErkJggg==" InformativeScreenshot="078615561e2c6448d453df4f523d387b.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Справочник партий-2088' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="797, 254, 107, 21" ElementType="Text" FriendlyName="'Введите Код товара'" FullSelectorArgument="&lt;webctrl id='ajc_2089_product_popup1831_label' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ajc_2089_product_popup1831_label' tag='LABEL' type='' aaname='Введите Код товара:' check:text='Введите Код товара:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAG8AAAAZCAYAAAA/vnC8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJqSURBVGhD7ZQxa1RBFIX9azbWNrYKammR0mJ7OyGlYGerWIpga6OgjaywGAOuJLBCQqq41ci35FvODvueCgnuyBwY3sy8M/eee8+8d610NItuXsPo5jWMbl7D6OY1jG5ew+jmNYxuXsPo5jWMbl7D6OY1jLV5L16+Kddv3N8YDyf75fz85wVjN/Hu/ady89Ze+XLwrZycnJU79yarwfx/x4Z5WbSNoDm7jDSPGlq4cJeFQfNoBk2hORqZX+Xj/WcrHu/rPZD7DGOz79wc5ObsNn7+EZjX0Dzj8hSpQYOBebe9A0P1cim4HLk3xgdZlzXJz3fq3sZ335hi9Lcp2WQ2jydFHB//WO2T2MLksOdXwFwhzo+OFutGeMY8FkJDb9+drJ71O8G61gtqvprRQ7wHe49WnMxRQ63wQMbI+M6tI3mC+F4y+eqFn3lA8ocw+OWlGSazSd5UE7ifDcwCsgnOX71+W548fb6awwXmUTDPjM2QK+BYJGfNj7Y0xfepgXnNSyQPENv4f9IfQIzUz3pbnamt5g/ht+Yh1mQ2zmSHh983RIgsDGwTx/rg63wjbl3UWGMFXJtFnLpBxubpZUoTxnKkbkAM16m1zuW5Dx8/r2MzvGTy1WDcIf4QRn+bBEyh+S6/qpqPqOQ6yCE/i7Bo1yk4dZkzAVfzPD+mbVudDBuZ4LzngJfSM7XujAfv9PRszUcjxnBGfvaJXBk/+QBurXFt3mWCJGkAYE8h/xJoqHWwrhtzldC8ukd/iysxr2Mc3byObl7L6OY1jA3zFotFmc1mZTqd9tHAWJuHcfP5vCyXy4udjt1GKb8AZoLcqU8l5IQAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="954,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_5" Shortcuts="[d(hk)][k(down)][u(hk)]" Version="V1" />
+            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="954,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_6" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V1" />
+            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="954,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_7" Shortcuts="[d(hk)][k(tab)][u(hk)]" Version="V1" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '№ Партии'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,217" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Text="CH20240330" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_mow_test/(S(m2wqpqpa3fkdzysfjndpw43j))/OheWebReports.aspx#" DesignTimeRectangle="953, 276, 137, 24" ElementType="InputBox" FriendlyName="'INPUT eb_2089_lot_num_p…'" FullSelectorArgument="&lt;webctrl id='eb_2089_lot_num_popup1832' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='eb_2089_lot_num_popup1832' tag='INPUT' type='text' aaname='№ Партии:' /&gt;" Guid="21d3e286-f834-45ac-bc16-8778b6590c7f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAI0AAAAcCAYAAABcZDxDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACwSURBVGhD7dsxCsMwAATB/P+BLty68w9cKZzAIcbg5PoZuEb1okp6DSh9otn3fazrOpZlMbssXaSP04wmB9u2jeM45iF8Sxfp4wxnRpOSBMOT9JFOYkaTKwh+OTsRDX8TDTXRUBMNNdFQEw010VATDTXRUBMNNdFQEw010VATDTXRUBMNNdFQEw010VC7RONhOb/cHpb7wsKTdHH7whI5SEm5gsy+ly7OYOITDfxnjDd1Rtt/2NJ6zAAAAABJRU5ErkJggg==" InformativeScreenshot="4ba9970e5b5a80c2f4e0daccd37eef47.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Справочник партий-2088' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="952, 254, 55, 21" ElementType="Text" FriendlyName="'№ Партии'" FullSelectorArgument="&lt;webctrl aaname='№ Партии:' parentid='form-2089-popup' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='№ Партии:' parentid='form-2089-popup' tag='LABEL' type='' check:text='№ Партии:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADsAAAAZCAYAAACPQVaOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGISURBVFhH7ZMxSwNBEIX9azbWNrYKaqdgSovrBNMJKRW7gJViI0jA1kZbvSIkFh4kcELAKqYa+Q7fsbcxFwISdN0Hy+3Ozs6+b5ZbsX+kCBuqImyoirChKsKGqggbqkrY0ejdtnYSO2m1K+uHx6diPUvj8YcdJi1bXdutDM5S4zdpChajALqwNGAWgGDVJHR1ffd3YDE/GOTFun1xY5vbifX6rwWQC4XmwdIsvbYaqZz9RrMYuvM57dn6RqOSTx5nVA8f5BCXZ/blg8GcPPmWpmCBo9jp+eWPwEp+HjncQ13dTUx7Mo0EywMQVxNcWNZqms75moJ1DzJYY5C5zLmaB6u6qufCyphqEPP3kGBvO/flI5Cj2sSpe9Q8WxzWNci6TnWww+FbCeHnEVvkZfFCTv8lK3N9n9ReGBbpArqmggwZkupgqclcZ/cOjkszxP1/VibZ+w6Wr9sYzXW3C0sTZ/6zy5YPtAxF2FAVYUNVBTbPc+t2u5amaZCjhAU0yzKbTCZfkdBk9gl/ycE20AIWfAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="954,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_8" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V1" />
+            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;Справочник партий&quot;,&quot;Конец&quot;,Date.now.ToString(&quot;dd.MM.yyyy hh:mm:ss&quot;),&quot;успешен&quot;}]" DataTable="[LogListLot]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="954,186" sap2010:WorkflowViewState.IdRef="AddDataRow_10" />
+            <ui:WriteCsvFile AddHeaders="True" DataTable="[LogListLot]" Delimitator="Comma" DisplayName="Write CSV" FilePath="Processes\TestCaces\Alexey\LOG\ListLotLog.csv" sap:VirtualizedContainerService.HintSize="954,153" sap2010:WorkflowViewState.IdRef="WriteCsvFile_2" ShouldQuote="True" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Edge" IconBase64="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" InformativeScreenshot="e155de6ce804536f328d74e3e00fa464.png" Selector="&lt;html app='msedge.exe' url='http://10.29.19.230/cwms_mow_test/' /&gt;" Url="http://10.29.19.230/cwms_mow_test/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
