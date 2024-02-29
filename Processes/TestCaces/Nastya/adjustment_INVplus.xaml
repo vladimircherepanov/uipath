@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Нужно_переименовать" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1192.8,13527.2" sap2010:WorkflowViewState.IdRef="Нужно_переименовать_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Нужно_переименовать" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1192.8,17528.8" sap2010:WorkflowViewState.IdRef="Нужно_переименовать_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>Microsoft.VisualBasic</x:String>
@@ -49,6 +49,7 @@
       <x:String>UiPath.OCR.Contracts</x:String>
       <x:String>UiPath.OCR.Activities</x:String>
       <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -97,17 +98,18 @@
       <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="adjustment_INVplus" sap:VirtualizedContainerService.HintSize="1203.2,12687.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="adjustment_INVplus" sap:VirtualizedContainerService.HintSize="1203.2,17464" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd1:DataTable" Name="log_x" />
       <Variable x:TypeArguments="x:Int32" Name="number" />
       <Variable x:TypeArguments="x:String" Name="batch" />
       <Variable x:TypeArguments="x:String" Name="product" />
+      <Variable x:TypeArguments="x:String" Name="SSCC" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -145,13 +147,13 @@
         <InArgument x:TypeArguments="x:String">CH20240310</InArgument>
       </Assign.Value>
     </Assign>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: ConsID.WMS - сиcтема управления складом нового поколения" sap:VirtualizedContainerService.HintSize="1140.8,11800.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="8b2f5d97-80df-4792-93ac-1f347c65690b" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: ConsID.WMS - сиcтема управления складом нового поколения" sap:VirtualizedContainerService.HintSize="1140.8,16577.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="8b2f5d97-80df-4792-93ac-1f347c65690b" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="1107.2,11584" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="1107.2,16360.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -413,7 +415,7 @@
               <uix:NCheckState.Target>
                 <uix:TargetAnchorable BrowserURL="http://10.29.19.237/cwms_krdc_prod/(S(dnvk21jkzedis2fja4sv52j5))/OheWebReports.aspx?ref=logoff#ref=2088&amp;popup=0" DesignTimeRectangle="34, 226, 150, 23" ElementType="Text" FriendlyName="'Справочник партий'" FullSelectorArgument="&lt;webctrl aaname='Справочник партий' parentid='tabs-2088-tab-1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Справочник партий' parentid='tabs-2088-tab-1' tag='SPAN' type='' check:text='Справочник партий' /&gt;" Guid="fd3a4175-996a-4c49-ab71-6f235067d1b1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJoAAAAbCAYAAACEE5ZqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAANSSURBVHhe7ZbBcSshDIZfa7m8SnLzIRW4COeQNpxD2rDL8LgLAkgCSYiFdRIy856+GSZjFiT062c3f4LjLMCN5izBjeYswY3mLMGN5izBjeYswY3mLKFrtNv7MTz9fRbjdMGHjlO4hfML88blLTy9fMRZiWG0SzhlY72FK85kUoA0/+pucxT3j3AoL6RjON9xnqGMBu60HJlBs/mbzdmLNNrQSJdwjc9ud7Ch9XmlQTGur/F3NO5VrLVcT29SNsTb03ieRnMp9DqWC2+erg/qoDc4Xjb95s7aUCx7DekhPiM8/+CrMKNnRrxBYBzeqwqlHsqHQ55L7q8jnffB+jKov+qLMBoE0hv7lILwd0Y1MxtNJW7zwOG4WBSnzhlrqCgShBrABBLi/KTRWPPtRsAenZszo6dZAxqH5qhmEUutKZhmeaQ+wOp3QhgNFqlCN5gRxo4pCzHjROhtCAe2jCbXyPUE5krzVpMiXzca5TjK+HxPzr2t7bSevRqFnto8nb1TRpuoj/0+5LUyzxqjNcJs5ML9cCP53tEbTYtTqee0zfplo+Vncb82MtuT6zXOxpnRU5Djx7g0ML4ZJwLzylSiLmJ/fbQnaWv1fM2n0xBY7kXDKMHkgdWaMlSMQS7L4PIsKHKTJw0pKuRi5jUbgXuNc2lm9NQXES6NNEaOY1xu01RDo43qg72NxltGawI14AEwyIwwVtIEb7jV/ITcywpm1L1SbI4+J+zRg5534hi3N60RTd1ohKzFZqyn1L8iz2zGicD8PqPN1Qe92eq5NBol6AmSA9dmj4XhRuBwYXo58Q1V5m2jNc3s5erVFJF18LMxREMopvqfZcNo9Kw5P2OsJ2qiz4ZrpNG0eTpmF3UR++rT/5NNGC2BxeiCc1AZYN5ocTBxYK4Wp38nyr6SzzYarMMzKMETcEYmjsHDRlO5eo2gunoGIMZ6Ul6+pj0L1dz2ytBhy2gsZsasL60zejc2GlAazYY+5FiYmvQs4qk9EZ0vGUo2hi6AHlokva7NpZF17DGayj0wWtmnmkDM6Flz15Ge8QtHcc75L63TOiGbRpupL65TWu0y2ndhJXV+FtOwv4wb7R/EjeYs4b80muMk3GjOEtxozhLcaM4S3GjOAkL4BGMsj4J9v5b9AAAAAElFTkSuQmCC" InformativeScreenshot="5d688babb56aa0157f536960250da8b2.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Справочник партий-2088' /&gt;" SearchSteps="FuzzySelector">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="34, 273, 99, 32" ElementType="Text" FriendlyName="'Код Товара'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' aaname='Код Товара:' check:text='Код Товара:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGcAAAAkCAYAAACUjSQ7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJXSURBVGhD7ZQ9ksIwDIX3atvsSegoOAGHgIJrQME1QpmGnoFTeJPY0Y8t2wECaHb1Zl6TOLb0PjlfzqRWBkexDI5iGRzFMjiKZXAUy+AolsFRLIOjWAZHsQyOYhkcxTI4imVwFMvgKBaH0+zc98+i886dwqNB8HzhlodLePhiXY9uGc4s+W31fEB1OATMW8MwODU4F7df6Qjhclj72lbHrqr/oTIcmN7oNxd02npwYCm46OYx3xF0CQ68A8f1Nm7D3nPHg5f0xfbDvTYNDu9gqR/hD8DPy1+AApzSrSk1GwXzUjhROMxrt7+GZRU4dG0KZvTYV20v0n/h14yZ3g2HeNuElyic1EwA5BtYKz17Fg6pdwPbE2CwFmtjAUB4oQ/pTwFnjL1SONI6PGMELYGQco1Vh9M7M60xaYSGRY/P6Nq54MCUx40WAxUsBZVMfboXDoRXtp5OyY18HI4Pl26IheSLi7/vlU7PXHDyQ5LciBocYc/UD8DJDXvvZ+Gw6ZkQCgQIcMZGxsa8PnlzeM38OdZPgp+8V1wPrhPhPw2nk1Qw3igaOikmHJyDMBccMUwaAKzNBcoHDfoiZ6S9kj5JTvSWDGeQwYba6LDPAYcVIzSb2n+LTVU8EZAMdMpvqFepXu8hQBJwagmOYKivVFtngMMHhGoCHBJMZ5xQAQCZhvfA8aL1yWvKgdJQ+F59DnF4uFefBeuzcu7wfZLxVDgzyhdNpzfSeMUnwtEjDueVMjh36w/A+bsyOKZOBkexDI5iGRzFMjiKlcC53W7ufD67tm3NH3XrfgHxXZMPPDQrBQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -427,7 +429,7 @@
                     <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
                   </ActivityAction.Argument>
                   <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_25">
-                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: ArrowButton (1375,125,20,24)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Aara C03AaHMA' (1220,164,91,12)&quot;]" DesignTimeCacheId="3aa491af-f7a9-472e-bd3d-aa6e50179d39" DesignTimeScaleFactor="1.25" DisplayName="CV Click - ArrowButton" sap:VirtualizedContainerService.HintSize="400,137.6" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_8" InformativeScreenshot="634984d84f0158f930e5dbe554ced7be" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V3">
+                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: ArrowButton (1375,125,20,24)&quot; +&#xA;&quot;Anchor: Text 'Aara C03AaHMA' (1220,164,91,12)&quot;]" DesignTimeCacheId="3aa491af-f7a9-472e-bd3d-aa6e50179d39" DesignTimeScaleFactor="1.25" DisplayName="CV Click - ArrowButton" sap:VirtualizedContainerService.HintSize="400,137.6" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_8" InformativeScreenshot="634984d84f0158f930e5dbe554ced7be" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V3">
                       <p:CvClickWithDescriptor.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -464,6 +466,9 @@
                   </Sequence>
                 </ActivityAction>
               </p:CVScope.Body>
+              <p:CVScope.DesignTimeCache>
+                <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" />
+              </p:CVScope.DesignTimeCache>
               <p:CVScope.DesignTimeCacheContainer>
                 <uc:CvCacheContainer>
                   <uc:CvCacheContainer.Caches>
@@ -701,7 +706,7 @@
                     <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
                   </ActivityAction.Argument>
                   <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_17">
-                    <p:CvTypeIntoWithDescriptor DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (12,80,159,33)&quot; +&#xD;&#xA;&quot;Anchor: Text 'BBeANTe KoA TOBapa:' (12,63,139,13)&quot;]" DesignTimeCacheId="99a8cd17-8414-43bf-bfb9-974f93a57639" DesignTimeScaleFactor="1.25" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="400,186.4" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_6" InformativeScreenshot="f14080345e7a9ffdeaf412d47a55959f" Text="[product]" Version="V3">
+                    <p:CvTypeIntoWithDescriptor DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (12,80,159,33)&quot; +&#xA;&quot;Anchor: Text 'BBeANTe KoA TOBapa:' (12,63,139,13)&quot;]" DesignTimeCacheId="99a8cd17-8414-43bf-bfb9-974f93a57639" DesignTimeScaleFactor="1.25" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="400,186.4" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_6" InformativeScreenshot="f14080345e7a9ffdeaf412d47a55959f" Text="[product]" Version="V3">
                       <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                         <uc:CvDescriptor>
                           <uc:CvDescriptor.Anchors>
@@ -730,7 +735,7 @@
                         <uix:TargetAnchorable BrowserURL="http://10.29.19.237/cwms_krdc_prod/(S(dnvk21jkzedis2fja4sv52j5))/OheWebReports.aspx?ref=logoff#" DesignTimeRectangle="766, 355, 176, 68" ElementType="Text" FriendlyName="'54962-ПРО МолокоОтбор'" FullSelectorArgument="&lt;webctrl parentid='c9aa17da-50cb-424a-886a-bc12a3648b2c' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='c9aa17da-50cb-424a-886a-bc12a3648b2c' tag='SPAN' type='' aaname='54962-ПРО МолокоОтбор 930 3.4-4.5% П6' check:text='54962-ПРО МолокоОтбор 930 3.4-4.5% П6' /&gt;" Guid="3d4ba93e-f113-46bb-8a53-cf8d5b6be9e7" ImageBase64="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" InformativeScreenshot="327215a001dda29dfbafbeae9d069bc7.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Справочник партий-2088' /&gt;" SearchSteps="FuzzySelector, Image" />
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <p:CvTypeIntoWithDescriptor DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (188,80,159,33)&quot; +&#xD;&#xA;&quot;Anchor: Text 'No Naprnn:' (188,63,70,14)&quot;]" DesignTimeCacheId="f68b1659-8006-4048-987d-42ac97d5bd01" DesignTimeScaleFactor="1.25" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="400,186.4" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_5" InformativeScreenshot="48975877b45462a2fb7863ae2a2efab2" Text="[batch]" Version="V3">
+                    <p:CvTypeIntoWithDescriptor DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (188,80,159,33)&quot; +&#xA;&quot;Anchor: Text 'No Naprnn:' (188,63,70,14)&quot;]" DesignTimeCacheId="f68b1659-8006-4048-987d-42ac97d5bd01" DesignTimeScaleFactor="1.25" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="400,186.4" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_5" InformativeScreenshot="48975877b45462a2fb7863ae2a2efab2" Text="[batch]" Version="V3">
                       <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                         <uc:CvDescriptor>
                           <uc:CvDescriptor.Anchors>
@@ -754,7 +759,7 @@
                         </ui:Target>
                       </p:CvTypeIntoWithDescriptor.Target>
                     </p:CvTypeIntoWithDescriptor>
-                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'OR06aBMTb' (198,153,56,13)&quot; +&#xD;&#xA;&quot;Anchor: Button (169,144,97,31)&quot;]" DesignTimeCacheId="f68b1659-8006-4048-987d-42ac97d5bd01" DesignTimeScaleFactor="1.25" DisplayName="CV Click - Text" sap:VirtualizedContainerService.HintSize="400,137.6" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_6" InformativeScreenshot="dc20c8ff689c53b52fa2b7400d7ccd77" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V3">
+                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'OR06aBMTb' (198,153,56,13)&quot; +&#xA;&quot;Anchor: Button (169,144,97,31)&quot;]" DesignTimeCacheId="f68b1659-8006-4048-987d-42ac97d5bd01" DesignTimeScaleFactor="1.25" DisplayName="CV Click - Text" sap:VirtualizedContainerService.HintSize="400,137.6" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_6" InformativeScreenshot="dc20c8ff689c53b52fa2b7400d7ccd77" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V3">
                       <p:CvClickWithDescriptor.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -791,6 +796,9 @@
                   </Sequence>
                 </ActivityAction>
               </p:CVScope.Body>
+              <p:CVScope.DesignTimeCache>
+                <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" />
+              </p:CVScope.DesignTimeCache>
               <p:CVScope.DesignTimeCacheContainer>
                 <uc:CvCacheContainer>
                   <uc:CvCacheContainer.Caches>
@@ -905,7 +913,7 @@
                     <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
                   </ActivityAction.Argument>
                   <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_28">
-                    <p:CvTypeIntoWithDescriptor DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (14,76,235,33)&quot; +&#xD;&#xA;&quot;Anchor: Text 'KoA ToBapa:' (15,60,80,14)&quot;]" DesignTimeCacheId="7416e9a8-fff7-4509-9825-e197a05df62e" DesignTimeScaleFactor="1.25" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="400,186.4" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_7" InformativeScreenshot="9ffc00a22f77e49630e990c72febac60" Text="[product]" Version="V3">
+                    <p:CvTypeIntoWithDescriptor DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (14,76,235,33)&quot; +&#xA;&quot;Anchor: Text 'KoA ToBapa:' (15,60,80,14)&quot;]" DesignTimeCacheId="7416e9a8-fff7-4509-9825-e197a05df62e" DesignTimeScaleFactor="1.25" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="400,186.4" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_7" InformativeScreenshot="9ffc00a22f77e49630e990c72febac60" Text="[product]" Version="V3">
                       <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                         <uc:CvDescriptor>
                           <uc:CvDescriptor.Anchors>
@@ -929,7 +937,7 @@
                         </ui:Target>
                       </p:CvTypeIntoWithDescriptor.Target>
                     </p:CvTypeIntoWithDescriptor>
-                    <p:CvTypeIntoWithDescriptor DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (264,76,236,34)&quot; +&#xD;&#xA;&quot;Anchor: Text 'NapTNA:' (265,60,52,14)&quot;]" DesignTimeCacheId="7416e9a8-fff7-4509-9825-e197a05df62e" DesignTimeScaleFactor="1.25" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="400,186.4" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_8" InformativeScreenshot="022fb04804025c5e32f2f4e649346500" Text="[batch]" Version="V3">
+                    <p:CvTypeIntoWithDescriptor DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (264,76,236,34)&quot; +&#xA;&quot;Anchor: Text 'NapTNA:' (265,60,52,14)&quot;]" DesignTimeCacheId="7416e9a8-fff7-4509-9825-e197a05df62e" DesignTimeScaleFactor="1.25" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="400,186.4" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_8" InformativeScreenshot="022fb04804025c5e32f2f4e649346500" Text="[batch]" Version="V3">
                       <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                         <uc:CvDescriptor>
                           <uc:CvDescriptor.Anchors>
@@ -956,6 +964,9 @@
                   </Sequence>
                 </ActivityAction>
               </p:CVScope.Body>
+              <p:CVScope.DesignTimeCache>
+                <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" />
+              </p:CVScope.DesignTimeCache>
               <p:CVScope.DesignTimeCacheContainer>
                 <uc:CvCacheContainer>
                   <uc:CvCacheContainer.Caches>
@@ -1162,7 +1173,7 @@
               <uix:NCheckState.Target>
                 <uix:TargetAnchorable BrowserURL="http://10.29.19.237/cwms_krdc_prod/(S(dnvk21jkzedis2fja4sv52j5))/OheWebReports.aspx?ref=logoff#ref=2088&amp;popup=0&amp;f_product=54962&amp;f_lot_num=CH20240310&amp;f_expdate=&amp;Button1=&amp;chk=&amp;hidscroll=0" DesignTimeRectangle="836, 440, 348, 52" ElementType="Text" FriendlyName="'CH20240310'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableCol='4' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' type='' tag='TD' aaname='CH20240310' check:text='CH20240310' /&gt;" Guid="a7ec4343-69be-4634-9146-513579da07bc" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAWAAAAA4CAYAAADDyyJiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAOGSURBVHhe7dnLbdtYFIDhtDabqSQ7L1JBikgWaSNepA0Z8MYlCO6CI4r3SnzcI5kBrSNhvg84yIQvkVr8uuF8eX197fp5e3s7/mmMMeZzp/ZWgI0x5sZzCnD/H8YYY24/X7qi/wsAn6/2VoABbkyAAZIIMEASAQZIIsAASQQYIIkAAyQRYIAkAgyQRIABkggwQBIBBkgiwABJBBggiQADJBFggCQCDJDkcwK8+9X98+/XyTw978vO4v1P99TaXjX377vf365ct1fOPR33c1d2jCzu8Vf3Una1lc/+wLVa97R//n71mLGXn8FnHRz3na71vfv9XnYAD2XjANdAzqJQg/jtz+GIYnWAd92P4BqTUJVtP06bynmjY2oMz8fUqMUxOwV0HsVjfEfnNZ5rOHd5TBTY8LMOjvc5+g4W1wYexqYBHiIWrCTnYWqEamK+fx66YghQ/czyAzCOdG9ybrSSHULdvJ8azH4m5y3j3pveU/u602Oq2Qp/fo9lpT3+4YifB7h32wX4WlAPoXjZ7bv9e9m/NsCB6QowiuiFuJ60Y1oD9/S8W4au3OM0iAfR9pFlgGt8+23tqLajHW8H7tt2AW6uzi7YKMCTVXcYviiuI8Hnnf/J34hisCq/eu/lu4qfrR3g+euHavojBDyKzQK8OgIlUqd/bgdzMcDzkIUBbgftbLz6HJkEdkWAoxX3+JkbIT1bF+D4PoB7lh7gMLAf3D8J0l8GeFhFz8+bR3SDAI8Mnxl9XwIM/webBXiIwI1eQbTi2wsDHL+CaMe3FbsVAb72bEeXXousC7BXEPCYtgvwh1d90/e1qwNcQt9cCYb30NpeInfYHgY7nBK7KPjhD8HY+gBH/7Mt2g7ctw0DPAvsXInSKSp/E+Aa32a0eu1wLVeqNb5rVo2ta7eDPwnilUi3n/+jz9ELjgXu3qYBDsNW4zuO89oA12tcC02J9Pm6y5Xm8EOxJr69duiG2I4C23iu5Q9TXWFHq9YoqvX7PZ/n9QM8ro0DPKhRGs8itCsDPEQsnskKs8a6zjhk833zab7a6F1YadaVeZnWMy2+k9Z1Ti581sH0uxBfeFSfEmAArhNggCQCDJBEgAGSCDBAEgEGSCLAAEkEGCCJAAMkEWCAJAIMkESAAZIIMEASAQZIIsAASQQYIIkAAyQRYIAkAgyQRIABkggwQJJFgAG4LQEGSNF1/wECQcHAsRcqXwAAAABJRU5ErkJggg==" InformativeScreenshot="3a547ad7cef3997273428b105b0049dd.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Справочник партий-2088' /&gt;" SearchSteps="FuzzySelector">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="836, 401, 348, 39" ElementType="Text" FriendlyName="'партия'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aria-role='columnheader' id='fcc19bca-cba7-4961-8ada-f25ab0ce143f' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aria-role='columnheader' id='fcc19bca-cba7-4961-8ada-f25ab0ce143f' tag='TH' type='' aaname='партия' check:text='партия' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAWAAAAArCAYAAABGiVJXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIwSURBVHhe7dzNbdswGIBhr9ZL9zDQrOCjc8wCgU/ZwEFGSLKCL16HlSpSf6ZTN430Ae1D4AEsmqZ8es3okM237z8SAOsTYIAgm/P5nABY3+Z0OqVWe1FeA7Cc0lsBBliZAAMEEWCAIAIMEESAAYIIMEAQAQYIIsAAQQQYIIgAAwQRYIAgAgwQRIABgggwQJDPB/j4UP3Hwq3t4W209iXt52vuX4b335/StpnbH2fr+jWVz4+093o97JrXD+m5v+ew7+Re177z3VN6HX8WYAV/GeBdenwfz3exHAI8v27kMPZzJZSN/TGvKdEdx3M0Pw38qRLgt/R4l+Na9pjfN3u+F2AgxqIBrp5MG5PoXQnjbYHvzO/TXe/Sto1wCXB1PwEG4ix8Ah4ZnXQnf/bn+eH0O10/3euWAHdr9sd8Cu5P0fPrjgADURYOcHfdRzfH7/IEfHkyrcf29wEe9q4Ht/ve+fsUAgwEWDTAv2J44yOILzkBT2JeC3D+QRgF1wkYiLJggHMAL+I2i2A1tI0/eMRRfeZbCXBZN95TgIEoK5yAK8GrBHiyrszNHx98GOB2j/FpexbgK3sKMBBl0QC3+uBm7XuTk2gO4/5QQjysG/YtPg7wdH4a4NqPQT8vwECAzwf4q5QAz58BA/zjBBggiAADBIkPMMB/SoABgggwQBABBggiwABBBBggiAADBBFggCACDBBEgAGCCDBAkD7A7QsA1rdJebQXhmEYxvKj621KPwGrYlPQHvalJwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -1190,9 +1201,9 @@
                 <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_mow_test/(S(5ki45jupr51i3u5s3uqmcl0t))/OheWebReports.aspx#" DesignTimeRectangle="446, 360, 248, 32" ElementType="Text" FriendlyName="'по ГМ'" FullSelectorArgument="&lt;webctrl aaname='по ГМ' parentid='top-menu' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='по ГМ' parentid='top-menu' tag='A' type='' check:text='по ГМ' /&gt;" Guid="f5d2a7b5-6cb0-434f-b838-e4b6a0e8d62d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPwAAAAkCAYAAACtxlclAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGeSURBVHhe7dkvb8JAGMfxvZqpqUkUSxocaghkBVU1CFyDQjSZmdn7vd099C+7Jk2WQunvKz7J6B2t+vaebS8fm4MLXt/eASxQ3XhA8MDCETwghOABIQQPCCF4QAjBA0IIHhBC8IAQggeEEDwghOABIU8f/Pb0476+487Zp0sv/ufTPvpdsyts73EXWQMWZhnBDwadWPDnS+njTyLre3cMawQPERrBZ7kPO3er23V/utsawUPE3YMfGsF7wVVjdi1+Ol+NCz6xff2ow1rp0rU/5W+fDyzUY4LvBdoPbpWVPvIQYrW+zm3kHop+bPD2EunuC/e1U5/goWNmwXcC7XzHXgKxkdwbHbw9p3Dbai3cs71O8NAws+AH4rNTvo21a3zw173ti6WeIggeOp4jePud/v/BN2N9M86HPQQPHTMLfsqRPnwOzypc2ozz9TWCh4aZBT/hH+06n3v3J3gImV3wZoJ/y9XX/k4LBA8ddw8ewOMQPCCE4AEhBA8IIXhACMEDQggeEELwgBCCB4QQPCCE4AEhBA8IIXhASBv8wf0CgMJvhlNZMzsAAAAASUVORK5CYII=" InformativeScreenshot="85bfd6d5ec8ae57c13159547d9f7f935.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Список ячеек по классу товара-5' /&gt;" SearchSteps="FuzzySelector, Image" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Код Товара'" sap:VirtualizedContainerService.HintSize="1044.8,640" sap2010:WorkflowViewState.IdRef="NCheckState_2" Version="V1">
+            <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Код Товара'" sap:VirtualizedContainerService.HintSize="1044.8,641.6" sap2010:WorkflowViewState.IdRef="NCheckState_2" Version="V1">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Целевой объект появляется" sap:VirtualizedContainerService.HintSize="496,421.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                <Sequence DisplayName="Целевой объект появляется" sap:VirtualizedContainerService.HintSize="496,423.2" sap2010:WorkflowViewState.IdRef="Sequence_10">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1210,7 +1221,7 @@
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Целевой объект не появляется" sap:VirtualizedContainerService.HintSize="496,421.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <Sequence DisplayName="Целевой объект не появляется" sap:VirtualizedContainerService.HintSize="496,423.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Int32" Name="number" />
                   </Sequence.Variables>
@@ -1233,7 +1244,7 @@
               <uix:NCheckState.Target>
                 <uix:TargetAnchorable BrowserURL="http://10.29.19.237/cwms_krdc_prod/(S(yvzq5apdr22b0jy1onfcorfy))/OheWebReports.aspx?ref=logoff#ref=135&amp;popup=0" DesignTimeRectangle="21, 274, 151, 43" FriendlyName="'Товарный запас'" FullSelectorArgument="&lt;webctrl idx='2' parentid='tabs-135-tab-1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='tabs-135-tab-1' tag='SPAN' aaname='' check:text='Товарный запас' /&gt;" Guid="9f02b46a-06e4-4b09-9a0a-bfdf8d70dee7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJsAAAAvCAYAAAD0OrjvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAOWSURBVHhe7ZbPThsxEIf7YhxoJZ6ivfVUpPIEXPoGUCnqA7RnOPAaUFWqeIGSiMAhXDgh5Nrr8e7MeHazIcmIP79PGok49qxn/K3Du8fHx4BAeISQbbFYhOlsFv5dXSEQa0Xy6Pb2Ntzf3zfxffKzk21+cxOm06m5EIF4SiSfrufz8OXrt7Dz4VOWLd1oKQDYNMmryY9fYXfvc5YtXXkPDw/0NQCbI3n1+8/fTrZ05QGwLZJfkA24ANmAG5ANuAHZgBuQDbgB2YAbkA24AdmAG5ANuAHZgBuQDbixGdmuz8J+TJISDcXROc1/9czCyQGr93wSdg/O4ujbZjs3G8n3duQyEC/gYTi5pvE3DGQDbvjLln5SmredQv28zE4P5fcUOlc9T94eF8dxLOa+EPPUDdPsRd86+Sdw97j9DQxHce3+af+PYHlWM8PMmXMs/SkVvTFuQ+PfFbEv3VsWcv+0Hx5tvR26x0M9GIOrbGXz3Tgd7N4kXJSRZk73OZHHuuZbc5oDZ2P5cwx2wDqPl2zWXipIlNKbaq9WT9Uaux69f6Meys3H8p7r568jnKNsPYemirBEkvmG85RnavkySiQP2ejzfso5IJvIkbDqqdaPqUfu3+xvROQ3z4/WDtSwDD/ZegrQDbOaUb3ljCxVF8OHU+ZT/q3LlnOltX376WOo5vyMVAfFCrIJ6EzaPGYNm8NPNmrQONlYAyh4s+Qcaop6ZnO4rTAdQmZ9aDyUbPWc7oXok40/a6xsvDYhiBIjf7f6zVbVQ2v5/vIeXrJs1ljD8putrG0axv/mqPx9h9uMb+Bm43nEs9qced2y/fQi6qQ9VetXl03Uz+D7e/mylTeqPURCyWPKxpvaNLSWttwI4nCH8iTWkI3vw5JN/482LJv1DL6P4d4N18NzU85qH5S/jJvnFzHzj8dRtlqItngmxdibTTS+jLHcWTY5L4+xZq0hG5e5lk09JzIsW6lb763UU/epG4sxWjajB5E8FoPtr57XI/wKuMrW0B4Ghdp8EbIKPo/JlSMdgmxGOdyT0sh2HmMF2bocJbp1QqRSn6pLzOmhPXQK86Zj36f+5jVU1wjZEtZzKtkj+iz0C7cq25HtGTDmcIEvkA24AdmAG69WNvD8gGzADcgG3IBswA3IBtyAbMANyAbcgGzADcgG3IBswA3IBtyAbMANyAbcELIt7u5oGIDNk/zaef8xy3Z5eUnDAGyLEP4D8PcbJE9A5I4AAAAASUVORK5CYII=" InformativeScreenshot="6218ca5d246dcf37ba4767a594c03e7c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Товарный запас-135' /&gt;" SearchSteps="FuzzySelector">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="34, 332, 99, 32" ElementType="Text" FriendlyName="'Код Товара'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' aaname='Код Товара:' check:text='Код Товара:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGcAAAAkCAYAAACUjSQ7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJmSURBVGhD7ZQ7lsIwDEVna9PMSugoWMEsAgq2AQXbgJKGhorPEqg8SezoY8tOgEB0GL1zXpM4tvSunC9nUiuDo1gGR7EMjmIZHMUyOIplcBTL4CiWwVEsg6NYBkexDI5iGRzFMjiKxeFsl+77Z1J56XbhUSN4PnHT9Sk8fLEuGzcNZ5b8tnpGUDccAuatYRicLjgnt5rpCOG0/vW1zTZVVf9DZTgwvdFvLmi38ODAUnDRzWO+I+gSHHgHjuvdujl7zx0PXtIX2w/3mm9xeBtL/Qh/AH5e/gIU4JRuTanZKJiXwonCYf51q0tY1gGHrk3BtG776tqL9F/4NWOmd8MhXmzDSxROaiYA8g2slZ49C4fUO4ftCTBYi7WxACC80If0p4Az2l4pHGkdntGClkBIucbqhlM7M60xaYSGRbfP6Nqh4MCUx40WAxUsBZVMfboXDoRXtp5KyY18HI4Pl26IheSLi7+vlU7PUHDyQ5LciC44wp6pH4CTG/baz8Jh09MjFAgQ4LSNtI15jXlzeM38OdZPgu+9V1wPrhPhPw2nklQw3igaOikmHJyDMBQcMUwaAKzNBcoHDfoiZ6S9kj5JTvSWNGeQwYba6LAPAYcVIzSb2n+LTXW4JyAZaJ/fUK1Svd5NgCTg1BIcwVBfqbbKAIcPCFUPOCSYyjihAgAyDe+B40Xrk9eUA6Wh8L3qHOLwcK86C9Znx7nN90nGfeEMKF80nd5I7RXvCUePOJxXyuDcrQ+A87kyOKZKBkexDI5iGRzFMjiKlcC5Xq/ucDi4/X5vHtkMzvF4dOfz2d1ut/DENJ6c+wP0jpJYgyFnmgAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -1247,7 +1258,7 @@
                     <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
                   </ActivityAction.Argument>
                   <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_11">
-                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: ArrowButton (1375,192,20,24)&quot; +&#xD;&#xA;&quot;Anchor: Cell (1181,216,79,34)&quot; +&#xD;&#xA;&quot;Anchor: Cell (1260,216,84,34)&quot; +&#xD;&#xA;&quot;Anchor: Cell (1344,216,68,34)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Ha3Ha4e...' (1420,230,63,10)&quot;]" DesignTimeCacheId="2374deb5-e3b7-4e27-bbcd-0a5a9efd6554" DesignTimeScaleFactor="1.25" DisplayName="CV Click - ArrowButton" sap:VirtualizedContainerService.HintSize="400,137.6" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_10" InformativeScreenshot="9abc7608cf29b0c3eff778bcd1d69dfb" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V3">
+                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: ArrowButton (1375,192,20,24)&quot; +&#xA;&quot;Anchor: Cell (1181,216,79,34)&quot; +&#xA;&quot;Anchor: Cell (1260,216,84,34)&quot; +&#xA;&quot;Anchor: Cell (1344,216,68,34)&quot; +&#xA;&quot;Anchor: Text 'Ha3Ha4e...' (1420,230,63,10)&quot;]" DesignTimeCacheId="2374deb5-e3b7-4e27-bbcd-0a5a9efd6554" DesignTimeScaleFactor="1.25" DisplayName="CV Click - ArrowButton" sap:VirtualizedContainerService.HintSize="400,137.6" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_10" InformativeScreenshot="9abc7608cf29b0c3eff778bcd1d69dfb" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V3">
                       <p:CvClickWithDescriptor.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -1287,6 +1298,9 @@
                   </Sequence>
                 </ActivityAction>
               </p:CVScope.Body>
+              <p:CVScope.DesignTimeCache>
+                <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" />
+              </p:CVScope.DesignTimeCache>
               <p:CVScope.DesignTimeCacheContainer>
                 <uc:CvCacheContainer>
                   <uc:CvCacheContainer.Caches>
@@ -1749,6 +1763,9 @@
                   </Sequence>
                 </ActivityAction>
               </p:CVScope.Body>
+              <p:CVScope.DesignTimeCache>
+                <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" />
+              </p:CVScope.DesignTimeCache>
               <p:CVScope.DesignTimeCacheContainer>
                 <uc:CvCacheContainer>
                   <uc:CvCacheContainer.Caches>
@@ -1840,7 +1857,7 @@
                         </ui:Target>
                       </p:CvTypeIntoWithDescriptor.Target>
                     </p:CvTypeIntoWithDescriptor>
-                    <uix:NClick ClickType="Double" DisplayName="Click '54962-ПРО МолокоОтбор'" sap:VirtualizedContainerService.HintSize="400,157.6" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8b2f5d97-80df-4792-93ac-1f347c65690b" Version="V1">
+                    <uix:NClick ClickType="Single" DisplayName="Click '54962-ПРО МолокоОтбор'" sap:VirtualizedContainerService.HintSize="400,157.6" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8b2f5d97-80df-4792-93ac-1f347c65690b" Version="V1">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_krdc_test/(S(trmpd2jwvz2pzihkkyevp4sj))/OheWebReports.aspx?ref=logoff#" DesignTimeRectangle="801, 408, 311, 23" ElementType="Text" FriendlyName="'54962-ПРО МолокоОтбор'" FullSelectorArgument="&lt;webctrl parentid='ajc_5282_f_product_popup246_listbox' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ajc_5282_f_product_popup246_listbox' tag='SPAN' type='' aaname='54962-ПРО МолокоОтбор 930 3.4-4.5% П6' check:text='54962-ПРО МолокоОтбор 930 3.4-4.5% П6' /&gt;" Guid="137271c4-554f-498f-af36-758f2c495a0a" ImageBase64="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" InformativeScreenshot="5b4f787b2582c52089c784feb397a493.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Товарный запас-135' /&gt;" SearchSteps="FuzzySelector, Image" />
                       </uix:NClick.Target>
@@ -1848,6 +1865,9 @@
                   </Sequence>
                 </ActivityAction>
               </p:CVScope.Body>
+              <p:CVScope.DesignTimeCache>
+                <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" />
+              </p:CVScope.DesignTimeCache>
               <p:CVScope.DesignTimeCacheContainer>
                 <uc:CvCacheContainer>
                   <uc:CvCacheContainer.Caches>
@@ -1951,6 +1971,9 @@
                   </Sequence>
                 </ActivityAction>
               </p:CVScope.Body>
+              <p:CVScope.DesignTimeCache>
+                <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" />
+              </p:CVScope.DesignTimeCache>
               <p:CVScope.DesignTimeCacheContainer>
                 <uc:CvCacheContainer>
                   <uc:CvCacheContainer.Caches>
@@ -2028,7 +2051,7 @@
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_krdc_test/(S(trmpd2jwvz2pzihkkyevp4sj))/OheWebReports.aspx?ref=logoff#ref=5282&amp;popup=1&amp;f_product=64&amp;button1=&amp;s_descript=&amp;s_comment=&amp;label=&amp;whse=0&amp;owner=0&amp;lot=&amp;product=&amp;brend=0&amp;po_num=&amp;brak_id=-1&amp;so_num=&amp;fifo_end_date=01.03.2024&amp;status=0&amp;zone=0&amp;huid=&amp;fifo_start_date=16.03.2021&amp;chk=&amp;hidscroll=0" DesignTimeRectangle="636, 454, 37, 37" ElementType="Button" FriendlyName="'BUTTON'" FullSelectorArgument="&lt;webctrl parentid='form-5280-popup' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='form-5280-popup' tag='BUTTON' type='button' aaname='' /&gt;" Guid="5f5acb81-960c-4300-b0c7-b7511fd605c4" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACkAAAApCAYAAACoYAD2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAD6SURBVFhH7ZgxCsJAEEW9mgjiAWzsVbC3shA8g/cQL+A1UrhN1GJJEyISIU1GPmZBjTbZH9zAPJgiMyke83eb7UkH6IZkFEUSUhljJEmSSu9JcJssikKstRLHcdUJOG6Iuo0GK4mNInoQ9MXBGQUq6YtKslBJFirJQiVZUCTLspQsu0maXn8W5vivCTTJ3f4gg9Fc+sNprdDH/K+SIM/vslpvv0qij3lTqGfyaE4ynizfBPGNvg9Uyc/YfWN2UCXBa+y+MTvokgDxzhYb75gdrUgi3vPFesfsaEWSjUqyUEkWKslCJVmoJAuVZBG8ZCceUYN+jq4/7Is8AKDlzEuKhkMaAAAAAElFTkSuQmCC" InformativeScreenshot="14ff56b9bfe39019ccff00935b7d499b.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Товарный запас-135' /&gt;" SearchSteps="FuzzySelector, Image">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="433, 456, 189, 33" ElementType="Text" FriendlyName="'Выберите ячейку'" FullSelectorArgument="&lt;webctrl parentid='dde24eff-22f2-41bb-91b2-fa64dc7c29ef' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='dde24eff-22f2-41bb-91b2-fa64dc7c29ef' tag='SPAN' type='' aaname='Выберите ячейку' check:text='Выберите ячейку' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMEAAAAlCAYAAAD7l40IAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAPxSURBVHhe7Zc9axVBFIbz12ysbWwV1E7BlBaptRPyGwJ2YiOIYCOaRtE0MTax8QcErGK38q55wpvDmd29iYXZOQ8Md2fmzJnzufferaOjo6FGjZ7H1lAUnVNNUHRPNUHRPdUERfdUExTdU01QdE81QdE91QRF91QTFN1TTVB0TzVB0T0XmuDT58Phxs0H6Xiyszucnv4+k7wcOi89Uffd+zvDycmvM6liU16+ejc8390bnxXHR9vPhuMfP8d5MU/aBPp0KN6rNIKSo2KPuourE18uaopiOYuaQEztLcHfVkXxP7FRE9y6vX3+NauinvoZIznJ6xxvKj2rEXhjZXdlP5lcBr1v3u6P9yPjDYaO2HSyGX0anI0j+ul7Sxq5pZtvUungGfim9Lf4XCyyM0L68SHGgrn2vx58H89Hn1p618pGP4c8KHpWoJY0AUH1QnAZ9CLnMtEmzvga52KiPbnZOdBce5JxvJhEvCcj+gQ6g1/+DOjeJBbxjEAGu2MstO86tS4d0gWteKyVxX+MNTzYeo7BcygG6SRZWWBdj54zGU8Uet0W4YmLiWd+595fGyTrZEmfukexiDog0yW88P0ZiBH3LYlFPMP84eOn52djLPTpPmX+ZPatmcU/hxQY31MgSUYGRSR5kpMFFrmP+wfjfiYjHSTV9Tqsy66YeMnqfvTEs64fWkUYCy8S7wYvrCx2rhcdc7GItuhTZ95/+HIu4/ZorheB+xTtnfNvjSxuAgVOgSVYCpJk4yB4yEtXDLSDHE2Q6dQgqRoxkSIrIt3n626T44UFLf8Y+NmCWPqQTbINO1xHZn88z8DWlm/uj+uKPoLOS4/0ZbFYO4ubgIB7ExA4IBExKSSCInC4kybIGsVxvY7fzX3SpTn3ts5qrnXtQ+bfUoiV+ytbfI4tFDYj2j8F9+iMZJF3f1xXy39fj3b2wMbfBAq4yIqEgGscfju+EPBWUfn6EploB+gerXvi43+AVhH4WWjJttYd2Rb1zRWXfJOP+LUkFpzx/wDC/fEmEPqMej1v2pvybY0sagKC5MHLkkSBaC8WCwnzQuA+Ep/JuE6fk2RfI9HYK92siWgTaO76QGd93YsF+yLRFtB86hy+bxILZDyGwv3BZuzhTLSPXGhPMj2RNkE2YgIV9EyO4JIwLzgS4vK+L+Zk0Lv34vX4iYwXATooBMhsEppHWYh+xuKJaD/TpfUYQyc2gZiLBWdi4bo/6HC7td/SNeffGrnQBNeBViEXV6PnuFYTFCP6Bpr6ploz1QSdw8+9Hv8LwLVrgqL411QTFN1TTVB0TzVB0T3VBEX3VBMU3VNNUHRPNUHRPdUERfdUExSdMwx/AAM4E73uU59uAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -2040,24 +2063,12 @@
                 <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_krdc_test/(S(trmpd2jwvz2pzihkkyevp4sj))/OheWebReports.aspx?ref=logoff#ref=5282&amp;popup=1&amp;f_product=64&amp;button1=&amp;s_descript=&amp;s_comment=&amp;label=&amp;whse=0&amp;owner=0&amp;lot=&amp;product=&amp;brend=0&amp;po_num=&amp;brak_id=-1&amp;so_num=&amp;fifo_end_date=01.03.2024&amp;status=0&amp;zone=0&amp;huid=&amp;fifo_start_date=16.03.2021&amp;chk=&amp;hidscroll=0" DesignTimeRectangle="454, 623, 227, 28" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl aria-role='searchbox' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;input' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='searchbox' aaname='' tag='INPUT' type='text' /&gt;" Guid="ebf3845d-e7a6-4a27-9904-53a43a90c274" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOcAAAAgCAYAAADpGW8sAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAARVSURBVHhe7Z0xTxRhEIb5/7/C2BgrQ2EoDIWhwMYCC4xoLsRwhQWJogdGijXPmRdehrnjTI5jCe+TTHa/nflm5ttvZncxBrZms9kQiUTGJ2nOSGSksnV4eDhEIpGHlaOjo+Hk5ORmcw4hhAfn4uJimE6nw2QySXOGMEZoUL1B05whjAjeoHzipjlDGCH8DJrmDGGEpDlDGClpzhBGytqa82T6bXj2fLsVdOHxc/hxMhc4Pf0+vN17P/y5vJyPw/pZa3O+eLkz3zRHTZsGffzQiG929/PQ3RD33pzaUD1xQwirsfHmRI+dnr6S2rz77w6udMveyC5uh/7V9u5wfv57PgZiYIdO550QG2quur6IGtPjAdfRy1/ND3zdEu7fos/H+jaTyDc51Dhal/KCZWvtHrBai3LTWD7lDz9VB66Hzuaps5HPWi+urjDqXDbMCwo9BVPnuN/qg7H70OZXP0A89wXKUwWpAq12jsdEsFV8+fOir+sErnkTdLk5XfN5Hqs0511r1djz4px7KRv8E0c+yVvnVQfo60Mg3GQj/yDkxVELA/xap4dapOjrmHnM19jjMp/xKr6hu7YoN+ExKV4vvM6fitaLHrs6rvOcTl/z8PsAdR2dD7fhOnrlhQ6fiOZpLdijf72zdxXTdcAR31wjdui59zenNlmb4Jsu2HTN7YoJsPfr2PnG1vhuzzXOP3/5eis21OJUMakYRS3SimKe/ZzN7RRH87pC9Niy8/xqbhVsfd2gPFhHp+dc92GVtfo5kJNEuckPPrFDJ1wnXwcfPs2Pbhducu/NCWyWikWFUd+u2niOVSeRD2BTNQdqfMayVyF5UTroVGSgYupyQDyug1/ZeIxa3I7HJi5vHL+HNbcO+fcctXatxWP7fVhlrZ4/c7HnWHOXH6470hEP4VwPsGobrnmw5vTi9QJy20WoWNxHja8i4KhPrC421AbwfP4HxayFp3y7QuSarpOffw5Cza2DPLu1y4/WXRsPu1XWqvyxIR/Zem7yg0/0Hl+64+Pp3B6bZfck/GNjzalNXNYgyCI/1Qeb7TZ1HmNsmKNiWhZbvmFR4XgBdigmdjWfGgPkT/n5GkU3z5EPz9Xz6PD7sMpaZcN/OvCHh+fm9jrXujR2+0VxwzUb+5kTfTeGuplsGGMVQZ3TFXGNz5i3wzI/wotGyFY5QWfn4Nfjub38eTH6OlWsHg/uiom9rxtqHpV6H+5aq3Ljfi6yIRYx5ZOj8pJOb2uQT78f4SZrbU59LlXRhoAKodrUTWLsevmo16uoIJSPF1MtSuFF5tRcOxsHv94Umq8cvEjdX73eSRdb8+q9q3lUuvuwbK0cGVefft+Ui3xqDvLj7Ndc1/lU7nV+WGNzbgo2sxajoMDYYI6PibsKk+b2wg5PgzTnCEhzho5H15whPBXSnCGMlDRnCCMlzRnCSElzhjBC8qsxQxgp+aXSIYyM9s8x8H0biUQeVm7/IaPZ8Bcmw/ZEz/1/twAAAABJRU5ErkJggg==" InformativeScreenshot="aeddbefad78718410ed89c95af8a4dda.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Товарный запас-135' /&gt;" SearchSteps="FuzzySelector, Image" />
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NClick ClickType="Single" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="1044.8,157.6" sap2010:WorkflowViewState.IdRef="NClick_22" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8b2f5d97-80df-4792-93ac-1f347c65690b" Version="V1">
-              <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_krdc_test/(S(dsaavj0jlbfpbhbxntgahmjv))/OheWebReports.aspx?ref=logoff#ref=5282&amp;popup=1&amp;f_product=369&amp;button1=&amp;s_descript=&amp;s_comment=&amp;label=&amp;whse=0&amp;owner=0&amp;lot=&amp;product=&amp;brend=0&amp;po_num=&amp;brak_id=-1&amp;so_num=&amp;fifo_end_date=01.03.2024&amp;status=0&amp;zone=0&amp;huid=&amp;fifo_start_date=16.03.2021&amp;chk=&amp;hidscroll=0" DesignTimeRectangle="420, 512, 249, 32" ElementType="ListItem" FriendlyName="'N-001-0103-10'" FullSelectorArgument="&lt;webctrl aria-role='option' id='ef10a3af-e6d4-4a7a-b5ff-85151f9def49' tag='LI' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='option' id='ef10a3af-e6d4-4a7a-b5ff-85151f9def49' tag='LI' type='' aaname='' check:text='N-001-0103-10' /&gt;" Guid="453d8ebe-444b-46c5-ae0a-31ad4f56f285" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAP0AAAAkCAYAAABCBDwbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAANCSURBVHhe7Zy7UuMwFED317bhP5iho6WnoqJn8gEshDyXhC3ooKTfyfAHKbJbptZakmXL9pUsj9MsOpk5A7HkK13PPZLzgG/7/V7tdjt1PB4BIAOQHiAzkB4gMyrpf//9AIAvyq+XF/Xj/l5NHx+RHiAHnPDz2QzpAXLACb9aLpEeIAdmT09quVion+s10gPkwKzY5derldo8PyM9QA4s5nOzy283G6QHyAEn/ct2i/QAOeBezyM9QCY46fXn9QOlf1V3lxfq+9mNWkntbzdF25W6+xTaGkzV9ZmOU3I77fYxseo+12+tdh/d93Ki3qU2gfeHKy92fL6r2wt1/vAqtPXnoM9NHUfkc6LOA9d6SA4AJ5C+IChqXwFaWWqR2s8L2nFicY0YxXwSpbey1CK1n3f7StL35yCPM0ROt6h05zYkBwDNaaQv6Oy+CdKLBWrOc8fKMVqLitk1W8dsrHI+SdILC0w5nnTMxW5L359D6jgBTCw3flvmkbEhS0a8pndCTuzPtmgJ0kvyukK2i4j/u0dDqlp43c/ETJHe3BV052diVec74fVYkmApOUjIsTqUwut+4uKSlANAkxHv3jvpi4Ivb6sbRdwrfWhH8oQIFHUsdrL0rYXDIcplkERNyKFx3BIeI4x4zuAcAEZ9Tu9JXzw3svkiIn33uBlTXyfpnDhID6dixDfymtK7Qq+EQ/qI2O1r1w/Sw6kY8d17oXBNEZbFjvTCcY/e69ME6eFUjPgrO3m3srf5RcF5RW2LUB8vKaU0fTu7nRVmyBt5Pl3pbQx/fBMvsKCYuYqLhixyfw4BvOtjr5mHcAcgijw4B4BRf08fukX1JYvvZGIhN4SOLCyCGFVbUsFLEod2bo0sfW8ORszuAiCeF0HuPzQHgFH/OSckfYEp+n7pqwWiiiEUcRmrksbbIas+HunSO5HqWHERZelTcrA7uRe3XAiGiBma27AcAD7Un8Oh4nTSu7Ze6TWlNI7oImKJ3TYPkV5jJXGxY/MNSV+3VXGEHKz4NdFbf4GYzOk5AIySHgD+R5AeIDOQHiAzkB4gM5AeIDOQHiAzkB4gM5AeIDOQHiAzkB4gM5AeIDNE6Xnw4PF1H7X0B/UP2X4Yss24aCcAAAAASUVORK5CYII=" InformativeScreenshot="54f1afc37daf8a850fcdb38bdb03bcb7.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Товарный запас-135' /&gt;" SearchSteps="FuzzySelector, Image">
-                  <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                      <uix:Target DesignTimeRectangle="430, 475, 24, 24" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;span' isleaf='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' isleaf='1' tag='SPAN' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAICSURBVEhL7Zb9L1tRGMf9a4tEmiXix/1gGUG6qG2It2hMpRQbmxixYd6CyhIh4jURtCSWFJkfrJuGirqN1aiu7W1pq1/OcSoW9+oR2kj4JCc3+d4n+dznueckJ0EURUSWIAiwWCwwm80xWxdCq9UKu90Ov9+PWEKFpDMiiwdUSMYY684iUCGZbbx4FCIcDmN55SfqG3qQodSgsqYNxoUVHB8HWMXNuFa4f+BCYckHpGWWYXBoGovfVzExtYDs1zpkvtTAuiWwSn5khS6XBzm51ejoGr7SDel6dNyIFxllsO3sspQPWaH+2yS0ulbZ0RFpe+cQ6j52IxQ6YWl0JIVer4+O8sfqL5ZIs23bheqNDn8c+yyJjqTQ6fyHV3k12Ni0sUQa3rrL3A9hIBBERdUXGOaXWSLN7/Ut5BfVw+32siQ6spvGYFyCUqXF3l8nS/5HFH1QlzehTz9ONxAvssJgMITmzwPILXgPx94BS8/xeERUv/uKZ6nF2BEcLOVDVkggR6KrZwSK5Gx62Bub9VC//YSnKTnQ1bajqWUAz9PV6NWP0Y55uFYYwX3WkWlpDTNzJvo8dLlp7vMdoai0AU+SsqDRtnBJuYRykH9HPkKRrOKW3kpIuKn01kLCZWmiQonhkRn25ip3IiQQ6azBhN7+MbrD5bgzIS8PRBj3a2L8LsLAKbJLtmziXPumAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
-                      <uix:Target DesignTimeRectangle="419, 399, 177, 15" FriendlyName="'msedge.exe ConsID.WMS-Т…'" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALEAAAAPCAYAAACr6S7AAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAO/SURBVGhD7Zi9ihVREIT31UyMTUwV1MxAQ4ONDYV9BmPxBUzETDFbs5UFMV4wWrORGvygLLvnnGviXnYKmrlzpn+qq/v+7J4sO3YcOfYl3nH02Jd4x9Hj5Orqx/Lw8ely5+6T1j5+Ov/tvuO24uLrt+XBo9P1Krx5+255dfZ6ff2/MbXEMpHecbuhDzP2QTuj3bkJ+GOJc1Gvr38uL07P1me66n7HjpuGzSUWdObvvNEnd+Ygvnsu6GvJfdzwJ4+/mfxNJk6Xl983uXmsf6rIRl+N+hq9d//5av6Vqli0ESp9smfnXdnWzzd4VHHwqLgK6Oy9JpeM6XLRu0x8vW/4ozGxVX2PYz7OKbWrMP1JTOFqSG7eLKTTvAmh85PBCdFo1M9k4jS7xB5XPa+Qw+RecaopXfKN4eY9u66VdUs80h4eyRWgM1y28sGhyuW94+u58p7YrC9wJkN/1yd3ssLUb2Ifrvt7gWyWgcpXMQKxLogTRriqCRYPLimk1xGo77WE5ClUHBIZBx/4eQ44CvDw3JUOrussBwAXNOj8comqpYJv6kwu7xNTTPInj+fOevhgrtshOPgPu5E/BBG2sxy+C+5C4Uc+GkWQp89erlcGCBAoB5nCpbnoDh/m+ZeLvzj7c6/nvZAbDZ2z6yqOFaiRPmhDPs+FfgKa6eq8KqOP7Av99J8K55L8qeU8q/rKoVw6Z7aHYvo3MU24f2UQgXBn1CIf+QUXGD946Pz9h8/ra9XgXDmUCyC25xXw70w5KzDMzpd6yUNAC/zJ5b6uqw/eMVo8z0fNyvTM61WGbnCViZdiZHqNHnpd5culdB2Yg66cp/8shkuc4nb+eQ7JETHlTD8fFjXIxycAInOu2uIAyIsf4Dz9R2CYisU8tw/b63kvGpYAZ+6F1LmD+6VlTyxHms4rjSt4X3xiyt/1yL1w817gwwzhy/loVzoMl5ihQ6jzT1EyTshBd0JW57qSrzrPAVKfWsDFJ4f3BNdEckd46noOH0bq0NWa4SBUdToNEnDW1e89jlzkdr2686ov8qCXQD2MPjl33Q7B9G9iCsz4i5x8FVM9F+nZujIJgigyb7YboDjo3EUEKSa2JSJDI5/zFweBmpWppg9+ZAzY4Zp6v50GCfrWVdjiQ333ofc8l6/roXvnSj3XnTOBc/T3WLTdwtQSe8GRfxZ14jJyzdTFlJNBuZBCN0AWKv0BcdjWAgsMzfNVtau+qoUYGTEO19KfdxokiB/N03M7Z9UBfi5/z0O8rrpHM+onT87/bYmX5RdlGKm6Ou46iwAAAABJRU5ErkJggg==" SearchSteps="Image" TargetType="ImageBased" />
-                      <uix:Target DesignTimeRectangle="416, 697, 223, 40" FriendlyName="'msedge.exe ConsID.WMS-Т…'" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAN8AAAAoCAYAAAB+bi+NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAVASURBVHhe7Z0/b1xVFMT91WioaWiDFOgoQKIAidR0IOUzUCO+AA2iA9EFNw6KhZAsCyny///2g9n4F8bH97196332WsqMNNp9d889Z865d7LeKmtnZ2fd6elpd3Jy0h0fH3dHR0fd4eFhd3Bw0O3v73d7e3sz7u7uzrizsxOG4QRcOz8/79yA1YQYETOGYTgN1y4uLjoM2DIhRqzEmGEY3o1rl5eXnQyICasRIYYMw3AazsznBnQTuhFbdHOGYbgY166urmbmc7oRW4YMw3B5zsznrEaELUOGYXh33jKfs2XCMAyn4Vr3H1rGC8PwfjkzX0UrMAzDadk0n6O1KQzD5TnXfEEQ3A9iviBYEWK+IFgRYr4gWBFiviBYEW6Y7/Xr3e6jj591773/ySC/eva8Oz4+ud4VBMFdEPMFwYrQa74ffvzpevV/aC3mC4JpsJT5/PnnX36fvYe//vbielfXvfzzr+6DDz+fUe8B+4n3+r6/1l02H/v76sCav6Klgxyqq/qC64CKc3z3/PvZul5dR9UwNk7QrDSzvpgh/U+eft198eW3b/dW0p/rAd7voncFoK0vrjVTJ/P1OPbrVc/07dr4UvHZ0auvkX8ZTGK+PpKjdch1uBpIa1BCrbtsPo9lva8Xr1FRdXheDkz5a07oF5ZL3Ed0jo3z3vtihvQvYz7XuOhdEYZiiRvqT6Snegf8mRjqoVVwDfT6aM1HvAtEdD1kj4F1MFwQodZdNh/7axz5WjEtVB3obM0C7YLyac1z+4VlzfWzf9E4NwV1iZmnHwzNotahBqQWucXWfKRffXgvrp39aPU411t78jhpQ18rd52L1kS0TY3J/uzUM6gDqM8M4MnTNxde77XmhzFmOPPyeT99VJyjtafGANfx4o+XM31oqp+zJrT61Ks/A3rjAoyJ29r6523+FtEzTz8gTnvrLFwPfSlWZ6F1PWt97F2p/YJ6N+edLfPxOOVGr/dRtRHz6WffzF6rlqnw4OZT06oh6r3WlINhkLNF6ozNN++AROoy8BaJqUCHx3LogvZpTRrq4VGP+PoMao4xca9e/T3YtzT7ufhnNa/gcXUWroez0yvri96Vvji91xr5550t+1txNbfX5Peo98Psp8Yk5qvi6kD9mX8RtZd1PfuhkreSumPzeT+ev8aJek+eVkwLHgP1rHX/3NcEv0hc9npZAdqY8Zg4/+ajnxbm6QceV2eBHv7q6NPJmc67K7Vf4GepXPUZDMU5vQ+00QNa+jRPhQf9zUcs+4cO1VHrjs3n/Xj+Gkd+H7L31qeNPKLec+HI4/XRKChfzc1eX2vtXzSu1VOdV59+UOflcD3+OevU8nnqvaB1fa41anot5QDsR6v3TD7Bc2rd46St5hFYg+Rjvc5jKkxmvhY5CB+oN+3r9VAdte7YfHXwoMb5c4t92tiHhtb8tLfmg3656iV2kn+RuKGe6GeMfsFz1Vm4nlY/i94VYSgWXa61j8pZ74CbE71eD72+rv3K43vRsQwm+82nH+x+2D5MPzzPO3Sojlp3bL46eNCqq1c9i/pMMVwgv1QO8hAvoJUDE1wHrP16rZYWMDZOmFd3rH7i6n4BPR4vsL7oXQFeU3SNQqs3J/fC46jD3MiJtlqjzuJezbcofKASFtwdbqohjI17bMhduY2Y75Eg5nv3EPM9EsR87x6WMl8QBHdHzBcEK0LMFwQrQswXBCtCzBcEK0LTfNvb293Gxka3vr4ehuE98Zb5Njc3u62trdl/3hcEwf3hhvn0jSfjBUFw/7hhPv2pmW+8IHgIdN2/74WmZgHR6w8AAAAASUVORK5CYII=" SearchSteps="Image" TargetType="ImageBased" />
-                    </scg:List>
-                  </uix:TargetAnchorable.Anchors>
-                </uix:TargetAnchorable>
-              </uix:NClick.Target>
-            </uix:NClick>
+            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="1044.8,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_10" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V1" />
             <uix:NClick ClickType="Single" DisplayName="Click 'Кол-во коробок'" sap:VirtualizedContainerService.HintSize="1044.8,157.6" sap2010:WorkflowViewState.IdRef="NClick_21" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8b2f5d97-80df-4792-93ac-1f347c65690b" Version="V1">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_krdc_test/(S(dsaavj0jlbfpbhbxntgahmjv))/OheWebReports.aspx?ref=logoff#ref=5282&amp;popup=1&amp;f_product=369&amp;button1=&amp;s_descript=&amp;s_comment=&amp;label=&amp;whse=0&amp;owner=0&amp;lot=&amp;product=&amp;brend=0&amp;po_num=&amp;brak_id=-1&amp;so_num=&amp;fifo_end_date=01.03.2024&amp;status=0&amp;zone=0&amp;huid=&amp;fifo_start_date=16.03.2021&amp;chk=&amp;hidscroll=0" DesignTimeRectangle="698, 422, 161, 38" ElementType="InputBox" FriendlyName="'0'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='int' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='int' aaname='Кол-во коробок' /&gt;" Guid="d9840e5b-12d2-40e6-97fc-bb2197bfb0ec" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKUAAAAqCAYAAADSzZvXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGLSURBVHhe7dyhTsNQFIdxXg+Hm0MRDIoXwGDwCAwPgSDhNWrqSkA0tcMN0eQs/0sv6eiarON0PeL7JTdpb+2Xc7OJe2ZAMESJcHaibJrGyrK0oihYrJMs9abu+n6jrKrK6rq2tm27HWB+6k3dqb8sRalS9QFYivrLEzNFqRHKhMSS1J86lBSlznZgablDokQYRIlwiBLhECXCcYny/GLVPQH/R5QIhygRjmuUm8233d0/pHet65tbW6+/0jfgUG5R5iAfn567XUvPhImp3KJ8eX2z1eWVvX98druWYlSU+gYcyi1KTUVNSk3MvrF9YIxblH+P7owjHFPNHqWObqLEFESJcGaPkuMbU7lFqfj2/aAZ2wfGuEW575jWs/b4SwhTuEWZA+xPRY5uHMMtSlGMilLvWgSJY7hGCXggSoRDlAiHKBGOS5SAJ6JEOESJcIgS4RAlwiFKhEOUCIcoEc5OlFyaiqUNLk3lemksbXC9tHARP5ag3tTd4CL+TKVqhOpsZ7FOsdRbnpA/zLaGK5mOYRwzIQAAAABJRU5ErkJggg==" InformativeScreenshot="6f45ee9a0e318073c1d5fee22c53b2eb.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Товарный запас-135' /&gt;" SearchSteps="FuzzySelector, Image">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="697, 388, 128, 32" ElementType="Text" FriendlyName="'Кол-во коробок'" FullSelectorArgument="&lt;webctrl aaname='Кол-во коробок' parentid='form-5280-popup' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Кол-во коробок' parentid='form-5280-popup' tag='LABEL' type='' check:text='Кол-во коробок' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIQAAAAkCAYAAABIWJJJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMRSURBVHhe7ZYxblRBEES5mhNiEscEcABCAp8ByWcgRlyAE0BqMjtxYEsgWSKys4/K2lpVt3pmWuvVCqF6Ugvv/zM91TXlNa82YwQHwgQcCBNwIEzAgTABB8IEHAgTcCBMwIEwAQfCBBwIE3AgTMCBMAEHwgQcCBNwIExgH4jHx6ft48Xldvb6/fbl67fd0/j87buL7eHhz+6NOQXff1w9e5/r0+Xn3YrjMg2EPkM5EKcFl07vtd6cf9iub253q47LNBBMp4NwenDhuPhTez8NBBOqf0IIBeM9CwEi+dulKl2fgQkwo9qHyppWeirQA+ugE3pVs34lr3rzPQrPVXf11V7NlufBZ/RDb/2mGAWEs4zWdWcdBgKDVY1BPlwL74D2G9VLAkGzQEdPBffRJO1Dkzq9q8BosT+gr1XpxeBnzF95qHcy87nyaDYrKAPB0oZEL0ob8QDu0X66Tvd3A0HjAc3nOV09FWoS+uBfXd/tTU3sxcvnOhRmVU90nYaEnuA8PuP8lZ5qb3XOalYyDQSLBwEKgDA0JioWh2u/lwaiqmzISk+FmnT18/rZIPycL2rVm4HIBqsH3XWci4FQPYCaqYnr1GNA7TxrNSsZ/smgeDbhRm2szfJ+/axi1UyI1nUsfL6//71fVxXP7+qp4F4tDWm3d+eisW4UMJAvdnXR6AGPRjNmTatZSes/lbp5NFT+rdF+OtQhgdBh8zldPRV4jvdaOBuaQLe3/vLQJ5A97QSHXlGb6gF8Tk2r4MwCkXuDaSB0cG7W4VUED6SAakigPdW8TDadZJ1dPRVcg353d7/257FPt7euo0+6DoVZKz8BL4/rgPZEH6D7qSefAdQjnrOalUwDAaoD9VkuvNMB+YwcEohRdfWM4D6aRt0aok5vvbyq1PTsjVa+HHyu1sEX+AP03nJVc8xmBctAjFKdTdDGOrSKB8cKhGoEMz0jsknqgV7Oqjffo/AfNvbIfUg128gLamTpHSirdd1Z94Ewh6OBWIXwX8eBOAIOhAk4EOa/xYEwAQfCBBwIE3AgjLBtfwFmXgZTnNMX4QAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -2069,13 +2080,458 @@
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_krdc_test/(S(dsaavj0jlbfpbhbxntgahmjv))/OheWebReports.aspx?ref=logoff#ref=5282&amp;popup=1&amp;f_product=369&amp;button1=&amp;s_descript=&amp;s_comment=&amp;label=&amp;whse=0&amp;owner=0&amp;lot=&amp;product=&amp;brend=0&amp;po_num=&amp;brak_id=-1&amp;so_num=&amp;fifo_end_date=01.03.2024&amp;status=0&amp;zone=0&amp;huid=&amp;fifo_start_date=16.03.2021&amp;chk=&amp;hidscroll=0" DesignTimeRectangle="698, 422, 161, 38" ElementType="InputBox" FriendlyName="'INPUT eb_5280_f_qty_box…'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='int' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='int' aaname='Кол-во коробок' /&gt;" Guid="34e357ac-c64e-41a4-88ff-07465f335377" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKUAAAAqCAYAAADSzZvXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAD0SURBVHhe7dwxboRAEERR3/90JGSEiFMgjVXYWLsi9k4F70mdQPrVk/XXgDKipM5blMdxjHVdx7Isxnxk0lu6e/UX5bZtY9/3cZ7n7xf4f+kt3aW/2xVlSs0PmCX93RvzijIr1IZkpvSXDuOKMm87zHZ3KEpqiJI6oqSOKKkjSuqIkjqipI4oqSNK6oiSOqKkjiipI0rqiJI6oqSOKKkjSuqIkjqipI4oqSNK6oiSOqKkjiipI0rqiJI6oqSOKKkjSuqIkjqipM5blI6mMtvjaKrz0sz2OC8dDvEzQ3pLd49D/LeUmhWat92YT0x6uzfkjzG+AQh8CUSW5O0KAAAAAElFTkSuQmCC" InformativeScreenshot="daf5a2bcf8cc635ee585d40bc6be838d.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Товарный запас-135' /&gt;" SearchSteps="FuzzySelector, Image">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="697, 388, 128, 32" ElementType="Text" FriendlyName="'Кол-во коробок'" FullSelectorArgument="&lt;webctrl aaname='Кол-во коробок' parentid='form-5280-popup' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Кол-во коробок' parentid='form-5280-popup' tag='LABEL' type='' check:text='Кол-во коробок' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIQAAAAkCAYAAABIWJJJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMRSURBVHhe7ZYxblRBEES5mhNiEscEcABCAp8ByWcgRlyAE0BqMjtxYEsgWSKys4/K2lpVt3pmWuvVCqF6Ugvv/zM91TXlNa82YwQHwgQcCBNwIEzAgTABB8IEHAgTcCBMwIEwAQfCBBwIE3AgTMCBMAEHwgQcCBNwIExgH4jHx6ft48Xldvb6/fbl67fd0/j87buL7eHhz+6NOQXff1w9e5/r0+Xn3YrjMg2EPkM5EKcFl07vtd6cf9iub253q47LNBBMp4NwenDhuPhTez8NBBOqf0IIBeM9CwEi+dulKl2fgQkwo9qHyppWeirQA+ugE3pVs34lr3rzPQrPVXf11V7NlufBZ/RDb/2mGAWEs4zWdWcdBgKDVY1BPlwL74D2G9VLAkGzQEdPBffRJO1Dkzq9q8BosT+gr1XpxeBnzF95qHcy87nyaDYrKAPB0oZEL0ob8QDu0X66Tvd3A0HjAc3nOV09FWoS+uBfXd/tTU3sxcvnOhRmVU90nYaEnuA8PuP8lZ5qb3XOalYyDQSLBwEKgDA0JioWh2u/lwaiqmzISk+FmnT18/rZIPycL2rVm4HIBqsH3XWci4FQPYCaqYnr1GNA7TxrNSsZ/smgeDbhRm2szfJ+/axi1UyI1nUsfL6//71fVxXP7+qp4F4tDWm3d+eisW4UMJAvdnXR6AGPRjNmTatZSes/lbp5NFT+rdF+OtQhgdBh8zldPRV4jvdaOBuaQLe3/vLQJ5A97QSHXlGb6gF8Tk2r4MwCkXuDaSB0cG7W4VUED6SAakigPdW8TDadZJ1dPRVcg353d7/257FPt7euo0+6DoVZKz8BL4/rgPZEH6D7qSefAdQjnrOalUwDAaoD9VkuvNMB+YwcEohRdfWM4D6aRt0aok5vvbyq1PTsjVa+HHyu1sEX+AP03nJVc8xmBctAjFKdTdDGOrSKB8cKhGoEMz0jsknqgV7Oqjffo/AfNvbIfUg128gLamTpHSirdd1Z94Ewh6OBWIXwX8eBOAIOhAk4EOa/xYEwAQfCBBwIE3AgjLBtfwFmXgZTnNMX4QAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
+            <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="ed5ebfce-339c-4eda-8abe-a1bbad8b7eec" DisplayName="CV Screen Scope 'DIV'" sap:VirtualizedContainerService.HintSize="1044.8,450.4" sap2010:WorkflowViewState.IdRef="CVScope_12" Version="V3">
+              <p:CVScope.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="5" Descriptor="[&quot;Target: ArrowButton (180,31,16,20)&quot; +&#xD;&#xA;&quot;Anchor: Text 'NapTVA:' (0,8,52,14)&quot; +&#xD;&#xA;&quot;Anchor: InputBox (0,26,204,31)&quot;]" DesignTimeCacheId="ed5ebfce-339c-4eda-8abe-a1bbad8b7eec" DesignTimeScaleFactor="1.25" DisplayName="CV Click - ArrowButton" sap:VirtualizedContainerService.HintSize="400,137.6" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_12" InformativeScreenshot="d1c0d50f22fc5a7456c41d75b985e2b9" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V3">
+                      <p:CvClickWithDescriptor.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </p:CvClickWithDescriptor.CursorPosition>
+                      <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                        <uc:CvDescriptor>
+                          <uc:CvDescriptor.Anchors>
+                            <x:Array Type="uc:CvElementDescriptor">
+                              <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="0, 8, 52, 14" ElementType="Text" Text="NapTVA:" />
+                              <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="0, 26, 204, 31" ElementType="InputBox" />
+                            </x:Array>
+                          </uc:CvDescriptor.Anchors>
+                          <uc:CvDescriptor.Target>
+                            <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="180, 31, 16, 20" ElementType="ArrowButton" />
+                          </uc:CvDescriptor.Target>
+                        </uc:CvDescriptor>
+                      </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                      <p:CvClickWithDescriptor.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="1d93910f-1c9b-485b-a4aa-3e7af3ab7499">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </p:CvClickWithDescriptor.Target>
+                    </p:CvClickWithDescriptor>
+                  </Sequence>
+                </ActivityAction>
+              </p:CVScope.Body>
+              <p:CVScope.DesignTimeCacheContainer>
+                <uc:CvCacheContainer>
+                  <uc:CvCacheContainer.Caches>
+                    <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
+                      <uc:CVCache DisplayName="Screen CV Click - 'NapTVA:' (Main)" Id="ed5ebfce-339c-4eda-8abe-a1bbad8b7eec" InformativeScreenshot="d15b5239902a405196aa47d36ed59f11" LogicalPosition="1058, 438" OcrText="NapTVA: CH20240310" Position="1058, 438" ScaleFactor="1.25" ScreenshotGuid="5004767b-4c79-4168-a0c5-b4491e81b9e8" ServerVersion="1">
+                        <uc:CVCache.CvUiElements>
+                          <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="16">
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="204, 56, 0, 0" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="204, 0, 0, 26" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="204, 52, 0, 4" />
+                            <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="0, 25, 204, 32" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="204, 42, 0, 14" />
+                            <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="204, 0, 0, 25" />
+                            <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="204, 0, 0, 25" />
+                            <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="204, 56, 0, 0" />
+                            <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="204, 56, 0, 0" />
+                            <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="204, 42, 0, 13" />
+                            <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="204, 52, 0, 4" />
+                            <uc:CvElementInfo Category="RadioButton" Confidence="Runtime" Region="204, 56, 0, 0" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="4, 1, 196, 23" />
+                            <uc:CvElementInfo Category="InputBox" Region="0, 26, 204, 31" />
+                            <uc:CvElementInfo Category="ArrowButton" Region="180, 31, 16, 20" />
+                          </scg:List>
+                        </uc:CVCache.CvUiElements>
+                        <uc:CVCache.OcrTexts>
+                          <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="4">
+                            <uc:OcrTextInfo Region="0, 8, 52, 14" Text="NapTVA:" />
+                            <uc:OcrTextInfo Region="10, 33, 80, 12" Text="CH20240310" />
+                          </scg:List>
+                        </uc:CVCache.OcrTexts>
+                      </uc:CVCache>
+                    </scg:List>
+                  </uc:CvCacheContainer.Caches>
+                </uc:CvCacheContainer>
+              </p:CVScope.DesignTimeCacheContainer>
+              <p:CVScope.OCREngine>
+                <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                  <ActivityFunc.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                  </ActivityFunc.Argument>
+                  <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_12" Image="[Image]" Language="en" Profile="Screen" Scale="1" Timeout="100000" />
+                </ActivityFunc>
+              </p:CVScope.OCREngine>
+              <p:CVScope.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="421f5fc7-3826-4ebd-b59f-772b01e89b51" InformativeScreenshot="3eb026b9c124daa7a6758c4d5650d68a" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div' idx='6' parentid='form-5280-popup' tag='DIV' /&gt;" WaitForReady="INTERACTIVE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </p:CVScope.Target>
+              <p:CVScope.UseLocalServer>
+                <InArgument x:TypeArguments="x:Boolean" />
+              </p:CVScope.UseLocalServer>
+            </p:CVScope>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1044.8,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_13" ScopeIdentifier="8b2f5d97-80df-4792-93ac-1f347c65690b" Text="[batch]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_krdc_test/(S(dsaavj0jlbfpbhbxntgahmjv))/OheWebReports.aspx?ref=logoff#ref=5282&amp;popup=1&amp;f_product=369&amp;button1=&amp;s_descript=&amp;s_comment=&amp;label=&amp;whse=0&amp;owner=0&amp;lot=&amp;product=&amp;brend=0&amp;po_num=&amp;brak_id=-1&amp;so_num=&amp;fifo_end_date=01.03.2024&amp;status=0&amp;zone=0&amp;huid=&amp;fifo_start_date=16.03.2021&amp;chk=&amp;hidscroll=0" DesignTimeRectangle="1102, 532, 253, 28" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl aria-role='searchbox' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;input' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='searchbox' aaname='' tag='INPUT' type='text' /&gt;" Guid="4923833b-5524-49a5-a06b-e1242b4d367c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQEAAAAgCAYAAAASa83aAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAI5SURBVHhe7Z2xSgNBEIZ9NRufxAcTG7GSFGIhVhZaKESIClHEBBUsBJscYoqV/8jgOCYxxZmLzvfBcJfbmc2mmI+9K3Jro9GoEASRN9a63W4hCCJP9Hq9MhgMPiVQACAVVVXVEuj3+0gAIDMSgQIJACRFOwLdGiABgMToGQESAEgMEgBITiMSWN/YnJwBwF+jMQmcnF6Ure3O3Hh4fJ5UAMCq0KgEDo9Oyvt4PLn6ycvLa9nZPUACACsIEgBITmsS0Lm/VdC48kRVvZW9zlG5uR3WR8u5ur6rx2OtD63hfvhU12keQ7UatzVoncqN9b5ONbN+E8B/oRUJ6OibXqjeGtAk4JvW5jARGPocG141/tq0+RapA8hAKxJQrsKjMRODNW3Mmda4izSzCSauIa4XCUBGWn8moDrbikcJxHyN6bqOxk8SsBrdWvg16GjfZ/g6gCy0djsQG983ZZMS0LoUcQ1Ca9WabS0KJADZWLoErPGU71lEAj7HmCcBHfcPjuuxaRJQrZ/P6pAAZGLpEpjV4KqPEoiiUNPG75gnAeVqXEQJTPsOJAAZaW0n4HN13bbjOrcGtc8iNrExSwJxax/r4y5AaAwJQDZaeSbgm9yaVWPKUXPa+Nn55Zc8q/fMk4DtAoRfg80fdxoa83OpftZvAvgvNCaBJrEm9U0MAL8DEgBIDhIASM5KSgAAlkcjEgCAvwsSAEgOEgBIDH85DpAcXj4CkJRvryHTPQFBEHni2wtJ7YQgiIwxKh8dZLp+vM6ttQAAAABJRU5ErkJggg==" InformativeScreenshot="6851ccc3c51673c7fd827f0244fd60de.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Товарный запас-135' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="1044.8,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_11" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V1" />
+            <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="c560884c-583d-4779-9443-08e0a806c55a" DisplayName="CV Screen Scope 'DIV'" sap:VirtualizedContainerService.HintSize="1044.8,450.4" sap2010:WorkflowViewState.IdRef="CVScope_14" Version="V3">
+              <p:CVScope.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'Inpo MonoKoOT6Op 930 3.4-4.5% n6' (9,33,224,15)&quot;]" DesignTimeCacheId="c560884c-583d-4779-9443-08e0a806c55a" DesignTimeScaleFactor="1.25" DisplayName="CV Click - Text" sap:VirtualizedContainerService.HintSize="400,137.6" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_14" InformativeScreenshot="1f6cb7418b777f483078221b9025ef72" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V3">
+                      <p:CvClickWithDescriptor.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </p:CvClickWithDescriptor.CursorPosition>
+                      <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                        <uc:CvDescriptor>
+                          <uc:CvDescriptor.Target>
+                            <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="9, 33, 224, 15" ElementType="Text" Text="Inpo MonoKoOT6Op 930 3.4-4.5% n6" />
+                          </uc:CvDescriptor.Target>
+                        </uc:CvDescriptor>
+                      </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                      <p:CvClickWithDescriptor.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="16e4d40b-4d5c-4460-9e0b-c50f3a2fc8f6">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </p:CvClickWithDescriptor.Target>
+                    </p:CvClickWithDescriptor>
+                  </Sequence>
+                </ActivityAction>
+              </p:CVScope.Body>
+              <p:CVScope.DesignTimeCacheContainer>
+                <uc:CvCacheContainer>
+                  <uc:CvCacheContainer.Caches>
+                    <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
+                      <uc:CVCache DisplayName="Screen CV Click - 'Inpo MonoKo (Main)" Id="c560884c-583d-4779-9443-08e0a806c55a" InformativeScreenshot="adcf53fe74a61a7f00dd19feec45fd71" LogicalPosition="410, 673" OcrText="AonONHITenbHOe onncaHne Inpo MonoKoOT6Op 930 3.4-4.5% n6" Position="410, 673" ScaleFactor="1.25" ScreenshotGuid="0f495d49-5b07-4c7d-aaf4-f42604323860" ServerVersion="1">
+                        <uc:CVCache.CvUiElements>
+                          <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="4">
+                            <uc:CvElementInfo Category="InputBox" Region="0, 27, 872, 30" />
+                            <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="0, 4, 872, 23" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="35, 0, 836, 24" />
+                          </scg:List>
+                        </uc:CVCache.CvUiElements>
+                        <uc:CVCache.OcrTexts>
+                          <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="8">
+                            <uc:OcrTextInfo Region="0, 8, 112, 13" Text="AonONHITenbHOe" />
+                            <uc:OcrTextInfo Region="115, 11, 64, 9" Text="onncaHne" />
+                            <uc:OcrTextInfo Region="9, 33, 31, 15" Text="Inpo" />
+                            <uc:OcrTextInfo Region="42, 35, 88, 13" Text="MonoKoOT6Op" />
+                            <uc:OcrTextInfo Region="132, 35, 24, 12" Text="930" />
+                            <uc:OcrTextInfo Region="157, 35, 55, 12" Text="3.4-4.5%" />
+                            <uc:OcrTextInfo Region="215, 35, 18, 12" Text="n6" />
+                          </scg:List>
+                        </uc:CVCache.OcrTexts>
+                      </uc:CVCache>
+                    </scg:List>
+                  </uc:CvCacheContainer.Caches>
+                </uc:CvCacheContainer>
+              </p:CVScope.DesignTimeCacheContainer>
+              <p:CVScope.OCREngine>
+                <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                  <ActivityFunc.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                  </ActivityFunc.Argument>
+                  <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_14" Image="[Image]" Language="en" Profile="Screen" Scale="1" Timeout="100000" />
+                </ActivityFunc>
+              </p:CVScope.OCREngine>
+              <p:CVScope.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6ed45ace-6129-4252-b26a-a0ce4c03311f" InformativeScreenshot="c621c742c3fe2932a3c0f1820ba9f9b8" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div' idx='9' parentid='form-5280-popup' tag='DIV' /&gt;" WaitForReady="INTERACTIVE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </p:CVScope.Target>
+              <p:CVScope.UseLocalServer>
+                <InArgument x:TypeArguments="x:Boolean" />
+              </p:CVScope.UseLocalServer>
+            </p:CVScope>
+            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="1044.8,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_12" Shortcuts="[d(hk)][d(ctrl)]a[u(ctrl)][u(hk)][d(hk)][k(del)][u(hk)]" Version="V1" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1044.8,224.8" sap2010:WorkflowViewState.IdRef="NTypeInto_14" Text="Робот Настя" Version="V1" />
+            <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="32220471-268f-45ea-8c36-0aec3b6767a6" DisplayName="CV Screen Scope 'DIV'" sap:VirtualizedContainerService.HintSize="1044.8,450.4" sap2010:WorkflowViewState.IdRef="CVScope_15" Version="V3">
+              <p:CVScope.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="5" Descriptor="[&quot;Target: ArrowButton (847,32,16,18)&quot; +&#xD;&#xA;&quot;Anchor: InputBox (4,26,867,30)&quot;]" DesignTimeCacheId="32220471-268f-45ea-8c36-0aec3b6767a6" DesignTimeScaleFactor="1.25" DisplayName="CV Click - ArrowButton" sap:VirtualizedContainerService.HintSize="400,137.6" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_15" InformativeScreenshot="9bf4ffefcf632d933a7cf0cd02bbbf5c" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V3">
+                      <p:CvClickWithDescriptor.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </p:CvClickWithDescriptor.CursorPosition>
+                      <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                        <uc:CvDescriptor>
+                          <uc:CvDescriptor.Anchors>
+                            <x:Array Type="uc:CvElementDescriptor">
+                              <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="4, 26, 867, 30" ElementType="InputBox" />
+                            </x:Array>
+                          </uc:CvDescriptor.Anchors>
+                          <uc:CvDescriptor.Target>
+                            <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="847, 32, 16, 18" ElementType="ArrowButton" />
+                          </uc:CvDescriptor.Target>
+                        </uc:CvDescriptor>
+                      </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                      <p:CvClickWithDescriptor.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="605a394e-8778-485c-8e93-9983e28e70bb">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </p:CvClickWithDescriptor.Target>
+                    </p:CvClickWithDescriptor>
+                  </Sequence>
+                </ActivityAction>
+              </p:CVScope.Body>
+              <p:CVScope.DesignTimeCacheContainer>
+                <uc:CvCacheContainer>
+                  <uc:CvCacheContainer.Caches>
+                    <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
+                      <uc:CVCache DisplayName="Screen CV Click - ArrowButton (Main)" Id="32220471-268f-45ea-8c36-0aec3b6767a6" InformativeScreenshot="fca0e278a64093f28b7cad28c495b596" LogicalPosition="410, 750" OcrText="Npm40Ha KoppekTnpOBKN: ADJ-" Position="410, 750" ScaleFactor="1.25" ScreenshotGuid="e9ad686e-7576-4f73-b897-190b6efa9bcf" ServerVersion="1">
+                        <uc:CVCache.CvUiElements>
+                          <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="4">
+                            <uc:CvElementInfo Category="InputBox" Region="4, 26, 867, 30" />
+                            <uc:CvElementInfo Category="ArrowButton" Region="847, 32, 16, 18" />
+                          </scg:List>
+                        </uc:CVCache.CvUiElements>
+                        <uc:CVCache.OcrTexts>
+                          <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="4">
+                            <uc:OcrTextInfo Region="0, 8, 57, 14" Text="Npm40Ha" />
+                            <uc:OcrTextInfo Region="60, 10, 104, 12" Text="KoppekTnpOBKN:" />
+                            <uc:OcrTextInfo Region="9, 34, 31, 12" Text="ADJ-" />
+                          </scg:List>
+                        </uc:CVCache.OcrTexts>
+                      </uc:CVCache>
+                    </scg:List>
+                  </uc:CvCacheContainer.Caches>
+                </uc:CvCacheContainer>
+              </p:CVScope.DesignTimeCacheContainer>
+              <p:CVScope.OCREngine>
+                <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                  <ActivityFunc.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                  </ActivityFunc.Argument>
+                  <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_15" Image="[Image]" Language="en" Profile="Screen" Scale="1" Timeout="100000" />
+                </ActivityFunc>
+              </p:CVScope.OCREngine>
+              <p:CVScope.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="26821afb-eb82-44dd-a29a-be5dea53845a" InformativeScreenshot="397217cd8d7a0097b485f8472adb7a4e" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div' idx='10' parentid='form-5280-popup' tag='DIV' /&gt;" WaitForReady="INTERACTIVE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </p:CVScope.Target>
+              <p:CVScope.UseLocalServer>
+                <InArgument x:TypeArguments="x:Boolean" />
+              </p:CVScope.UseLocalServer>
+            </p:CVScope>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1044.8,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_15" ScopeIdentifier="8b2f5d97-80df-4792-93ac-1f347c65690b" Text="INV" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_krdc_test/(S(dsaavj0jlbfpbhbxntgahmjv))/OheWebReports.aspx?ref=logoff#ref=5282&amp;popup=1&amp;f_product=369&amp;button1=&amp;s_descript=&amp;s_comment=&amp;label=&amp;whse=0&amp;owner=0&amp;lot=&amp;product=&amp;brend=0&amp;po_num=&amp;brak_id=-1&amp;so_num=&amp;fifo_end_date=01.03.2024&amp;status=0&amp;zone=0&amp;huid=&amp;fifo_start_date=16.03.2021&amp;chk=&amp;hidscroll=0" DesignTimeRectangle="454, 577, 1056, 28" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl aria-role='searchbox' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;input' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='searchbox' aaname='' tag='INPUT' type='text' /&gt;" Guid="31ff48c9-b7bd-460b-a3e6-5154eee3dbc4" ImageBase64="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" InformativeScreenshot="09d4d2d7f43bcb98df6140485f15e06a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Товарный запас-135' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="1044.8,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_13" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V1" />
+            <uix:NGetText DisplayName="Get Text 'Код паллеты'" sap:VirtualizedContainerService.HintSize="1044.8,157.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="8b2f5d97-80df-4792-93ac-1f347c65690b" Version="V1">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_krdc_test/(S(dsaavj0jlbfpbhbxntgahmjv))/OheWebReports.aspx?ref=logoff#ref=5282&amp;popup=1&amp;f_product=369&amp;button1=&amp;s_descript=&amp;s_comment=&amp;label=&amp;whse=0&amp;owner=0&amp;lot=&amp;product=&amp;brend=0&amp;po_num=&amp;brak_id=-1&amp;so_num=&amp;fifo_end_date=01.03.2024&amp;status=0&amp;zone=0&amp;huid=&amp;fifo_start_date=16.03.2021&amp;chk=&amp;hidscroll=0" DesignTimeRectangle="420, 398, 346, 38" ElementType="InputBox" FriendlyName="'360015381900050200'" FullSelectorArgument="&lt;webctrl id='eb_5280_f_hu_id_popup23814' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='eb_5280_f_hu_id_popup23814' tag='INPUT' type='text' aaname='Код паллеты:' /&gt;" Guid="9900aabd-ab06-42b3-bae1-aa239e8de95d" InformativeScreenshot="ebc85d2dda799c967db10ab724d56f0e.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Товарный запас-135' /&gt;" SearchSteps="FuzzySelector">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="419, 365, 113, 32" ElementType="Text" FriendlyName="'Код паллеты'" FullSelectorArgument="&lt;webctrl parentid='form-5280-popup' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='form-5280-popup' tag='LABEL' type='' aaname='Код паллеты:' check:text='Код паллеты:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHUAAAAkCAYAAAC31nXuAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKgSURBVHhe7ZQ9bhRBEIW5mhNiEscO4ACEDnwGJJ+BGPkCnAAkO0FLsFhakZi1wD9yYGdtFfKzvi26p4dh12ZL9aTSanqqq6ve17MvSiqcEmpAJdSASqgBlVADKqEGVEINqIQaUAk1oBJqQCXUgEqoAZVQAyqhBtQj1Nvbu7J/cFh2Xr4pH44+Pqyuru+9PigXF9cPb1L/qwahci2hbo8GoX76/CVhbqEGob47fL/yTH07/V5e7b79/V5hl4DyX7oPny/ZBbKLVNtj4S+Z9cf31pf1J/XqMd/X8mGeSL4u++rVsdmVYx6ZVy35j6vGimpCHfpKhxrmIU8BtdULQfXqTYFau9QWqtWr8+RQFRxWokG8tWqwZmZtzXLHQGWOztBwtfr2a8/cy3o0Qbnc78+Q9K9lvy1TtZe+MJfrJuX/LdSeBqEqaGzrgJpxWmMu81iXauW0DDdxj0J7+Y4QpkKtncXg3jFQa8EaLc9bav798sbzJqkRf7v8fpNqsBkasg6oMrsWm4JKb2rBvVOhWsjjtUE10TAZ1DqgZpya5jDMIzCqleMNVy8WOpOGa2+tN9NUqGNmkMZAFTxJc6kvPfueWhqEyuZ1ME1jk2pQjbQGH2NIK8cbXgOgNe5lPc1mmgqVXhEIcyTmct2ks1jDJIgbgWqqmcQ1H/aO4HtBaBIh8L3O1XC9c2yv75X1CPX45OvjmRbeaA/M6iiXIRDSGKit0Jw6S88tVlIXKg3moN5QDtMzm0GTpbFQTTRXPRAAjfOg1KeFh+r78lBNQx5IU6HWZtTaaKjrlIb1Q1AyqQY19W9KqAG1Eaip51VCDaiEGlAJNaASakAl1ID6A+pyuSzz+bzMZrOMLY0VqIvFopyd/ShX1zfl/NdVWf68zNi6uCz3RJMJ54Qvh8oAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+              <uix:NGetText.Text>
+                <OutArgument x:TypeArguments="x:String">[SSCC]</OutArgument>
+              </uix:NGetText.Text>
+            </uix:NGetText>
+            <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="72e04798-a08e-476a-aaeb-db933352b79c" DisplayName="CV Screen Scope 'DIV'" sap:VirtualizedContainerService.HintSize="1044.8,450.4" sap2010:WorkflowViewState.IdRef="CVScope_13" Version="V3">
+              <p:CVScope.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'Ono6aBNTb' (738,19,55,13)&quot;]" DesignTimeCacheId="72e04798-a08e-476a-aaeb-db933352b79c" DesignTimeScaleFactor="1.25" DisplayName="CV Click - Text" sap:VirtualizedContainerService.HintSize="400,137.6" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_13" InformativeScreenshot="8ba769a0354f237a15a0176925c918e2" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V3">
+                      <p:CvClickWithDescriptor.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </p:CvClickWithDescriptor.CursorPosition>
+                      <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                        <uc:CvDescriptor>
+                          <uc:CvDescriptor.Target>
+                            <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="738, 19, 55, 13" ElementType="Text" Text="Ono6aBNTb" />
+                          </uc:CvDescriptor.Target>
+                        </uc:CvDescriptor>
+                      </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                      <p:CvClickWithDescriptor.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="69567402-117d-44e1-8019-0d8689ab7cca">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </p:CvClickWithDescriptor.Target>
+                    </p:CvClickWithDescriptor>
+                  </Sequence>
+                </ActivityAction>
+              </p:CVScope.Body>
+              <p:CVScope.DesignTimeCacheContainer>
+                <uc:CvCacheContainer>
+                  <uc:CvCacheContainer.Caches>
+                    <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
+                      <uc:CVCache DisplayName="Screen CV Click - 'Ono6aBNTb' (Main)" Id="72e04798-a08e-476a-aaeb-db933352b79c" InformativeScreenshot="393a745f2918e789672a9044c2b69348" LogicalPosition="393, 849" OcrText="Ono6aBNTb 3akpbITb" Position="393, 849" ScaleFactor="1.25" ScreenshotGuid="8bfad83a-a554-4c90-b2d0-9209d11a0006" ServerVersion="1">
+                        <uc:CVCache.CvUiElements>
+                          <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="8">
+                            <uc:CvElementInfo Category="Button" Region="811, 8, 78, 32" />
+                            <uc:CvElementInfo Category="Button" Region="709, 9, 97, 32" />
+                            <uc:CvElementInfo Category="Icon" Region="720, 18, 16, 16" />
+                            <uc:CvElementInfo Category="RadioButton" Confidence="Runtime" Region="720, 18, 16, 16" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="815, 14, 72, 24" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="692, 9, 192, 29" />
+                          </scg:List>
+                        </uc:CVCache.CvUiElements>
+                        <uc:CVCache.OcrTexts>
+                          <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="4">
+                            <uc:OcrTextInfo Region="721, 19, 72, 13" Text="Ono6aBNTb" />
+                            <uc:OcrTextInfo Region="822, 19, 55, 13" Text="3akpbITb" />
+                          </scg:List>
+                        </uc:CVCache.OcrTexts>
+                      </uc:CVCache>
+                    </scg:List>
+                  </uc:CvCacheContainer.Caches>
+                </uc:CvCacheContainer>
+              </p:CVScope.DesignTimeCacheContainer>
+              <p:CVScope.OCREngine>
+                <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                  <ActivityFunc.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                  </ActivityFunc.Argument>
+                  <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_13" Image="[Image]" Language="en" Profile="Screen" Scale="1" Timeout="100000" />
+                </ActivityFunc>
+              </p:CVScope.OCREngine>
+              <p:CVScope.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e610f8a8-c59f-4aef-9a8b-70fc8f5eb297" InformativeScreenshot="9d7999adb9e1dfdd1256004b6ed61e7f" Selector="&lt;webctrl idx='2' parentid='panel-5280-popup' tag='DIV' /&gt;" WaitForReady="INTERACTIVE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </p:CVScope.Target>
+              <p:CVScope.UseLocalServer>
+                <InArgument x:TypeArguments="x:Boolean" />
+              </p:CVScope.UseLocalServer>
+            </p:CVScope>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Код ГМ'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1044.8,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_16" ScopeIdentifier="8b2f5d97-80df-4792-93ac-1f347c65690b" Text="[SSCC]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_krdc_test/(S(dsaavj0jlbfpbhbxntgahmjv))/OheWebReports.aspx?ref=logoff#ref=135&amp;popup=0&amp;product=&amp;huid=&amp;brend=0&amp;lot=&amp;po_num=&amp;so_num=&amp;s_descript=&amp;s_comment=%D0%A0%D0%BE%D0%B1%D0%BE%D1%82&amp;label=&amp;zone=0&amp;brak_id=-1&amp;status=0&amp;whse=0&amp;owner=0&amp;fifo_start_date=16.03.2021&amp;fifo_end_date=01.03.2024&amp;Button1=&amp;chk=&amp;hidscroll=0" DesignTimeRectangle="192, 374, 132, 38" ElementType="InputBox" FriendlyName="'INPUT eb_135_huid38217'" FullSelectorArgument="&lt;webctrl id='eb_135_huid38217' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='eb_135_huid38217' tag='INPUT' type='text' aaname='Код ГМ:' /&gt;" Guid="3aa30b4a-00f1-4f33-887b-ecc744059cb9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIgAAAAqCAYAAABobhO3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADlSURBVHhe7dwxjoQwEETRvf8BSSYhQxyByKtC6xWIUV2A9yQnEPqrnfXPgOIWyL7v4/P5jGVZnBee3H0auPoPZF3XsW3bOI7j7wtvk7tPA2lhOgNJNfkBkRbmJDkDyWgxOZjSQpqIM5C8P3A1mxAIXwmESiBUAqESCJVAqARCJRAqgVAJhEogVAKhEgiVQKgEQiUQKoFQCYRKIFQCoRIIlUCoBEIlECqBUAmESiBUAqESCJVAqARCdQvEAhmuHgtkrKDi6rGCKiyxI3efBh5L7KZUk9GS98d538ndz8kx3QKBuzF+AeFZSmGs31uUAAAAAElFTkSuQmCC" InformativeScreenshot="1a6a8abf3fc10c33b8a224202251e022.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Товарный запас-135' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="191, 341, 64, 32" ElementType="Text" FriendlyName="'Код ГМ'" FullSelectorArgument="&lt;webctrl aaname='Код ГМ:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Код ГМ:' tag='LABEL' type='' check:text='Код ГМ:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAkCAYAAAAw55zoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHUSURBVGhD7ZU/loIwEIf3att4EjsLTuAhsPAaUngNLG1srFCPYDVLMH9mfiEgAu7uc7735j1NyGTykYQvUgQqBFAhgAoBVAigQgAVAqgQQIUAKgRQIYAKAVQIoEIAIeSwWdL3oo5NaVse+PbFmnZX2zg35dbOmYhsT9V1TyveBnUbQu0m+uvvFTI04WS8ImSxpYMd/qCkXPSPFeInfKMIhxfSMXckZEk53ySR1JFCqmIt/kvQ/pJWRWX7AnKHyWh73jNQyCp71MpzurldX8hV0S5rryEtpGt3dG1nkPcuIXlhf5uj1HS6RdfjC8w1VAgLsQUbQrIweQ2TFMaEZ9vaJhVSMgHmeddnanwml6VXiAlReHLnMFF+l0CRDXMJqTPbI27y8t9P5bJ03CH8jmC3t0+ONzqON7gc7xHix2Rbyu0con2ckGDchC9+yA7xBbKjNaeQ6KK3L20qIWKRfkewSTvvkNTC5xQCxx5fzHghNWyhfgGsLYpmbPxJTkVSyotCeG1xm8uVfin9Qlp3iSFetC/gN4W0HelXhUyHFSLuDon4CvwhVAgwk5D/iwoBVAigQgAVAqgQIBJyu93odDrR8Xj8yBBCzuczXS4Xut/vtuXTIPoBmqRjvZv2WgYAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DelayAfter="10" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="1044.8,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_14" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V1" />
+            <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'статус'" sap:VirtualizedContainerService.HintSize="1044.8,641.6" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="8b2f5d97-80df-4792-93ac-1f347c65690b" Version="V1">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Целевой объект появляется" sap:VirtualizedContainerService.HintSize="496,423.2" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;Изменение стока&quot;, &quot;Корректировка запаса&quot;,number, &quot;админ&quot;, &quot;WEB&quot;, &quot;Складирование новой паллеты&quot;, &quot;OK&quot;, Date.Now}]" DataTable="[log_x]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="433.6,188" sap2010:WorkflowViewState.IdRef="AddDataRow_11" />
+                  <Assign sap:VirtualizedContainerService.HintSize="433.6,82.4" sap2010:WorkflowViewState.IdRef="Assign_19">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Int32">[number]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Int32">[number + 1]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Целевой объект не появляется" sap:VirtualizedContainerService.HintSize="496,423.2" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:Int32" Name="number" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;Изменение стока&quot;, &quot;Корректировка запаса&quot;,number, &quot;админ&quot;, &quot;WEB&quot;, &quot;Складирование новой паллеты&quot;, &quot;NOT OK&quot;, Date.Now}]" DataTable="[log_x]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="433.6,188" sap2010:WorkflowViewState.IdRef="AddDataRow_12" />
+                  <Assign sap:VirtualizedContainerService.HintSize="433.6,82.4" sap2010:WorkflowViewState.IdRef="Assign_20">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Int32">[number]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Int32">[number + 1]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_krdc_test/(S(dsaavj0jlbfpbhbxntgahmjv))/OheWebReports.aspx?ref=logoff#ref=135&amp;popup=0&amp;product=&amp;huid=&amp;brend=0&amp;lot=&amp;po_num=&amp;so_num=&amp;s_descript=&amp;s_comment=%D0%A0%D0%BE%D0%B1%D0%BE%D1%82&amp;label=&amp;zone=0&amp;brak_id=-1&amp;status=0&amp;whse=0&amp;owner=0&amp;fifo_start_date=16.03.2021&amp;fifo_end_date=01.03.2024&amp;Button1=&amp;chk=&amp;hidscroll=0" DesignTimeRectangle="1143, 590, 158, 78" FriendlyName="'Доступен'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl tableCol='12' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' aaname='' check:text='Доступен' /&gt;" Guid="871f46b1-7ec0-47c4-964f-7c45deb8d6d9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKIAAABSCAYAAADXYA8CAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALHSURBVHhe7doxThtBFIdxn4lr5A6pcoEcIi1FLoGUhiugdKFzgTvcIdEhIW1FMWFmZ/DM7Ns1Qmj9f+b7SU/B9q5Z7X4eE2k32+027Ha7EP9lmDWn7m4THzDMqWcTsvgAWFvpjhBxUoQICYQICYQICYQICYQICYQICYQICYQICYQICYQICYQICYQICYQICYQICYQICYQICYQICYQICYQICYQICYQICYQICYQICYQICYQICYQICYQICYQICe5D/LP/HX7++xa+/71gXieei3hOvHEd4q/tD/NiMBfp3HjiNsT4qbcuAHMYTyuj2xD5Oj4+8Rx54TZE68Qz0/HirEO8GfLGnYdHe/tzHC++QIj7cFOee9ynfQlRDyHe34Z64WwjvQx3L/mFaLhOz9sr7evvmbz/dXiITyzt93Ibrsrvy/uPquPOxzg8XabHV0/PaYv3fKC8+Nohmhf4OdzdV/uXUIyIJ+/fhdfv026fty3v3xxL/gCYrxGiFOuk93MsxD68NqTx53LxrZmG2D7Xv74UYn8s4+O8LSHqsk56O92qEmdxhYpThdhdfGusEMffEYOqo7a2b0McX+vlMPOx9AhRgHXS25mG8JEVsdm/GzPEvN8w7FM8dSxLIU6PpRpWRF3WSW+mi858zrzAhxiacIwV0g6xXt3a15ZCbN+fvxHPI8R84eZVK0+zbb8i2f9rLjMXYgl+efsuxDhlv6R6X0LUZZ30t0kXbuZrLl3smdc+a6zV+ETjBSF+6uRVLlr423LN8cJtiNz0cHy46WEF3AZ2fLgNbCXcGDs/3Bi7svip52v6MPFceFoJC/ch4jwQIiQQIiQQIiQQIiQQIiQQIiQQIiQQIiQQIiQQIiQQIiQQIiQQIiQQIiQQIiQQIiQQIiQQIiQQIiQQIiQQIiQQIiQQIiQQIiQQIiQQIiQQIiRMQgROiRAhIIT/Ur7ekod84v4AAAAASUVORK5CYII=" InformativeScreenshot="534a266eb8caebbda1a7deb7404fc7d8.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Товарный запас-135' /&gt;" SearchSteps="FuzzySelector">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="1142, 551, 158, 39" ElementType="Text" FriendlyName="'статус'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aria-role='columnheader' id='aa6762e0-8cb1-444c-b6c3-d068dbe761b9' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aria-role='columnheader' id='aa6762e0-8cb1-444c-b6c3-d068dbe761b9' tag='TH' type='' aaname='статус' check:text='статус' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKIAAAArCAYAAAD7TVMLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIASURBVHhe7drNbcIwAIbhrNZL90AqK3CEIwsgTmwAQuoCwApcso6bHzu1EztAIpEv6I30SNQkcaS+cVNE9vX9Y4CpZXmeG2Bq2f1+N6XyB/caeBfXHSFiUoQICYQICYQICYQICYQICYQICYQICYQICYQICYQICYQICYQICYQICYQICaNDvOxXwTdsF/trMX41u2X4zdvA5myPP5t16r3jNhwPrMzu92AWxet6Pu+abvX4+ujG2nNszcnfHxJGhXja2ChudsxGEMZho2zic+pAgn2jxxeqKL15Kva8y4O5ePvWN4aNzZ7Pn7u+ZmJUMzzEzspTq0II4oiHGATjqUJpxRUP0Z3DHw/nip7L3gDt68a0hoeYiKMrtSJ63MrlPBliZ1UNbo4n5oWMwSF2V6OUVBCtZ7e+Vawnen//cJW15yfEWZgsxNSz2qsh/r/XnocQ52RwiKlnxG40sRDtWOL57aUQ3Z/nzba4nnCf+DNiaoXGlIaHWKhXNf+XH1uF+lbESDgvh+hW58hxkf+an1/J8U6jQiw1EVidj156VqAmPO/YaCgPQnTBdecu2ZujwUc3ikaHKOFRqJD3ESFWKyvPfLM26xCTz5SYnY9YETF/hAgJhAgJhAgJhAgJhAgJhAgJhAgJhAgJhAgJTYjlC2BqmfG2coCN7d0bIbJJbHmemz/fAalYveAWpwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
