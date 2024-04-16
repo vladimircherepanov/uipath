@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Нужно_переименовать" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1032.8,12488.8" sap2010:WorkflowViewState.IdRef="Нужно_переименовать_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Нужно_переименовать" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1032.8,12927.2" sap2010:WorkflowViewState.IdRef="Нужно_переименовать_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>Microsoft.VisualBasic</x:String>
@@ -49,6 +49,8 @@
       <x:String>UiPath.OCR.Contracts</x:String>
       <x:String>UiPath.OCR.Activities</x:String>
       <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.Activities.System.Arrays</x:String>
+      <x:String>Org.BouncyCastle.Utilities.Date</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -96,9 +98,10 @@
       <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>BouncyCastle.Crypto</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -106,9 +109,17 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Справочник партий" sap:VirtualizedContainerService.HintSize="1043.2,12424" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Справочник партий" sap:VirtualizedContainerService.HintSize="1043.2,12862.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd1:DataTable" Name="LogListLot" />
+      <Variable x:TypeArguments="sd1:DataTable" Name="Material" />
+      <Variable x:TypeArguments="x:String" Name="Batch" />
+      <Variable x:TypeArguments="x:String" Name="Item" />
+      <Variable x:TypeArguments="s:DateTime" Name="DateShL">
+        <Variable.Default>
+          <mva:VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="dateadd(&quot;m&quot;,1,now)" />
+        </Variable.Default>
+      </Variable>
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -116,6 +127,23 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:ReadCsvFile DataTable="[LogListLot]" Delimitator="Comma" DisplayName="Read CSV" FilePath="Processes\TestCaces\Alexey\LOG\ListLotLog.csv" sap:VirtualizedContainerService.HintSize="980.8,155.2" sap2010:WorkflowViewState.IdRef="ReadCsvFile_3" />
+    <ui:ReadCsvFile DataTable="[Material]" Delimitator="Semicolon" DisplayName="Read CSV" FilePath="DATA\MASTERDATA\Materials.csv" sap:VirtualizedContainerService.HintSize="980.8,155.2" sap2010:WorkflowViewState.IdRef="ReadCsvFile_5" />
+    <Assign sap:VirtualizedContainerService.HintSize="980.8,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[Item]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[cstr(cint(Material.Rows(2).Item("MaterialCode")))]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="980.8,81.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[Batch]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[cstr(Material.Rows(2).Item("Plant"))+DateShL.ToString("yyyyMMdd")]</InArgument>
+      </Assign.Value>
+    </Assign>
     <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: ConsID.WMS - сиcтема управления складом нового поколения" sap:VirtualizedContainerService.HintSize="980.8,12116.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
@@ -715,7 +743,7 @@
               </uix:NCheckState.Target>
             </uix:NCheckState>
             <ui:WriteCsvFile AddHeaders="True" DataTable="[LogListLot]" Delimitator="Comma" DisplayName="Write CSV" FilePath="Processes\TestCaces\Alexey\LOG\ListLotLog.csv" sap:VirtualizedContainerService.HintSize="884.8,155.2" sap2010:WorkflowViewState.IdRef="WriteCsvFile_3" ShouldQuote="True" />
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DisplayName="Type Into 'Введите Код товара'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="884.8,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="WindowMessages" ScopeIdentifier="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Text="100703" Version="V1">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DisplayName="Type Into 'Введите Код товара'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="884.8,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="WindowMessages" ScopeIdentifier="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Text="[Item]" Version="V1">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_mow_test/(S(m2wqpqpa3fkdzysfjndpw43j))/OheWebReports.aspx#" DesignTimeRectangle="798, 276, 137, 24" ElementType="InputBox" FriendlyName="'INPUT ajc_2089_product_…'" FullSelectorArgument="&lt;webctrl aria-role='combobox' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='combobox' tag='INPUT' type='text' aaname='Введите Код товара:' /&gt;" Guid="2c522b85-222c-4f21-99a7-235ea097b6a5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAI0AAAAcCAYAAABcZDxDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACwSURBVGhD7dsxCsMwAATB/P+BLty68w9cKZzAIcbg5PoZuEb1okp6DSh9otn3fazrOpZlMbssXaSP04wmB9u2jeM45iF8Sxfp4wxnRpOSBMOT9JFOYkaTKwh+OTsRDX8TDTXRUBMNNdFQEw010VATDTXRUBMNNdFQEw010VATDTXRUBMNNdFQEw010VC7RONhOb/cHpb7wsKTdHH7whI5SEm5gsy+ly7OYOITDfxnjDd1Rtt/2NJ6zAAAAABJRU5ErkJggg==" InformativeScreenshot="078615561e2c6448d453df4f523d387b.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Справочник партий-2088' /&gt;" SearchSteps="FuzzySelector, Image">
                   <uix:TargetAnchorable.Anchors>
@@ -728,7 +756,7 @@
             </uix:NTypeInto>
             <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="884.8,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_10" Shortcuts="[d(hk)][d(ctrl)][k(enter)][u(ctrl)][u(hk)]" Version="V1" />
             <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="884.8,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_9" Shortcuts="[d(hk)][k(tab)][u(hk)]" Version="V1" />
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '№ Партии'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="884.8,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="Simulate" ScopeIdentifier="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Text="CH20240331" Version="V1">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '№ Партии'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="884.8,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="Simulate" ScopeIdentifier="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Text="[Batch]" Version="V1">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_mow_test/(S(m2wqpqpa3fkdzysfjndpw43j))/OheWebReports.aspx#" DesignTimeRectangle="953, 276, 137, 24" ElementType="InputBox" FriendlyName="'INPUT eb_2089_lot_num_p…'" FullSelectorArgument="&lt;webctrl id='eb_2089_lot_num_popup1832' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='eb_2089_lot_num_popup1832' tag='INPUT' type='text' aaname='№ Партии:' /&gt;" Guid="21d3e286-f834-45ac-bc16-8778b6590c7f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAI0AAAAcCAYAAABcZDxDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACwSURBVGhD7dsxCsMwAATB/P+BLty68w9cKZzAIcbg5PoZuEb1okp6DSh9otn3fazrOpZlMbssXaSP04wmB9u2jeM45iF8Sxfp4wxnRpOSBMOT9JFOYkaTKwh+OTsRDX8TDTXRUBMNNdFQEw010VATDTXRUBMNNdFQEw010VATDTXRUBMNNdFQEw010VC7RONhOb/cHpb7wsKTdHH7whI5SEm5gsy+ly7OYOITDfxnjDd1Rtt/2NJ6zAAAAABJRU5ErkJggg==" InformativeScreenshot="4ba9970e5b5a80c2f4e0daccd37eef47.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Справочник партий-2088' /&gt;" SearchSteps="FuzzySelector, Image">
                   <uix:TargetAnchorable.Anchors>
@@ -764,7 +792,7 @@
                 </uix:TargetAnchorable>
               </uix:NHover.Target>
             </uix:NHover>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Код Товара'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="884.8,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_5" InteractionMode="WindowMessages" ScopeIdentifier="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Text="100703" Version="V1">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Код Товара'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="884.8,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_5" InteractionMode="WindowMessages" ScopeIdentifier="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Text="[Item]" Version="V1">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_mow_test/(S(qvexyfyra25fgcboilit0w5n))/OheWebReports.aspx#ref=2089&amp;popup=1&amp;product=3127&amp;lot_num=CH20240328&amp;f_expiry_date=14.02.2024&amp;f_lot_num=&amp;f_expdate=&amp;f_product=&amp;chk=&amp;hidscroll=0" DesignTimeRectangle="28, 226, 292, 24" ElementType="InputBox" FriendlyName="'INPUT eb_2088_f_product…'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='Код Товара:' /&gt;" Guid="399bc9cc-d158-43ef-b3d8-14384ce3af45" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAASgAAAAcCAYAAADSmyIWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADZSURBVHhe7d0xCoNAFEXRbC9dumzbxtbWTQgT/pCIECtBfcU58EBmARe7/2gAodZAzfPcxnFswzCYmV2+6k91aKsHqh6naWrLsvRHgKtVf6pD20j1QFW5xAm4W3WoevTTA1W/VwAJtj0SKCCKQAGxBAqIJVBArMOBer7e3y+AcwgUEEuggFgCBcQSKCCWQAGxBAqIJVBALIECYgkUEEuggFiHAwVwNoECYgkUEEuggFh/gXI0AUiwezTB2SngbtWf3bNTpR6rXPV7ZWZ29ao/2ziVNVAAWVr7AHCAlTETyfPVAAAAAElFTkSuQmCC" InformativeScreenshot="2509c03661102a20898870f647e7a3eb.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Справочник партий-2088' /&gt;" SearchSteps="FuzzySelector, Image">
                   <uix:TargetAnchorable.Anchors>
@@ -775,7 +803,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Партия'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="884.8,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_7" InteractionMode="Simulate" ScopeIdentifier="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Text="CH20240331" Version="V1">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Партия'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="884.8,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_7" InteractionMode="Simulate" ScopeIdentifier="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Text="[Batch]" Version="V1">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="http://10.29.19.228/cwms_mow_prod/(S(4bhhmksap01w3how5rozfwmv))/OheWebReports.aspx#ref=2088&amp;popup=0" DesignTimeRectangle="342, 394, 278, 37" ElementType="InputBox" FriendlyName="'INPUT eb_2088_f_lot_num…'" FullSelectorArgument="&lt;webctrl id='eb_2088_f_lot_num1724' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='eb_2088_f_lot_num1724' tag='INPUT' type='text' aaname='Партия:' /&gt;" Guid="55d0980c-8730-4f82-8475-e6f5318bf897" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARoAAAApCAYAAADqKuYNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFLSURBVHhe7d0xasQwFEXR7H+BM51x6854AaPwRBwyXRL0unPgN3J/+VLjjwFQ9haa8zzHvu/j+XyOx+NhjDF/mrQjDUlLfvoOzXEcY9u2cV3XeL1eX6cAv5d2pCFpSZpym6FJffJBYIAV0pI05d5sZmiy6qRCAKukKWlLzNDkXmWbAVZKU9KWmKHJIw7AandbhAaoERqgTmiAOqEB6oQGqBMaoE5ogDqhAeqEBqgTGqBOaIA6oQHqhAaoExqgTmiAOqEB6oQGqBMaoE5ogDqhAeqEBqgTGqBOaIA6oQHqhAaoExqgTmiAOqEB6t5Ckz/+58//AKukKWlLzNDs+z6u65oHACukKWlLzNCc5zm2bbPVAEukJWlK2hIzNHEcx/yQCgkO8B9pRxqSlqQpt+/QROqTVSf3qjziGGPMXybtSEPuTeb2FhqA9cb4BEf70OlQjoAgAAAAAElFTkSuQmCC" InformativeScreenshot="85f3f1075797e2b40ee797ff17266689.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Справочник партий-2088' /&gt;" SearchSteps="FuzzySelector, Image">
                   <uix:TargetAnchorable.Anchors>
@@ -821,21 +849,21 @@
               <uix:NCheckState.Target>
                 <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_mow_test/(S(qchhwa00agkmz3fplonb31co))/OheWebReports.aspx#ref=2088&amp;popup=0&amp;f_product=100703&amp;f_lot_num=CH20240331&amp;f_expdate=&amp;Button1=&amp;grpage=1&amp;grskip=0&amp;grtake=100&amp;chk=&amp;hidscroll=0" DesignTimeRectangle="135, 454, 340, 40" ElementType="Text" FriendlyName="'100703'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl isleaf='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' tag='TD' type='' aaname='100703' check:text='100703' /&gt;" Guid="97e666af-479a-4e5e-9524-b25d3c9aca94" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVgAAAAsCAYAAAAgqKAjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIPSURBVHhe7do7TutAFIDhbI2GldyOghWwiKRgG1CwjSClyRIidjHXzzAeP8SVfcwtvk8aYXuCTfXrYDhcLpdUr+v12ny1LMuy1q2+p4f6wLIsy9p+HVKnPgFgvb6nAguwMYEFCCKwAEEEFiCIwAIEEViAIAILEERgAYIILEAQgQUIIrAAQQQWIMh2gT2/pofnj3TrTlvndHz8kx6a9Zo+u6utub38er6+P3N7f7lff3ofPjHfGz8TYD/bBLaOax20IrCfp+ra6Tw6ri3tDd3S23MW0q+P9PT4kt6+iuNa83N8R7W57yj6APtYHdgmYlXkjqdqchzErJ1Ej303mxj28VvaG2om0uy+5Xn9/HKKvSuCC7Cn9YE9t5UswzeaLpcmz/L8rghxpZx2l6bfpT2AaKsD25sObD491rHMAzuzlxnds1JOrM1nyoj2rywmow2wj/84sMW7186PAttrQiuywO8IDmwWt/x8ae9ueqr9l1cEc5EG2ENcYMtADqbWpb3OzB+oyom1nGiH6ucM3+EC7CUwsMPpcmnynJpCZ3/1X5qEiyg395iINMAeQgPbT5DT//S/tDcd3V4bzvZ7y+k13/P+FfhNmwUWgCGBBQgisABBBBYgiMACBBFYgCACCxBEYAGCCCxAEIEFCCKwAEEEFiCIwAIEEViAIAILEERgAYIILECQUWAB2JbAAoRI6S/lKBNCRH32cQAAAABJRU5ErkJggg==" InformativeScreenshot="12942fe7678d753c2ac70d082894dd14.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Справочник партий-2088' /&gt;" SearchSteps="FuzzySelector">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="47, 389, 1784, 20" FriendlyName="'Справочник партий'" FullSelectorArgument="&lt;webctrl tag='H4' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H4' type='' aaname='Справочник партий' check:text='Справочник партий' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NCheckState.Target>
             </uix:NCheckState>
-            <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="5d39847a-dafc-4fd8-bd6d-d7f9d1239c96" DisplayName="CV Screen Scope 'pane'" sap:VirtualizedContainerService.HintSize="884.8,983.2" sap2010:WorkflowViewState.IdRef="CVScope_5" Version="V3">
+            <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="4e01b3dd-f500-4a91-b698-31e1aa756103" DisplayName="CV Screen Scope 'pane'" sap:VirtualizedContainerService.HintSize="433.6,816.8" sap2010:WorkflowViewState.IdRef="CVScope_5" Version="V3">
               <p:CVScope.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
                   </ActivityAction.Argument>
                   <Sequence DisplayName="Сделать" sap2010:WorkflowViewState.IdRef="Sequence_22">
-                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: CheckBox (24,221,15,15)&quot; +&#xD;&#xA;&quot;Anchor: Text 'CnpaBO4HVK napTnN' (28,190,109,13)&quot;]" DesignTimeCacheId="5d39847a-dafc-4fd8-bd6d-d7f9d1239c96" DesignTimeScaleFactor="1.25" DisplayName="CV Click - CheckBox" sap:VirtualizedContainerService.HintSize="400,137.6" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_13" InformativeScreenshot="e8f106327a6f64f7ff5ac4c856e1484a" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V3">
+                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: CheckBox (24,221,15,15)&quot; +&#xA;&quot;Anchor: Text 'CnpaBO4HVK napTnN' (28,190,109,13)&quot;]" DesignTimeCacheId="5d39847a-dafc-4fd8-bd6d-d7f9d1239c96" DesignTimeScaleFactor="1.25" DisplayName="CV Click - CheckBox" sap:VirtualizedContainerService.HintSize="400,137.6" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_13" InformativeScreenshot="e8f106327a6f64f7ff5ac4c856e1484a" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V3">
                       <p:CvClickWithDescriptor.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -927,7 +955,7 @@
                         </ui:Target>
                       </p:CvClickWithDescriptor.Target>
                     </p:CvClickWithDescriptor>
-                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (782,170,79,28)&quot; +&#xD;&#xA;&quot;Anchor: Icon (792,178,14,15)&quot; +&#xD;&#xA;&quot;Anchor: Text 'NoarBepxgeHne napTmn' (552,93,136,14)&quot;]" DesignTimeCacheId="ea907099-c921-449a-9cfc-55faf0b2fa84" DesignTimeScaleFactor="1.25" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="400,137.6" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_16" InformativeScreenshot="5f98a9cb259a1b0269018798a19ced98" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V3">
+                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (782,170,79,28)&quot; +&#xD;&#xA;&quot;Anchor: Icon (792,178,14,15)&quot; +&#xD;&#xA;&quot;Anchor: Text 'NoarBepxgeHne napTmn' (552,93,136,14)&quot;]" DesignTimeCacheId="ea907099-c921-449a-9cfc-55faf0b2fa84" DesignTimeScaleFactor="1.25" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="400,137.6" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_16" InformativeScreenshot="614cb5145cb9f243162285033686bd77" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V3">
                       <p:CvClickWithDescriptor.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -965,11 +993,14 @@
                   </Sequence>
                 </ActivityAction>
               </p:CVScope.Body>
+              <p:CVScope.DesignTimeCache>
+                <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" />
+              </p:CVScope.DesignTimeCache>
               <p:CVScope.DesignTimeCacheContainer>
                 <uc:CvCacheContainer>
                   <uc:CvCacheContainer.Caches>
                     <scg:List x:TypeArguments="uc:CVCache" Capacity="4">
-                      <uc:CVCache DisplayName="Экран CV Click - 'CnpaBO4HVK n (Главный)" Id="5d39847a-dafc-4fd8-bd6d-d7f9d1239c96" InformativeScreenshot="e8bfa64e16749802c9e880add41b8d0e" LogicalPosition="0, 143" OcrText="consid Aleksey ZAMOSKOVTSEV TEXHONOrnH V36pahhoe CmpaBO4HMKW CVCTeMbl YnpaBneHwe CknaJoM CTaTVCTVKa pa60TbI Knko4eBbIe noka3aTenn pa60TbI i CepBnc CnpaBO4HMK napTnn CnvcoK A4eeK no Knaccy TOBapa X KoA ToBapa: NapTMA: Cpok roAHOCTW: 100703 CH20240331 Onowck CnpaBO4HVK napTnN AenCTBMA _ X Kop ToBapa HavMeHOBaHne TOBapa napTVA cpok rOAHOCTM Aara C03AaHMA 100703 MAHNCCMMO TBOP 130 4EPHNKA K8 CH20240331 31.03.2024 19.03.2024" Position="0, 143" ScaleFactor="1.25" ScreenshotGuid="e05ad9ed-5d38-4fd9-8dae-0afb018acd61" ServerVersion="1">
+                      <uc:CVCache DisplayName="Экран CV Click - 'CnpaBO4HVK n " Id="5d39847a-dafc-4fd8-bd6d-d7f9d1239c96" InformativeScreenshot="e8bfa64e16749802c9e880add41b8d0e" LogicalPosition="0, 143" OcrText="consid Aleksey ZAMOSKOVTSEV TEXHONOrnH V36pahhoe CmpaBO4HMKW CVCTeMbl YnpaBneHwe CknaJoM CTaTVCTVKa pa60TbI Knko4eBbIe noka3aTenn pa60TbI i CepBnc CnpaBO4HMK napTnn CnvcoK A4eeK no Knaccy TOBapa X KoA ToBapa: NapTMA: Cpok roAHOCTW: 100703 CH20240331 Onowck CnpaBO4HVK napTnN AenCTBMA _ X Kop ToBapa HavMeHOBaHne TOBapa napTVA cpok rOAHOCTM Aara C03AaHMA 100703 MAHNCCMMO TBOP 130 4EPHNKA K8 CH20240331 31.03.2024 19.03.2024" Position="0, 143" ScaleFactor="1.25" ScreenshotGuid="e05ad9ed-5d38-4fd9-8dae-0afb018acd61" ServerVersion="1">
                         <uc:CVCache.CvTables>
                           <x:Array Type="uc:CvTableInfo">
                             <uc:CvTableInfo>
@@ -1259,7 +1290,7 @@
                           </scg:List>
                         </uc:CVCache.OcrTexts>
                       </uc:CVCache>
-                      <uc:CVCache DisplayName="Экран CV Click - 'NoarBepxgeHn" Id="ea907099-c921-449a-9cfc-55faf0b2fa84" InformativeScreenshot="d083897fca18e74b724b4bb946722eba" LogicalPosition="0, 143" OcrText="consid Aleksey ZAMOSKOVTSEV TEXHONOrwH V36pahhoe CnpaBO4HMKW CMCTeMbl YnpaBneHMe Ckna,goM CTaTMCTVKa pa60Tbl Knko4eBbIe noka3arenn pa60Tbl CepBMC CnpaBO4HMK napTvn CnvcoK A4eeK no Knaccy TOBapa X NoarBepxgeHne napTmn X KoA ToBapa: NapTMA: Cpok rc B6l neNCTBMTeNbHO XOTVTe yAanMTb BBl6paHHyo napTvio? 100703 CH20240331 OYpanwTb 3akpblTb CnpaBO4HMK napTMN AenCTBMA _ X KoA ToBapa HavMeHOBaHne ToBapa napTMA cpok rOAHOCTM Aara C03AaHWA 100703 /AHMCCVMO TBOP 130 4EPHNKA K8 CH20240331 31.03.2024 19.03.2024" Position="0, 143" ScaleFactor="1.25" ScreenshotGuid="417937ec-750e-4e75-9130-5307bf9824ae" ServerVersion="1">
+                      <uc:CVCache DisplayName="Экран CV Click - 'NoarBepxgeHn" Id="ea907099-c921-449a-9cfc-55faf0b2fa84" InformativeScreenshot="d083897fca18e74b724b4bb946722eba" LogicalPosition="8, 147" OcrText="consid Aleksey ZAMOSKOVTSEV TEXHONOrwH V36pahhoe CnpaBO4HMKW CMCTeMbl YnpaBneHMe Ckna,goM CTaTMCTVKa pa60Tbl Knko4eBbIe noka3arenn pa60Tbl CepBMC CnpaBO4HMK napTvn CnvcoK A4eeK no Knaccy TOBapa X NoarBepxgeHne napTmn X KoA ToBapa: NapTMA: Cpok rc B6l neNCTBMTeNbHO XOTVTe yAanMTb BBl6paHHyo napTvio? 100703 CH20240331 OYpanwTb 3akpblTb CnpaBO4HMK napTMN AenCTBMA _ X KoA ToBapa HavMeHOBaHne ToBapa napTMA cpok rOAHOCTM Aara C03AaHWA 100703 /AHMCCVMO TBOP 130 4EPHNKA K8 CH20240331 31.03.2024 19.03.2024" Position="8, 147" ScaleFactor="1.25" ScreenshotGuid="417937ec-750e-4e75-9130-5307bf9824ae" ServerVersion="1">
                         <uc:CVCache.CvTables>
                           <x:Array Type="uc:CvTableInfo">
                             <uc:CvTableInfo>
@@ -1419,6 +1450,139 @@
                           </scg:List>
                         </uc:CVCache.OcrTexts>
                       </uc:CVCache>
+                      <uc:CVCache DisplayName="Главный экран" Id="4e01b3dd-f500-4a91-b698-31e1aa756103" InformativeScreenshot="1641567e6c64b796aede4c9456251a64" LogicalPosition="11, 148" OcrText="consid Aleksey ZAMOSKOVTSEV TeXHOnornw V36pahhoe CmpaB04HWKM CMCTeMbl Ynpabnehwe CknapoM CtaTwctmKa pa60Tbl Knko4eBbie noka3aTenM pa60Tbl R CepBMC CnpaBo4HMK naptwi CnMCOK A4eeK no knaccy ToBapa X Kon ToBapa: NapTMA: Cpok rogHOCTM: 100722 XY20240516 NoncK CnpaBo4HMK napTwi AenCTBMA _ X Kop Tobapa HavmehoBahwe ToBapa napTVA cpok ropHOCTM Aata CO3QaHVA 100722 PACTWW noryPT 110 ABJOKO-rPYWIA XY20240516 16.05.2024 16.04.2024" Position="11, 148" ScaleFactor="1.25" ScreenshotGuid="5109572b-22f2-4408-8a03-356bac03ce6d" ServerVersion="1">
+                        <uc:CVCache.CvTables>
+                          <x:Array Type="uc:CvTableInfo">
+                            <uc:CvTableInfo>
+                              <uc:CvTableInfo.Columns>
+                                <x:Array Type="x:Int32">
+                                  <x:Int32>8</x:Int32>
+                                  <x:Int32>90</x:Int32>
+                                  <x:Int32>362</x:Int32>
+                                  <x:Int32>635</x:Int32>
+                                  <x:Int32>905</x:Int32>
+                                  <x:Int32>1176</x:Int32>
+                                  <x:Int32>1180</x:Int32>
+                                  <x:Int32>1452</x:Int32>
+                                </x:Array>
+                              </uc:CvTableInfo.Columns>
+                              <uc:CvTableInfo.Rows>
+                                <x:Array Type="x:Int32">
+                                  <x:Int32>208</x:Int32>
+                                  <x:Int32>234</x:Int32>
+                                  <x:Int32>266</x:Int32>
+                                </x:Array>
+                              </uc:CvTableInfo.Rows>
+                            </uc:CvTableInfo>
+                          </x:Array>
+                        </uc:CVCache.CvTables>
+                        <uc:CVCache.CvUiElements>
+                          <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="64">
+                            <uc:CvElementInfo Category="Button" Region="743, 143, 66, 28" />
+                            <uc:CvElementInfo Category="InputBox" Region="252, 144, 231, 27" />
+                            <uc:CvElementInfo Category="Icon" Region="291, 51, 20, 16" />
+                            <uc:CvElementInfo Category="InputBox" Region="496, 144, 232, 28" />
+                            <uc:CvElementInfo Category="Icon" Region="594, 49, 20, 19" />
+                            <uc:CvElementInfo Category="Icon" Region="1397, 1, 36, 36" />
+                            <uc:CvElementInfo Category="InputBox" Region="8, 144, 232, 27" />
+                            <uc:CvElementInfo Category="Icon" Region="7, 6, 26, 27" />
+                            <uc:CvElementInfo Category="CheckBox" Region="16, 247, 16, 16" />
+                            <uc:CvElementInfo Category="Icon" Region="24, 50, 18, 18" />
+                            <uc:CvElementInfo Category="Icon" Region="1438, 9, 23, 23" />
+                            <uc:CvElementInfo Category="Icon" Region="794, 51, 16, 16" />
+                            <uc:CvElementInfo Category="Icon" Region="130, 51, 17, 16" />
+                            <uc:CvElementInfo Category="CloseButton" Region="1431, 185, 16, 16" />
+                            <uc:CvElementInfo Category="Button" Region="0, 81, 111, 33" />
+                            <uc:CvElementInfo Category="CheckBox" Region="14, 217, 16, 16" />
+                            <uc:CvElementInfo Category="Icon" Region="448, 51, 18, 16" />
+                            <uc:CvElementInfo Category="MinimizeButton" Region="1409, 187, 16, 13" />
+                            <uc:CvElementInfo Category="Icon" Region="752, 149, 15, 16" />
+                            <uc:CvElementInfo Category="CloseButton" Region="274, 86, 15, 15" />
+                            <uc:CvElementInfo Category="Icon" Region="1389, 185, 16, 17" />
+                            <uc:CvElementInfo Category="Button" Region="110, 81, 191, 34" />
+                            <uc:CvElementInfo Category="MaximizeButton" Region="1368, 186, 15, 15" />
+                            <uc:CvElementInfo Category="Cell" Region="1180, 208, 272, 26" />
+                            <uc:CvElementInfo Category="Cell" Region="362, 208, 272, 26" />
+                            <uc:CvElementInfo Category="Cell" Region="635, 208, 270, 26" />
+                            <uc:CvElementInfo Category="Cell" Region="905, 208, 271, 26" />
+                            <uc:CvElementInfo Category="Cell" Region="90, 208, 272, 26" />
+                            <uc:CvElementInfo Category="Cell" Region="8, 208, 82, 26" />
+                            <uc:CvElementInfo Category="Cell" Region="1180, 234, 272, 32" />
+                            <uc:CvElementInfo Category="Cell" Region="362, 234, 272, 32" />
+                            <uc:CvElementInfo Category="Cell" Region="8, 234, 82, 32" />
+                            <uc:CvElementInfo Category="Cell" Region="905, 234, 271, 32" />
+                            <uc:CvElementInfo Category="Cell" Region="90, 234, 272, 32" />
+                            <uc:CvElementInfo Category="Cell" Region="635, 234, 270, 32" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1369, 187, 14, 14" />
+                            <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="1389, 186, 16, 16" />
+                            <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="1290, 184, 73, 21" />
+                            <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="110, 82, 191, 32" />
+                            <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="1389, 185, 16, 16" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="274, 86, 14, 14" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1448, 207, 9, 28" />
+                            <uc:CvElementInfo Category="InputBox" Region="1291, 184, 72, 21" />
+                            <uc:CvElementInfo Category="ArrowButton" Region="1346, 184, 18, 21" />
+                          </scg:List>
+                        </uc:CVCache.CvUiElements>
+                        <uc:CVCache.OcrTexts>
+                          <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="64">
+                            <uc:OcrTextInfo Region="34, 10, 55, 16" Text="consid" />
+                            <uc:OcrTextInfo Region="1249, 14, 38, 12" Text="Aleksey" />
+                            <uc:OcrTextInfo Region="1288, 14, 88, 10" Text="ZAMOSKOVTSEV" />
+                            <uc:OcrTextInfo Region="34, 25, 55, 6" Text="TeXHOnornw" />
+                            <uc:OcrTextInfo Region="44, 54, 54, 12" Text="V36pahhoe" />
+                            <uc:OcrTextInfo Region="152, 54, 64, 12" Text="CmpaB04HWKM" />
+                            <uc:OcrTextInfo Region="217, 56, 42, 8" Text="CMCTeMbl" />
+                            <uc:OcrTextInfo Region="312, 54, 59, 12" Text="Ynpabnehwe" />
+                            <uc:OcrTextInfo Region="373, 54, 44, 12" Text="CknapoM" />
+                            <uc:OcrTextInfo Region="469, 54, 56, 10" Text="CtaTwctmKa" />
+                            <uc:OcrTextInfo Region="527, 54, 37, 12" Text="pa60Tbl" />
+                            <uc:OcrTextInfo Region="616, 54, 51, 10" Text="Knko4eBbie" />
+                            <uc:OcrTextInfo Region="668, 56, 56, 8" Text="noka3aTenM" />
+                            <uc:OcrTextInfo Region="725, 54, 37, 12" Text="pa60Tbl" />
+                            <uc:OcrTextInfo Region="799, 55, 6, 8" Text="R" />
+                            <uc:OcrTextInfo Region="815, 54, 37, 12" Text="CepBMC" />
+                            <uc:OcrTextInfo Region="8, 92, 59, 12" Text="CnpaBo4HMK" />
+                            <uc:OcrTextInfo Region="68, 92, 33, 12" Text="naptwi" />
+                            <uc:OcrTextInfo Region="121, 92, 36, 10" Text="CnMCOK" />
+                            <uc:OcrTextInfo Region="159, 94, 28, 8" Text="A4eeK" />
+                            <uc:OcrTextInfo Region="188, 94, 12, 8" Text="no" />
+                            <uc:OcrTextInfo Region="203, 94, 32, 10" Text="knaccy" />
+                            <uc:OcrTextInfo Region="238, 94, 34, 10" Text="ToBapa" />
+                            <uc:OcrTextInfo Region="276, 88, 9, 10" Text="X" />
+                            <uc:OcrTextInfo Region="8, 131, 20, 12" Text="Kon" />
+                            <uc:OcrTextInfo Region="30, 131, 40, 12" Text="ToBapa:" />
+                            <uc:OcrTextInfo Region="253, 131, 40, 12" Text="NapTMA:" />
+                            <uc:OcrTextInfo Region="497, 131, 27, 12" Text="Cpok" />
+                            <uc:OcrTextInfo Region="526, 133, 50, 9" Text="rogHOCTM:" />
+                            <uc:OcrTextInfo Region="19, 152, 36, 10" Text="100722" />
+                            <uc:OcrTextInfo Region="263, 152, 61, 10" Text="XY20240516" />
+                            <uc:OcrTextInfo Region="764, 151, 36, 11" Text="NoncK" />
+                            <uc:OcrTextInfo Region="20, 187, 67, 12" Text="CnpaBo4HMK" />
+                            <uc:OcrTextInfo Region="88, 186, 40, 13" Text="napTwi" />
+                            <uc:OcrTextInfo Region="1295, 188, 48, 12" Text="AenCTBMA" />
+                            <uc:OcrTextInfo Region="1412, 186, 11, 12" Text="_" />
+                            <uc:OcrTextInfo Region="1433, 188, 11, 10" Text="X" />
+                            <uc:OcrTextInfo Region="98, 217, 19, 12" Text="Kop" />
+                            <uc:OcrTextInfo Region="118, 217, 35, 12" Text="Tobapa" />
+                            <uc:OcrTextInfo Region="369, 217, 73, 10" Text="HavmehoBahwe" />
+                            <uc:OcrTextInfo Region="444, 220, 35, 10" Text="ToBapa" />
+                            <uc:OcrTextInfo Region="641, 220, 34, 10" Text="napTVA" />
+                            <uc:OcrTextInfo Region="913, 220, 24, 10" Text="cpok" />
+                            <uc:OcrTextInfo Region="937, 220, 44, 9" Text="ropHOCTM" />
+                            <uc:OcrTextInfo Region="1184, 220, 24, 9" Text="Aata" />
+                            <uc:OcrTextInfo Region="1210, 220, 45, 9" Text="CO3QaHVA" />
+                            <uc:OcrTextInfo Region="100, 246, 36, 10" Text="100722" />
+                            <uc:OcrTextInfo Region="372, 246, 44, 10" Text="PACTWW" />
+                            <uc:OcrTextInfo Region="417, 244, 42, 12" Text="noryPT" />
+                            <uc:OcrTextInfo Region="461, 246, 17, 10" Text="110" />
+                            <uc:OcrTextInfo Region="480, 246, 84, 10" Text="ABJOKO-rPYWIA" />
+                            <uc:OcrTextInfo Region="643, 246, 61, 10" Text="XY20240516" />
+                            <uc:OcrTextInfo Region="916, 246, 52, 10" Text="16.05.2024" />
+                            <uc:OcrTextInfo Region="1188, 246, 52, 10" Text="16.04.2024" />
+                          </scg:List>
+                        </uc:CVCache.OcrTexts>
+                      </uc:CVCache>
                     </scg:List>
                   </uc:CvCacheContainer.Caches>
                 </uc:CvCacheContainer>
@@ -1432,7 +1596,10 @@
                 </ActivityFunc>
               </p:CVScope.OCREngine>
               <p:CVScope.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="20fa05e9-8f2b-4c5a-8c92-f93186caf1f8" InformativeScreenshot="0f65d69a44e05d775957619a3ba61c3b" Selector="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='ConsID.WMS-Справочник партий-2088 — Рабочий: Microsoft​ Edge' /&gt;&lt;ctrl name='ConsID.WMS-Справочник партий-2088: Microsoft Edge' role='pane' /&gt;&lt;ctrl idx='117' role='pane' /&gt;" WaitForReady="INTERACTIVE">
+                <ui:Target Element="{x:Null}" Id="20fa05e9-8f2b-4c5a-8c92-f93186caf1f8" InformativeScreenshot="e790c5575d3cab47a0221520d995e888" Selector="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='ConsID.WMS-Справочник партий-2088 — Рабочий: Microsoft​ Edge' /&gt;&lt;ctrl name='ConsID.WMS-Справочник партий-2088: Microsoft Edge' role='pane' /&gt;&lt;ctrl idx='90' role='pane' /&gt;" WaitForReady="INTERACTIVE">
+                  <ui:Target.ClippingRegion>
+                    <ui:Region Rectangle="8, 4, 1476, 696" />
+                  </ui:Target.ClippingRegion>
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -1926,7 +2093,7 @@
                 <InArgument x:TypeArguments="x:Boolean" />
               </p:CVScope.UseLocalServer>
             </p:CVScope>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DisplayName="Type Into 'Введите Код товара'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="884.8,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_8" InteractionMode="WindowMessages" ScopeIdentifier="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Text="100703" Version="V1">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DisplayName="Type Into 'Введите Код товара'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="884.8,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_8" InteractionMode="WindowMessages" ScopeIdentifier="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Text="[Item]" Version="V1">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_mow_test/(S(m2wqpqpa3fkdzysfjndpw43j))/OheWebReports.aspx#" DesignTimeRectangle="798, 276, 137, 24" ElementType="InputBox" FriendlyName="'INPUT ajc_2089_product_…'" FullSelectorArgument="&lt;webctrl aria-role='combobox' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='combobox' tag='INPUT' type='text' aaname='Введите Код товара:' /&gt;" Guid="2c522b85-222c-4f21-99a7-235ea097b6a5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAI0AAAAcCAYAAABcZDxDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACwSURBVGhD7dsxCsMwAATB/P+BLty68w9cKZzAIcbg5PoZuEb1okp6DSh9otn3fazrOpZlMbssXaSP04wmB9u2jeM45iF8Sxfp4wxnRpOSBMOT9JFOYkaTKwh+OTsRDX8TDTXRUBMNNdFQEw010VATDTXRUBMNNdFQEw010VATDTXRUBMNNdFQEw010VC7RONhOb/cHpb7wsKTdHH7whI5SEm5gsy+ly7OYOITDfxnjDd1Rtt/2NJ6zAAAAABJRU5ErkJggg==" InformativeScreenshot="078615561e2c6448d453df4f523d387b.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Справочник партий-2088' /&gt;" SearchSteps="FuzzySelector, Image">
                   <uix:TargetAnchorable.Anchors>
@@ -1939,7 +2106,7 @@
             </uix:NTypeInto>
             <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="884.8,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_11" Shortcuts="[d(hk)][d(ctrl)][k(enter)][u(ctrl)][u(hk)]" Version="V1" />
             <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="884.8,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_12" Shortcuts="[d(hk)][k(tab)][u(hk)]" Version="V1" />
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '№ Партии'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="884.8,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_9" InteractionMode="Simulate" ScopeIdentifier="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Text="сн20240331" Version="V1">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '№ Партии'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="884.8,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_9" InteractionMode="Simulate" ScopeIdentifier="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Text="[Batch]" Version="V1">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_mow_test/(S(m2wqpqpa3fkdzysfjndpw43j))/OheWebReports.aspx#" DesignTimeRectangle="953, 276, 137, 24" ElementType="InputBox" FriendlyName="'INPUT eb_2089_lot_num_p…'" FullSelectorArgument="&lt;webctrl id='eb_2089_lot_num_popup1832' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='eb_2089_lot_num_popup1832' tag='INPUT' type='text' aaname='№ Партии:' /&gt;" Guid="21d3e286-f834-45ac-bc16-8778b6590c7f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAI0AAAAcCAYAAABcZDxDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACwSURBVGhD7dsxCsMwAATB/P+BLty68w9cKZzAIcbg5PoZuEb1okp6DSh9otn3fazrOpZlMbssXaSP04wmB9u2jeM45iF8Sxfp4wxnRpOSBMOT9JFOYkaTKwh+OTsRDX8TDTXRUBMNNdFQEw010VATDTXRUBMNNdFQEw010VATDTXRUBMNNdFQEw010VC7RONhOb/cHpb7wsKTdHH7whI5SEm5gsy+ly7OYOITDfxnjDd1Rtt/2NJ6zAAAAABJRU5ErkJggg==" InformativeScreenshot="4ba9970e5b5a80c2f4e0daccd37eef47.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Справочник партий-2088' /&gt;" SearchSteps="FuzzySelector, Image">
                   <uix:TargetAnchorable.Anchors>
@@ -1975,7 +2142,7 @@
                 </uix:TargetAnchorable>
               </uix:NHover.Target>
             </uix:NHover>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Код Товара'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="884.8,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_10" InteractionMode="WindowMessages" ScopeIdentifier="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Text="100703" Version="V1">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Код Товара'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="884.8,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_10" InteractionMode="WindowMessages" ScopeIdentifier="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Text="[Item]" Version="V1">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_mow_test/(S(qvexyfyra25fgcboilit0w5n))/OheWebReports.aspx#ref=2089&amp;popup=1&amp;product=3127&amp;lot_num=CH20240328&amp;f_expiry_date=14.02.2024&amp;f_lot_num=&amp;f_expdate=&amp;f_product=&amp;chk=&amp;hidscroll=0" DesignTimeRectangle="28, 226, 292, 24" ElementType="InputBox" FriendlyName="'INPUT eb_2088_f_product…'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='Код Товара:' /&gt;" Guid="399bc9cc-d158-43ef-b3d8-14384ce3af45" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAASgAAAAcCAYAAADSmyIWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADZSURBVHhe7d0xCoNAFEXRbC9dumzbxtbWTQgT/pCIECtBfcU58EBmARe7/2gAodZAzfPcxnFswzCYmV2+6k91aKsHqh6naWrLsvRHgKtVf6pD20j1QFW5xAm4W3WoevTTA1W/VwAJtj0SKCCKQAGxBAqIJVBArMOBer7e3y+AcwgUEEuggFgCBcQSKCCWQAGxBAqIJVBALIECYgkUEEuggFiHAwVwNoECYgkUEEuggFh/gXI0AUiwezTB2SngbtWf3bNTpR6rXPV7ZWZ29ao/2ziVNVAAWVr7AHCAlTETyfPVAAAAAElFTkSuQmCC" InformativeScreenshot="2509c03661102a20898870f647e7a3eb.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Справочник партий-2088' /&gt;" SearchSteps="FuzzySelector, Image">
                   <uix:TargetAnchorable.Anchors>
@@ -1986,7 +2153,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Партия'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="884.8,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_11" InteractionMode="Simulate" ScopeIdentifier="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Text="сн20240331" Version="V1">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Партия'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="884.8,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_11" InteractionMode="Simulate" ScopeIdentifier="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Text="[&quot;ФЬ&quot;+DateShL.ToString(&quot;yyyyMMdd&quot;)]" Version="V1">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="http://10.29.19.228/cwms_mow_prod/(S(4bhhmksap01w3how5rozfwmv))/OheWebReports.aspx#ref=2088&amp;popup=0" DesignTimeRectangle="342, 394, 278, 37" ElementType="InputBox" FriendlyName="'INPUT eb_2088_f_lot_num…'" FullSelectorArgument="&lt;webctrl id='eb_2088_f_lot_num1724' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='eb_2088_f_lot_num1724' tag='INPUT' type='text' aaname='Партия:' /&gt;" Guid="55d0980c-8730-4f82-8475-e6f5318bf897" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARoAAAApCAYAAADqKuYNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFLSURBVHhe7d0xasQwFEXR7H+BM51x6854AaPwRBwyXRL0unPgN3J/+VLjjwFQ9haa8zzHvu/j+XyOx+NhjDF/mrQjDUlLfvoOzXEcY9u2cV3XeL1eX6cAv5d2pCFpSZpym6FJffJBYIAV0pI05d5sZmiy6qRCAKukKWlLzNDkXmWbAVZKU9KWmKHJIw7AandbhAaoERqgTmiAOqEB6oQGqBMaoE5ogDqhAeqEBqgTGqBOaIA6oQHqhAaoExqgTmiAOqEB6oQGqBMaoE5ogDqhAeqEBqgTGqBOaIA6oQHqhAaoExqgTmiAOqEB6t5Ckz/+58//AKukKWlLzNDs+z6u65oHACukKWlLzNCc5zm2bbPVAEukJWlK2hIzNHEcx/yQCgkO8B9pRxqSlqQpt+/QROqTVSf3qjziGGPMXybtSEPuTeb2FhqA9cb4BEf70OlQjoAgAAAAAElFTkSuQmCC" InformativeScreenshot="85f3f1075797e2b40ee797ff17266689.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Справочник партий-2088' /&gt;" SearchSteps="FuzzySelector, Image">
                   <uix:TargetAnchorable.Anchors>
