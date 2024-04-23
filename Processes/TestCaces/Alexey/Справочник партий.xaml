@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1032.8,12760.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1032.8,12927.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Нужно_переименовать_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -111,6 +111,7 @@
       <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
       <AssemblyReference>BouncyCastle.Crypto</AssemblyReference>
       <AssemblyReference>Accessibility</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -118,7 +119,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Справочник партий" sap:VirtualizedContainerService.HintSize="1043.2,12696" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Справочник партий" sap:VirtualizedContainerService.HintSize="1043.2,12862.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd1:DataTable" Name="LogListLot" />
       <Variable x:TypeArguments="sd1:DataTable" Name="Material" />
@@ -149,13 +150,13 @@
         <InArgument x:TypeArguments="x:String">[cstr(Material.Rows(2).Item("Plant"))+DateShL.ToString("yyyyMMdd")]</InArgument>
       </Assign.Value>
     </Assign>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: ConsID.WMS - сиcтема управления складом нового поколения" sap:VirtualizedContainerService.HintSize="980.8,11950.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: ConsID.WMS - сиcтема управления складом нового поколения" sap:VirtualizedContainerService.HintSize="980.8,12116.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="947.2,11733.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="947.2,11900" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -861,7 +862,7 @@
                 </uix:TargetAnchorable>
               </uix:NCheckState.Target>
             </uix:NCheckState>
-            <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="4e01b3dd-f500-4a91-b698-31e1aa756103" DisplayName="CV Screen Scope 'pane'" sap:VirtualizedContainerService.HintSize="433.6,816.8" sap2010:WorkflowViewState.IdRef="CVScope_5" Version="V3">
+            <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="4e01b3dd-f500-4a91-b698-31e1aa756103" DisplayName="CV Screen Scope 'pane'" sap:VirtualizedContainerService.HintSize="884.8,983.2" sap2010:WorkflowViewState.IdRef="CVScope_5" Version="V3">
               <p:CVScope.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
@@ -960,7 +961,7 @@
                         </ui:Target>
                       </p:CvClickWithDescriptor.Target>
                     </p:CvClickWithDescriptor>
-                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (782,170,79,28)&quot; +&#xA;&quot;Anchor: Icon (792,178,14,15)&quot; +&#xA;&quot;Anchor: Text 'NoarBepxgeHne napTmn' (552,93,136,14)&quot;]" DesignTimeCacheId="ea907099-c921-449a-9cfc-55faf0b2fa84" DesignTimeScaleFactor="1.25" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="400,137.6" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_16" InformativeScreenshot="614cb5145cb9f243162285033686bd77" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V3">
+                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (782,170,79,28)&quot; +&#xD;&#xA;&quot;Anchor: Icon (792,178,14,15)&quot; +&#xD;&#xA;&quot;Anchor: Text 'NoarBepxgeHne napTmn' (552,93,136,14)&quot;]" DesignTimeCacheId="ea907099-c921-449a-9cfc-55faf0b2fa84" DesignTimeScaleFactor="1.25" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="400,137.6" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_16" InformativeScreenshot="614cb5145cb9f243162285033686bd77" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V3">
                       <p:CvClickWithDescriptor.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -2111,7 +2112,7 @@
             </uix:NTypeInto>
             <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="884.8,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_11" Shortcuts="[d(hk)][d(ctrl)][k(enter)][u(ctrl)][u(hk)]" Version="V1" />
             <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="884.8,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_12" Shortcuts="[d(hk)][k(tab)][u(hk)]" Version="V1" />
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '№ Партии'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="884.8,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_9" InteractionMode="Simulate" ScopeIdentifier="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Text="[Batch]" Version="V1">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '№ Партии'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="884.8,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_9" InteractionMode="Simulate" ScopeIdentifier="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Text="[&quot;ФЬ&quot;+DateShL.ToString(&quot;yyyyMMdd&quot;)]" Version="V1">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="http://10.29.19.230/cwms_mow_test/(S(m2wqpqpa3fkdzysfjndpw43j))/OheWebReports.aspx#" DesignTimeRectangle="953, 276, 137, 24" ElementType="InputBox" FriendlyName="'INPUT eb_2089_lot_num_p…'" FullSelectorArgument="&lt;webctrl id='eb_2089_lot_num_popup1832' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='eb_2089_lot_num_popup1832' tag='INPUT' type='text' aaname='№ Партии:' /&gt;" Guid="21d3e286-f834-45ac-bc16-8778b6590c7f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAI0AAAAcCAYAAABcZDxDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACwSURBVGhD7dsxCsMwAATB/P+BLty68w9cKZzAIcbg5PoZuEb1okp6DSh9otn3fazrOpZlMbssXaSP04wmB9u2jeM45iF8Sxfp4wxnRpOSBMOT9JFOYkaTKwh+OTsRDX8TDTXRUBMNNdFQEw010VATDTXRUBMNNdFQEw010VATDTXRUBMNNdFQEw010VC7RONhOb/cHpb7wsKTdHH7whI5SEm5gsy+ly7OYOITDfxnjDd1Rtt/2NJ6zAAAAABJRU5ErkJggg==" InformativeScreenshot="4ba9970e5b5a80c2f4e0daccd37eef47.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ConsID.WMS-Справочник партий-2088' /&gt;" SearchSteps="FuzzySelector, Image">
                   <uix:TargetAnchorable.Anchors>
