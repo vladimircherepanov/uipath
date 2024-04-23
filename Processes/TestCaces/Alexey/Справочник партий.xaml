@@ -150,7 +150,7 @@
         <InArgument x:TypeArguments="x:String">[cstr(Material.Rows(2).Item("Plant"))+DateShL.ToString("yyyyMMdd")]</InArgument>
       </Assign.Value>
     </Assign>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: ConsID.WMS - сиcтема управления складом нового поколения" sap:VirtualizedContainerService.HintSize="980.8,12116.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: ConsID.WMS - сиcтема управления складом нового поколения" sap:VirtualizedContainerService.HintSize="980.8,12116.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="94b9f2fe-233b-4f49-9e2c-cda331bb8b2e" Version="V1" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -932,7 +932,7 @@
                         </ui:Target>
                       </p:CvClickWithDescriptor.Target>
                     </p:CvClickWithDescriptor>
-                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'YAanVTb' (1361,276,41,11)&quot;]" DesignTimeCacheId="47967873-d871-42d2-bf6b-2ab4c1b9bd55" DesignTimeScaleFactor="1.25" DisplayName="CV Click - Text" sap:VirtualizedContainerService.HintSize="400,137.6" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_15" InformativeScreenshot="c61a2ba8ee0e8061aa260fa53d6cb51f" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V3">
+                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'YAanVTb' (1361,276,41,11)&quot; +&#xD;&#xA;&quot;Anchor: Text 'AenCTBMA' (1303,192,49,12)&quot;]" DesignTimeCacheId="47967873-d871-42d2-bf6b-2ab4c1b9bd55" DesignTimeScaleFactor="1.25" DisplayName="CV Click - Text" sap:VirtualizedContainerService.HintSize="400,137.6" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_15" InformativeScreenshot="b6e69405dda943d13beeabe1e0c2db79" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V3">
                       <p:CvClickWithDescriptor.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -945,6 +945,11 @@
                       </p:CvClickWithDescriptor.CursorPosition>
                       <p:CvClickWithDescriptor.DesignTimeDescriptor>
                         <uc:CvDescriptor>
+                          <uc:CvDescriptor.Anchors>
+                            <x:Array Type="uc:CvElementDescriptor">
+                              <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1303, 192, 49, 12" ElementType="Text" Text="AenCTBMA" />
+                            </x:Array>
+                          </uc:CvDescriptor.Anchors>
                           <uc:CvDescriptor.Target>
                             <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1361, 276, 41, 11" ElementType="Text" Text="YAanVTb" />
                           </uc:CvDescriptor.Target>
@@ -961,7 +966,7 @@
                         </ui:Target>
                       </p:CvClickWithDescriptor.Target>
                     </p:CvClickWithDescriptor>
-                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (782,170,79,28)&quot; +&#xD;&#xA;&quot;Anchor: Icon (792,178,14,15)&quot; +&#xD;&#xA;&quot;Anchor: Text 'NoarBepxgeHne napTmn' (552,93,136,14)&quot;]" DesignTimeCacheId="ea907099-c921-449a-9cfc-55faf0b2fa84" DesignTimeScaleFactor="1.25" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="400,137.6" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_16" InformativeScreenshot="614cb5145cb9f243162285033686bd77" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V3">
+                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (782,170,79,28)&quot; +&#xD;&#xA;&quot;Anchor: Icon (792,178,14,15)&quot; +&#xD;&#xA;&quot;Anchor: Text 'NoarBepxgeHne napTmn' (552,93,136,14)&quot; +&#xD;&#xA;&quot;Anchor: Text 'OYpanwTb' (808,178,43,12)&quot;]" DesignTimeCacheId="ea907099-c921-449a-9cfc-55faf0b2fa84" DesignTimeScaleFactor="1.25" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="400,137.6" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_16" InformativeScreenshot="286c2ccca9054603f64e5fda2e72ed7a" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V3">
                       <p:CvClickWithDescriptor.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -978,6 +983,7 @@
                             <x:Array Type="uc:CvElementDescriptor">
                               <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="792, 178, 14, 15" ElementType="Icon" />
                               <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="552, 93, 136, 14" ElementType="Text" Text="NoarBepxgeHne napTmn" />
+                              <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="808, 178, 43, 12" ElementType="Text" Text="OYpanwTb" />
                             </x:Array>
                           </uc:CvDescriptor.Anchors>
                           <uc:CvDescriptor.Target>
@@ -1006,7 +1012,7 @@
                 <uc:CvCacheContainer>
                   <uc:CvCacheContainer.Caches>
                     <scg:List x:TypeArguments="uc:CVCache" Capacity="4">
-                      <uc:CVCache DisplayName="Экран CV Click - 'CnpaBO4HVK n " Id="5d39847a-dafc-4fd8-bd6d-d7f9d1239c96" InformativeScreenshot="e8bfa64e16749802c9e880add41b8d0e" LogicalPosition="0, 143" OcrText="consid Aleksey ZAMOSKOVTSEV TEXHONOrnH V36pahhoe CmpaBO4HMKW CVCTeMbl YnpaBneHwe CknaJoM CTaTVCTVKa pa60TbI Knko4eBbIe noka3aTenn pa60TbI i CepBnc CnpaBO4HMK napTnn CnvcoK A4eeK no Knaccy TOBapa X KoA ToBapa: NapTMA: Cpok roAHOCTW: 100703 CH20240331 Onowck CnpaBO4HVK napTnN AenCTBMA _ X Kop ToBapa HavMeHOBaHne TOBapa napTVA cpok rOAHOCTM Aara C03AaHMA 100703 MAHNCCMMO TBOP 130 4EPHNKA K8 CH20240331 31.03.2024 19.03.2024" Position="0, 143" ScaleFactor="1.25" ScreenshotGuid="e05ad9ed-5d38-4fd9-8dae-0afb018acd61" ServerVersion="1">
+                      <uc:CVCache DisplayName="Экран CV Click - 'CnpaBO4HVK n " Id="5d39847a-dafc-4fd8-bd6d-d7f9d1239c96" InformativeScreenshot="e8bfa64e16749802c9e880add41b8d0e" LogicalPosition="8, 147" OcrText="consid Aleksey ZAMOSKOVTSEV TEXHONOrnH V36pahhoe CmpaBO4HMKW CVCTeMbl YnpaBneHwe CknaJoM CTaTVCTVKa pa60TbI Knko4eBbIe noka3aTenn pa60TbI i CepBnc CnpaBO4HMK napTnn CnvcoK A4eeK no Knaccy TOBapa X KoA ToBapa: NapTMA: Cpok roAHOCTW: 100703 CH20240331 Onowck CnpaBO4HVK napTnN AenCTBMA _ X Kop ToBapa HavMeHOBaHne TOBapa napTVA cpok rOAHOCTM Aara C03AaHMA 100703 MAHNCCMMO TBOP 130 4EPHNKA K8 CH20240331 31.03.2024 19.03.2024" Position="8, 147" ScaleFactor="1.25" ScreenshotGuid="e05ad9ed-5d38-4fd9-8dae-0afb018acd61" ServerVersion="1">
                         <uc:CVCache.CvTables>
                           <x:Array Type="uc:CvTableInfo">
                             <uc:CvTableInfo>
