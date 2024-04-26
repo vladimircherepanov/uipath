@@ -60,6 +60,7 @@
       <x:String>UiPath.Activities.System.Arrays</x:String>
       <x:String>Org.BouncyCastle.Utilities.Date</x:String>
       <x:String>Accessibility</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
